@@ -227,10 +227,21 @@ function EventDetails({ event }: { event: TripEvent }) {
 
   return (
     <div
-      className="mt-4 pt-4 grid grid-cols-2 gap-x-6 gap-y-3.5"
+      className="mt-4 pt-4 space-y-3.5"
       style={{ borderTop: `1px solid ${color}18` }}
     >
-      {content()}
+      {event.confirmationNumber && (
+        <div className="flex items-center justify-between">
+          <div>
+            <div className="text-[10px] text-white/25 uppercase tracking-[0.12em] mb-0.5">Confirmation</div>
+            <div className="text-sm font-mono text-white/70">{event.confirmationNumber}</div>
+          </div>
+          <CopyButton value={event.confirmationNumber} />
+        </div>
+      )}
+      <div className="grid grid-cols-2 gap-x-6 gap-y-3.5">
+        {content()}
+      </div>
     </div>
   )
 }
@@ -297,17 +308,11 @@ export function EventRow({ event, isMultiDayIndicator, multiDayLabel }: EventRow
             </div>
           </div>
 
-          {/* Badge + confirmation number */}
-          <div className="flex items-center gap-2 mt-2.5">
+          {/* Type badge */}
+          <div className="mt-2.5">
             <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${badgeClass}`}>
               {EVENT_LABELS[event.type]}
             </span>
-            {event.confirmationNumber && (
-              <div className="flex items-center gap-0.5">
-                <span className="text-[11px] text-white/20 font-mono">#{event.confirmationNumber}</span>
-                <CopyButton value={event.confirmationNumber} />
-              </div>
-            )}
           </div>
 
           {expanded && <EventDetails event={event} />}
