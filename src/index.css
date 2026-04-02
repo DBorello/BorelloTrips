@@ -1,0 +1,215 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #08080e;
+    color: white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'DM Sans', system-ui, sans-serif;
+  }
+
+  * {
+    @apply box-border;
+  }
+
+  /* Subtle grain texture overlay */
+  body::after {
+    content: '';
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0.025;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 128px 128px;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+
+  .font-display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.6) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+/* FullCalendar dark theme overrides */
+.calendar-wrapper .fc {
+  --fc-border-color: rgba(255,255,255,0.07);
+  --fc-today-bg-color: rgba(14, 165, 233, 0.07);
+  --fc-page-bg-color: #101018;
+  --fc-neutral-bg-color: #101018;
+  --fc-button-bg-color: #18181f;
+  --fc-button-border-color: rgba(255,255,255,0.1);
+  --fc-button-text-color: rgba(255,255,255,0.7);
+  --fc-button-hover-bg-color: #222230;
+  --fc-button-hover-border-color: rgba(255,255,255,0.15);
+  --fc-button-active-bg-color: #0ea5e9;
+  --fc-button-active-border-color: #0ea5e9;
+  --fc-event-border-color: transparent;
+  color: rgba(255,255,255,0.85);
+  font-family: 'DM Sans', system-ui, sans-serif;
+}
+
+.calendar-wrapper .fc-toolbar-title {
+  color: white;
+  font-family: 'Cormorant Garamond', Georgia, serif;
+  font-size: 1.4rem;
+  font-weight: 400;
+  font-style: italic;
+  letter-spacing: 0.01em;
+}
+
+.calendar-wrapper .fc-col-header-cell-cushion,
+.calendar-wrapper .fc-daygrid-day-number {
+  color: rgba(255,255,255,0.35);
+  text-decoration: none;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+}
+
+.calendar-wrapper .fc-col-header-cell-cushion {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.65rem;
+}
+
+.calendar-wrapper .fc-day-today .fc-daygrid-day-number {
+  background-color: #0ea5e9;
+  color: white;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.calendar-wrapper .fc-event {
+  border-radius: 5px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  padding: 2px 5px;
+  cursor: pointer;
+  border: none;
+  letter-spacing: 0.01em;
+}
+
+.calendar-wrapper .fc-event:hover {
+  filter: brightness(1.15);
+  transform: translateY(-1px);
+  transition: all 0.15s ease;
+}
+
+.calendar-wrapper .fc-button {
+  border-radius: 8px !important;
+  font-size: 0.75rem !important;
+  font-weight: 500 !important;
+  letter-spacing: 0.03em !important;
+  transition: all 0.15s ease !important;
+}
+
+.calendar-wrapper .fc-button:focus {
+  box-shadow: none !important;
+}
+
+.calendar-wrapper .fc-popover {
+  background-color: #18181f;
+  border-color: rgba(255,255,255,0.1);
+  color: white;
+  border-radius: 14px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.6);
+}
+
+.calendar-wrapper .fc-popover-header {
+  background-color: rgba(255,255,255,0.05);
+  border-radius: 14px 14px 0 0;
+  padding: 10px 14px;
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.calendar-wrapper .fc-more-link {
+  color: rgba(255,255,255,0.3);
+  font-size: 0.7rem;
+}
+
+.calendar-wrapper .fc-timegrid-slot-label-cushion {
+  color: rgba(255,255,255,0.2);
+  font-size: 0.65rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.calendar-wrapper .fc-daygrid-day-frame {
+  background: transparent;
+}
+
+.calendar-wrapper .fc-scrollgrid {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+/* Leaflet popup dark styling */
+.leaflet-popup-content-wrapper {
+  background-color: #18181f !important;
+  border: 1px solid rgba(255,255,255,0.1) !important;
+  border-radius: 14px !important;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.7) !important;
+  color: white !important;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+
+.leaflet-popup-tip {
+  background-color: #18181f !important;
+}
+
+.leaflet-popup-close-button {
+  color: rgba(255,255,255,0.3) !important;
+  font-size: 18px !important;
+  top: 8px !important;
+  right: 10px !important;
+}
+
+.leaflet-popup-close-button:hover {
+  color: white !important;
+}
+
+.leaflet-container {
+  background-color: #08080e !important;
+  font-family: 'DM Sans', system-ui, sans-serif !important;
+}
+
+.leaflet-tile-pane {
+  filter: saturate(0.7) brightness(0.85);
+}
+
+.leaflet-control-zoom a {
+  background-color: #18181f !important;
+  color: rgba(255,255,255,0.7) !important;
+  border-color: rgba(255,255,255,0.1) !important;
+}
+
+.leaflet-control-zoom a:hover {
+  background-color: #222230 !important;
+  color: white !important;
+}
