@@ -31,14 +31,8 @@ function buildCalendarEvents(events: TripEvent[]): EventInput[] {
         calEvents.push({
           id: h.id,
           title: h.name,
-          start: h.checkInDatetime.split('T')[0],
-          end: (() => {
-            // Add one day for all-day end in FullCalendar (exclusive end)
-            const d = new Date(h.checkOutDatetime.split('T')[0])
-            d.setDate(d.getDate() + 1)
-            return d.toISOString().split('T')[0]
-          })(),
-          allDay: true,
+          start: h.checkInDatetime,
+          end: h.checkOutDatetime,
           backgroundColor: getEventColor('hotel'),
           borderColor: getEventColor('hotel'),
           extendedProps: { event: h }
@@ -50,13 +44,8 @@ function buildCalendarEvents(events: TripEvent[]): EventInput[] {
         calEvents.push({
           id: c.id,
           title: `${c.company} Rental`,
-          start: c.pickupDatetime.split('T')[0],
-          end: (() => {
-            const d = new Date(c.dropoffDatetime.split('T')[0])
-            d.setDate(d.getDate() + 1)
-            return d.toISOString().split('T')[0]
-          })(),
-          allDay: true,
+          start: c.pickupDatetime,
+          end: c.dropoffDatetime,
           backgroundColor: getEventColor('car_rental'),
           borderColor: getEventColor('car_rental'),
           extendedProps: { event: c }
