@@ -91,8 +91,6 @@ Adding a trip: save JSON to `public/trips/{id}.json`, add entry to `public/trips
 
 | ID | Title | Dates |
 |----|-------|-------|
-| `paris-2026` | Paris Spring 2026 | May 1–14, 2026 |
-| `tokyo-2025` | Tokyo Adventure 2025 | Oct 5–18, 2025 |
 | `costa-rica-2026` | Costa Rica 2026 | Apr 19–26, 2026 |
 
 ## Architecture notes
