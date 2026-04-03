@@ -44,6 +44,18 @@ export default defineConfig({
         globPatterns: ['**/*.{js,css,html,ico,png,svg,webmanifest}'],
         runtimeCaching: [
           {
+            // Trip JSON files — always fetch fresh from network, fall back to cache if offline
+            urlPattern: /\/trips\/.*\.json$/,
+            handler: 'NetworkFirst',
+            options: {
+              cacheName: 'trip-data',
+              networkTimeoutSeconds: 5,
+              expiration: {
+                maxAgeSeconds: 60 * 60 * 24
+              }
+            }
+          },
+          {
             urlPattern: /^https:\/\/images\.unsplash\.com\/.*/i,
             handler: 'CacheFirst',
             options: {
