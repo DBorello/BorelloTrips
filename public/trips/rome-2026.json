@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "rome-2026",
+  "title": "Rome 2026",
+  "description": "A month in Rome.",
+  "destination": "Rome, Italy",
+  "coverImage": "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800",
+  "startDate": "2026-06-02",
+  "endDate": "2026-07-02",
+  "timezone": "Europe/Rome",
+  "events": [
+    {
+      "id": "evt-001",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 970",
+      "departureAirport": "ORD",
+      "arrivalAirport": "FCO",
+      "departureDatetime": "2026-06-02T15:45:00",
+      "arrivalDatetime": "2026-06-03T07:55:00",
+      "confirmationNumber": "LC5L7E",
+      "notes": "Polaris business class · Seat 09F"
+    },
+    {
+      "id": "evt-002",
+      "type": "hotel",
+      "name": "Frattina Family Romantic Superior Suite",
+      "address": "Via Frattina, 34, 00187 Rome, Lazio, Italy",
+      "checkInDatetime": "2026-06-02T15:00:00",
+      "checkOutDatetime": "2026-07-02T10:00:00",
+      "confirmationNumber": "HMMDDM2HWR",
+      "coordinates": { "lat": 41.9054, "lng": 12.4797 },
+      "notes": "Airbnb hosted by Massimiliano · Self check-in with smart lock · 2 adults, 2 children · Contact: +39 351 771 9920"
+    },
+    {
+      "id": "evt-003",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 971",
+      "departureAirport": "FCO",
+      "arrivalAirport": "ORD",
+      "departureDatetime": "2026-07-02T09:45:00",
+      "arrivalDatetime": "2026-07-02T13:15:00",
+      "confirmationNumber": "LC5L7E",
+      "notes": "Polaris business class · Seat 03F"
+    }
+  ]
+}
