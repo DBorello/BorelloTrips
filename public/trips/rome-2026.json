@@ -59,6 +59,20 @@
     },
     {
       "id": "evt-005",
+      "type": "ground_transportation",
+      "company": "Trenitalia",
+      "serviceType": "Frecciarossa High-Speed Train",
+      "pickupLocation": "Venezia Santa Lucia, 30121 Venice, Italy",
+      "dropoffLocation": "Roma Termini, Piazza dei Cinquecento, 00185 Rome, Italy",
+      "pickupDatetime": "2026-06-16T12:26:00",
+      "dropoffDatetime": "2026-06-16T16:24:00",
+      "pickupCoordinates": { "lat": 45.4414, "lng": 12.3202 },
+      "dropoffCoordinates": { "lat": 41.9009, "lng": 12.5010 },
+      "confirmationNumber": "R78PC5",
+      "notes": "Frecciarossa 8419 · 1st class, car 2 · Daniel 12B, Ashley 11B, Joshua 12A, Audrey 11A"
+    },
+    {
+      "id": "evt-006",
       "type": "flight",
       "airline": "ITA Airways",
       "flightNumber": "XZ 2337",
@@ -70,7 +84,7 @@
       "notes": null
     },
     {
-      "id": "evt-006",
+      "id": "evt-007",
       "type": "hotel",
       "name": "Forte Village — Le Dune",
       "address": "Via Forte Village 1, 09010 Santa Margherita di Pula, Sardinia, Italy",
@@ -81,7 +95,7 @@
       "notes": "Dune Suite · 2 adults, 2 children · Half board (breakfast and dinner) · $100 F&B credit · Spa access included"
     },
     {
-      "id": "evt-007",
+      "id": "evt-008",
       "type": "flight",
       "airline": "ITA Airways",
       "flightNumber": "XZ 2340",
@@ -93,7 +107,7 @@
       "notes": null
     },
     {
-      "id": "evt-008",
+      "id": "evt-009",
       "type": "flight",
       "airline": "United Airlines",
       "flightNumber": "UA 971",
