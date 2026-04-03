@@ -1,6 +1,6 @@
 import { X, Copy, Check } from 'lucide-react'
 import { useState } from 'react'
-import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent } from '../../types/trip'
+import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent } from '../../types/trip'
 import { getEventColor, getEventBadgeClass, EVENT_LABELS } from '../../utils/eventColors'
 import { formatTime, formatDate } from '../../utils/dates'
 
@@ -116,6 +116,21 @@ export function EventPopover({ event, onClose, isMobile }: EventPopoverProps) {
             </div>
             <Field label="Address" value={a.address} />
             {a.notes && <Field label="Notes" value={a.notes} />}
+          </div>
+        )
+      }
+      case 'ground_transportation': {
+        const g = event as GroundTransportationEvent
+        return (
+          <div className="space-y-3">
+            <div className="text-lg font-semibold text-white">{g.pickupLocation} → {g.dropoffLocation}</div>
+            <div className="grid grid-cols-2 gap-3">
+              <Field label="Company" value={g.company} />
+              <Field label="Service Type" value={g.serviceType} />
+              <Field label="Pick-Up" value={`${formatDate(g.pickupDatetime, 'MMM d')} ${formatTime(g.pickupDatetime)}`} />
+              {g.dropoffDatetime && <Field label="Drop-Off" value={`${formatDate(g.dropoffDatetime, 'MMM d')} ${formatTime(g.dropoffDatetime)}`} />}
+            </div>
+            {g.notes && <Field label="Notes" value={g.notes} />}
           </div>
         )
       }

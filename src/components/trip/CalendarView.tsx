@@ -4,7 +4,7 @@ import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
 import type { EventClickArg, EventInput } from '@fullcalendar/core'
-import type { Trip, TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent } from '../../types/trip'
+import type { Trip, TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent } from '../../types/trip'
 import { getEventColor } from '../../utils/eventColors'
 import { EventPopover } from './EventPopover'
 
@@ -88,6 +88,19 @@ function buildCalendarEvents(events: TripEvent[]): EventInput[] {
           backgroundColor: getEventColor('activity'),
           borderColor: getEventColor('activity'),
           extendedProps: { event: a }
+        })
+        break
+      }
+      case 'ground_transportation': {
+        const g = event as GroundTransportationEvent
+        calEvents.push({
+          id: g.id,
+          title: `${g.pickupLocation} → ${g.dropoffLocation}`,
+          start: g.pickupDatetime,
+          end: g.dropoffDatetime ?? undefined,
+          backgroundColor: getEventColor('ground_transportation'),
+          borderColor: getEventColor('ground_transportation'),
+          extendedProps: { event: g }
         })
         break
       }
