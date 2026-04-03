@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "costa-rica-2026",
+  "title": "Costa Rica 2026",
+  "description": "Rainforest and Pacific coast — Arenal Volcano, Nayara Tented Camp, and Four Seasons Peninsula Papagayo.",
+  "destination": "Costa Rica",
+  "coverImage": "https://images.unsplash.com/photo-43CLgVLVE7U?w=800",
+  "startDate": "2026-04-19",
+  "endDate": "2026-04-26",
+  "timezone": "America/Costa_Rica",
+  "events": [
+    {
+      "id": "evt-001",
+      "type": "activity",
+      "name": "Airport Transfer to O'Hare",
+      "description": "A-1 Airport Limousine car service from Inverness to O'Hare International Airport.",
+      "address": "Inverness, IL",
+      "date": "2026-04-19",
+      "startTime": "05:30",
+      "durationMinutes": 60,
+      "confirmationNumber": "5181894",
+      "coordinates": null,
+      "notes": "For UA 1120 departing 07:48 AM."
+    },
+    {
+      "id": "evt-002",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 1120",
+      "departureAirport": "ORD",
+      "arrivalAirport": "LIR",
+      "departureDatetime": "2026-04-19T07:48:00",
+      "arrivalDatetime": "2026-04-19T11:53:00",
+      "confirmationNumber": "HCGB50",
+      "notes": null
+    },
+    {
+      "id": "evt-003",
+      "type": "car_rental",
+      "company": "Avis",
+      "carType": "SUV",
+      "pickupLocation": "Liberia International Airport, LIR",
+      "dropoffLocation": "Liberia International Airport, LIR",
+      "pickupDatetime": "2026-04-19T12:00:00",
+      "dropoffDatetime": "2026-04-26T12:00:00",
+      "pickupCoordinates": { "lat": 10.5934, "lng": -85.5444 },
+      "dropoffCoordinates": { "lat": 10.5934, "lng": -85.5444 },
+      "confirmationNumber": "07818257US6",
+      "notes": "Nissan Pathfinder or similar. Unlimited kilometers."
+    },
+    {
+      "id": "evt-004",
+      "type": "hotel",
+      "name": "Nayara Tented Camp",
+      "address": "702 Rd, Arenal Volcano National Park, La Fortuna de San Carlos, Alajuela 21007, Costa Rica",
+      "checkInDatetime": "2026-04-19T15:00:00",
+      "checkOutDatetime": "2026-04-23T12:00:00",
+      "confirmationNumber": "10868SG138518",
+      "coordinates": { "lat": 10.4631, "lng": -84.7018 },
+      "notes": "Nayara Family Tent — king bed tent + two queen bed tent connected by outdoor living space with private pool."
+    },
+    {
+      "id": "evt-005",
+      "type": "hotel",
+      "name": "Four Seasons Resort Peninsula Papagayo",
+      "address": "Peninsula Papagayo, 5000 Carrillo, Guanacaste, Costa Rica",
+      "checkInDatetime": "2026-04-23T15:00:00",
+      "checkOutDatetime": "2026-04-26T12:00:00",
+      "confirmationNumber": "4372512174",
+      "coordinates": { "lat": 10.5581, "lng": -85.7258 },
+      "notes": "Canopy Plunge Pool Suite, one-bedroom, king bed."
+    },
+    {
+      "id": "evt-006",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 1121",
+      "departureAirport": "LIR",
+      "arrivalAirport": "ORD",
+      "departureDatetime": "2026-04-26T13:03:00",
+      "arrivalDatetime": "2026-04-26T19:30:00",
+      "confirmationNumber": "HCGB50",
+      "notes": null
+    },
+    {
+      "id": "evt-007",
+      "type": "activity",
+      "name": "Airport Transfer from O'Hare",
+      "description": "A-1 Airport Limousine car service from O'Hare International Airport to Inverness.",
+      "address": "O'Hare International Airport, Chicago, IL",
+      "date": "2026-04-26",
+      "startTime": "19:30",
+      "durationMinutes": 60,
+      "confirmationNumber": "5181895",
+      "coordinates": { "lat": 41.9742, "lng": -87.9073 },
+      "notes": "Text with vehicle info sent ~1 hour before flight arrival. Meet at baggage claim level."
+    }
+  ]
+}

@@ -17,6 +17,15 @@
       "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
       "startDate": "2025-10-05",
       "endDate": "2025-10-18"
+    },
+    {
+      "id": "costa-rica-2026",
+      "title": "Costa Rica 2026",
+      "description": "Rainforest and Pacific coast — Arenal Volcano, Nayara Tented Camp, and Four Seasons Peninsula Papagayo.",
+      "destination": "Costa Rica",
+      "coverImage": "https://images.unsplash.com/photo-43CLgVLVE7U?w=800",
+      "startDate": "2026-04-19",
+      "endDate": "2026-04-26"
     }
   ]
 }
