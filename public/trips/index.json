@@ -1,24 +1,6 @@
 {
   "trips": [
     {
-      "id": "paris-2026",
-      "title": "Paris Spring 2026",
-      "description": "Two weeks in France celebrating our anniversary.",
-      "destination": "Paris, France",
-      "coverImage": "https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=800",
-      "startDate": "2026-05-01",
-      "endDate": "2026-05-14"
-    },
-    {
-      "id": "tokyo-2025",
-      "title": "Tokyo Adventure 2025",
-      "description": "Exploring Japan's capital — temples, ramen, and neon lights.",
-      "destination": "Tokyo, Japan",
-      "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
-      "startDate": "2025-10-05",
-      "endDate": "2025-10-18"
-    },
-    {
       "id": "costa-rica-2026",
       "title": "Costa Rica 2026",
       "description": "Rainforest and Pacific coast — Arenal Volcano, Nayara Tented Camp, and Four Seasons Peninsula Papagayo.",
