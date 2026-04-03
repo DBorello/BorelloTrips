@@ -115,12 +115,18 @@ interface CalendarViewProps {
 }
 
 export function CalendarView({ trip }: CalendarViewProps) {
-  const [view, setView] = useState<'dayGridMonth' | 'timeGridWeek'>('dayGridMonth')
   const [selectedEvent, setSelectedEvent] = useState<TripEvent | null>(null)
   const [isMobile, setIsMobile] = useState(window.innerWidth < 640)
   const calendarRef = useRef<FullCalendar>(null)
 
   const calendarEvents = buildCalendarEvents(trip.events)
+
+  // Exclusive end date for FullCalendar visibleRange
+  const endExclusive = (() => {
+    const d = new Date(trip.endDate)
+    d.setDate(d.getDate() + 1)
+    return d.toISOString().split('T')[0]
+  })()
 
   const handleEventClick = useCallback((info: EventClickArg) => {
     const ev = info.event.extendedProps.event as TripEvent
@@ -128,55 +134,33 @@ export function CalendarView({ trip }: CalendarViewProps) {
     setIsMobile(window.innerWidth < 640)
   }, [])
 
-  const handleViewChange = (newView: 'dayGridMonth' | 'timeGridWeek') => {
-    setView(newView)
-    calendarRef.current?.getApi().changeView(newView)
-  }
-
   return (
     <div className="relative">
-      {/* View toggle */}
-      <div className="flex gap-2 mb-4">
-        <button
-          onClick={() => handleViewChange('dayGridMonth')}
-          className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-            view === 'dayGridMonth'
-              ? 'bg-sky-500 text-white'
-              : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-          }`}
-        >
-          Month
-        </button>
-        <button
-          onClick={() => handleViewChange('timeGridWeek')}
-          className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
-            view === 'timeGridWeek'
-              ? 'bg-sky-500 text-white'
-              : 'bg-slate-800 text-slate-300 hover:bg-slate-700'
-          }`}
-        >
-          Week
-        </button>
-      </div>
-
-      {/* Calendar */}
+      {/* Calendar — scoped to trip dates only */}
       <div className="rounded-xl overflow-hidden border border-slate-800 bg-slate-900 calendar-wrapper">
         <FullCalendar
           ref={calendarRef}
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-          initialView={view}
+          initialView="dayGridCustom"
           initialDate={trip.startDate}
+          views={{
+            dayGridCustom: {
+              type: 'dayGrid',
+              visibleRange: { start: trip.startDate, end: endExclusive }
+            }
+          }}
           events={calendarEvents}
           eventClick={handleEventClick}
           headerToolbar={{
-            left: 'prev,next today',
+            left: '',
             center: 'title',
             right: ''
           }}
           height="auto"
           eventDisplay="block"
-          dayMaxEvents={4}
+          dayMaxEvents={false}
           eventTextColor="#ffffff"
+          eventOrder="start,-duration,allDay,title"
         />
       </div>
 
