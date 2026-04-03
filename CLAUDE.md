@@ -11,7 +11,7 @@ Static PWA for visualizing family travel itineraries. No backend — all data is
 - **react-router-dom** — HashRouter (required for GitHub Pages)
 - **date-fns** — all date formatting and manipulation
 - **lucide-react** — icons
-- **vite-plugin-pwa** — service worker + PWA manifest
+- **vite-plugin-pwa** — service worker + PWA manifest, auto-activates on update
 
 ## Dev
 
@@ -31,37 +31,53 @@ Push to `main` → GitHub Actions builds and deploys to GitHub Pages automatical
 ## Key files
 
 ```
-public/trips/index.json          ← trip index (title, dates, coverImage per trip)
-public/trips/{id}.json           ← individual trip files
-src/types/trip.ts                ← all TypeScript interfaces — source of truth for schema
-src/utils/eventColors.ts         ← canonical event type → color mapping
-src/utils/sortEvents.ts          ← chronological sort across event types
-src/utils/dates.ts               ← date-fns helpers
-src/components/events/EventRow.tsx   ← collapsible event card (itinerary view)
-src/components/trip/MapView.tsx      ← Leaflet map, auto-fits to hotel pins on load
-src/components/trip/CalendarView.tsx ← FullCalendar, multi-day hotels/cars + timed events
-src/index.css                    ← global styles, FullCalendar overrides, Leaflet overrides
-TRIP_FORMAT.md                   ← schema documentation for Claude.ai trip generation
-CLAUDE_PROJECT_PROMPT.md         ← paste into Claude project instructions
+public/trips/index.json               ← master trip list (summary per trip)
+public/trips/{id}.json                ← one file per trip, all events
+src/types/trip.ts                     ← TypeScript interfaces — source of truth for schema
+src/utils/eventColors.ts              ← canonical event type → color/label mapping
+src/utils/sortEvents.ts               ← chronological sort across all event types
+src/utils/dates.ts                    ← date-fns helpers
+src/components/events/EventRow.tsx    ← collapsible event card (itinerary view)
+src/components/trip/MapView.tsx       ← Leaflet map, auto-fits to hotel pins on load
+src/components/trip/CalendarView.tsx  ← FullCalendar, multi-day hotels/cars + timed events
+src/components/trip/EventPopover.tsx  ← click-on-event detail popup in calendar view
+src/index.css                         ← global styles, FullCalendar overrides, Leaflet overrides
+TRIP_FORMAT.md                        ← schema docs for Claude.ai trip generation
+CLAUDE_PROJECT_PROMPT.md             ← paste into Claude project instructions (GitHub MCP)
+GENERATE_TRIP_PROMPT.md              ← paste into a new Claude Code session to generate a trip
 ```
 
 ## Event color system — do not change
 
-| Type        | Hex       | Tailwind       |
-|-------------|-----------|----------------|
-| Flight      | `#0ea5e9` | `sky-500`      |
-| Hotel       | `#8b5cf6` | `violet-500`   |
-| Car Rental  | `#f59e0b` | `amber-500`    |
-| Restaurant  | `#f43f5e` | `rose-500`     |
-| Activity    | `#10b981` | `emerald-500`  |
+| Type                   | Hex       | Tailwind       |
+|------------------------|-----------|----------------|
+| Flight                 | `#0ea5e9` | `sky-500`      |
+| Hotel                  | `#8b5cf6` | `violet-500`   |
+| Car Rental             | `#f59e0b` | `amber-500`    |
+| Restaurant             | `#f43f5e` | `rose-500`     |
+| Activity               | `#10b981` | `emerald-500`  |
+| Ground Transportation  | `#f97316` | `orange-500`   |
 
-These are defined in `src/utils/eventColors.ts` and used everywhere — calendar events, map pins, itinerary timeline dots, event card accents.
+Defined in `src/utils/eventColors.ts`, used everywhere: calendar events, map pins, itinerary timeline dots, event card accents.
 
-## Trip JSON format
+## Event types
 
-Each trip file must match the schema in `src/types/trip.ts`. Key rules:
+Six types are supported. All share `id`, `type`, `confirmationNumber`, `notes`.
 
-- Datetimes: ISO 8601 local time, no `Z` or offset (e.g. `2026-05-01T10:30:00`)
+| Type                  | Key fields |
+|-----------------------|------------|
+| `flight`              | `airline`, `flightNumber`, `departureAirport`, `arrivalAirport`, `departureDatetime`, `arrivalDatetime` |
+| `hotel`               | `name`, `address`, `checkInDatetime`, `checkOutDatetime`, `coordinates?` |
+| `car_rental`          | `company`, `carType`, `pickupLocation`, `dropoffLocation`, `pickupDatetime`, `dropoffDatetime`, `pickupCoordinates?`, `dropoffCoordinates?` |
+| `restaurant`          | `name`, `address`, `date`, `time`, `partySize`, `coordinates?` |
+| `activity`            | `name`, `description`, `address`, `date`, `startTime`, `durationMinutes`, `coordinates?` |
+| `ground_transportation` | `company`, `serviceType`, `pickupLocation`, `dropoffLocation`, `pickupDatetime`, `dropoffDatetime`, `pickupCoordinates?`, `dropoffCoordinates?` |
+
+Full interfaces in `src/types/trip.ts`.
+
+## Trip JSON format rules
+
+- Datetimes: ISO 8601 local time, no `Z` or offset (`2026-05-01T10:30:00`)
 - `date` fields: `YYYY-MM-DD`
 - `time` / `startTime` fields: `HH:MM` (24-hour)
 - `coordinates`: `{ lat, lng }` — optional but needed for map pins
@@ -71,6 +87,14 @@ Each trip file must match the schema in `src/types/trip.ts`. Key rules:
 
 Adding a trip: save JSON to `public/trips/{id}.json`, add entry to `public/trips/index.json`, push.
 
+## Current trips
+
+| ID | Title | Dates |
+|----|-------|-------|
+| `paris-2026` | Paris Spring 2026 | May 1–14, 2026 |
+| `tokyo-2025` | Tokyo Adventure 2025 | Oct 5–18, 2025 |
+| `costa-rica-2026` | Costa Rica 2026 | Apr 19–26, 2026 |
+
 ## Architecture notes
 
 - **HashRouter** is required — GitHub Pages can't redirect 404s to index.html on a sub-path
@@ -78,14 +102,11 @@ Adding a trip: save JSON to `public/trips/{id}.json`, add entry to `public/trips
 - **`import.meta.env.BASE_URL`** used in hooks to prefix fetch paths (requires `"types": ["vite/client"]` in tsconfig)
 - Leaflet default marker icons break with Vite bundling — use custom `L.divIcon` SVG markers instead
 - `@apply` in `index.css` cannot use custom Tailwind config colors — use raw hex values there
-- FullCalendar and Leaflet both need their CSS imported; dark theme overrides are in `src/index.css`
+- FullCalendar and Leaflet both need their CSS imported; dark theme overrides live in `src/index.css`
+- Service worker uses `registerType: 'autoUpdate'` and force-activates via `src/main.tsx` so updates apply immediately without requiring a page reload
 
 ## Trip generation workflow
 
-See `TRIP_FORMAT.md` for the full schema description intended for Claude.ai.
-See `CLAUDE_PROJECT_PROMPT.md` for the Claude project instructions (includes GitHub MCP push steps).
-
-The intended workflow:
-1. Paste confirmation emails into the Claude travel project
-2. Claude generates a valid trip JSON (fetching schema from GitHub)
-3. Push the JSON here, update `index.json`, commit and push → auto-deployed
+See `TRIP_FORMAT.md` for the full schema description.
+See `GENERATE_TRIP_PROMPT.md` for the self-contained prompt to paste into a new Claude Code session.
+See `CLAUDE_PROJECT_PROMPT.md` for the Claude.ai project instructions (GitHub MCP approach).

@@ -17,30 +17,20 @@ There is no backend. Trips are stored as individual JSON files in the repo.
 - **Live site:** https://dborello.github.io/BorelloTrips/
 - **GitHub Actions** automatically builds and deploys on every push to `main` (~30 seconds)
 
-## File locations
-
-```
-/home/vmuser/BorelloTrips/
-  public/
-    trips/
-      index.json          ← master list of all trips (you must update this)
-      {id}.json           ← one file per trip (you will create this)
-```
-
 ## Your tasks
 
 1. Read the confirmation emails I paste below
 2. Generate a valid trip JSON file
-3. Write it to `public/trips/{id}.json`
-4. Update `public/trips/index.json` to add the new trip (do not remove existing entries)
+3. Write it to `/home/vmuser/BorelloTrips/public/trips/{id}.json`
+4. Update `/home/vmuser/BorelloTrips/public/trips/index.json` to add the new trip (do not remove existing entries)
 5. Commit both files and push to `main`
 6. Confirm with the live URL: `https://dborello.github.io/BorelloTrips/#/trip/{id}`
 
 ---
 
-## Current index.json content
+## Current index.json
 
-Write this exact content back, with the new trip appended to the `trips` array:
+Write this back exactly, with the new trip appended to the `trips` array:
 
 ```json
 {
@@ -62,6 +52,15 @@ Write this exact content back, with the new trip appended to the `trips` array:
       "coverImage": "https://images.unsplash.com/photo-1540959733332-eab4deabeeaf?w=800",
       "startDate": "2025-10-05",
       "endDate": "2025-10-18"
+    },
+    {
+      "id": "costa-rica-2026",
+      "title": "Costa Rica 2026",
+      "description": "Rainforest and Pacific coast — Arenal Volcano, Nayara Tented Camp, and Four Seasons Peninsula Papagayo.",
+      "destination": "Costa Rica",
+      "coverImage": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800",
+      "startDate": "2026-04-19",
+      "endDate": "2026-04-26"
     }
   ]
 }
@@ -70,8 +69,6 @@ Write this exact content back, with the new trip appended to the `trips` array:
 ---
 
 ## Trip file schema
-
-The trip file must match this structure exactly.
 
 ### Top-level fields
 
@@ -94,7 +91,7 @@ The trip file must match this structure exactly.
 
 All events have: `id` (sequential: `evt-001`, `evt-002`…), `type`, `confirmationNumber`, `notes`.
 
-**Flight**
+**flight**
 ```json
 {
   "id": "evt-001",
@@ -109,10 +106,10 @@ All events have: `id` (sequential: `evt-001`, `evt-002`…), `type`, `confirmati
   "notes": null
 }
 ```
-- `departureAirport` and `arrivalAirport` are IATA 3-letter codes (SFO, JFK, LHR, CDG, FCO, NRT…)
+- `departureAirport` / `arrivalAirport` are IATA 3-letter codes
 - Datetimes are **local time at each airport** — no Z, no UTC offset
 
-**Hotel**
+**hotel**
 ```json
 {
   "id": "evt-002",
@@ -127,7 +124,7 @@ All events have: `id` (sequential: `evt-001`, `evt-002`…), `type`, `confirmati
 }
 ```
 
-**Car Rental**
+**car_rental**
 ```json
 {
   "id": "evt-003",
@@ -145,7 +142,7 @@ All events have: `id` (sequential: `evt-001`, `evt-002`…), `type`, `confirmati
 }
 ```
 
-**Restaurant**
+**restaurant**
 ```json
 {
   "id": "evt-004",
@@ -160,9 +157,9 @@ All events have: `id` (sequential: `evt-001`, `evt-002`…), `type`, `confirmati
   "notes": null
 }
 ```
-- `date` is `YYYY-MM-DD`, `time` is `HH:MM` in 24-hour local time
+- `date` is `YYYY-MM-DD`, `time` is `HH:MM` 24-hour local time
 
-**Activity**
+**activity**
 ```json
 {
   "id": "evt-005",
@@ -178,7 +175,28 @@ All events have: `id` (sequential: `evt-001`, `evt-002`…), `type`, `confirmati
   "notes": null
 }
 ```
-- `startTime` is `HH:MM` in 24-hour local time
+- `startTime` is `HH:MM` 24-hour local time
+
+**ground_transportation**
+```json
+{
+  "id": "evt-006",
+  "type": "ground_transportation",
+  "company": "Rome Limo Service",
+  "serviceType": "Private Car",
+  "pickupLocation": "Rome Fiumicino Airport, Arrivals Hall",
+  "dropoffLocation": "Hotel de Russie, Via del Babuino 9",
+  "pickupDatetime": "2026-07-02T08:00:00",
+  "dropoffDatetime": null,
+  "pickupCoordinates": { "lat": 41.8003, "lng": 12.2389 },
+  "dropoffCoordinates": { "lat": 41.9097, "lng": 12.4789 },
+  "confirmationNumber": "LIM-4421",
+  "notes": null
+}
+```
+- Use for limos, private cars, shuttles, transfers
+- `dropoffDatetime` may be `null` if arrival time is unknown
+- `serviceType` examples: `"Private Car"`, `"Shared Shuttle"`, `"Limo"`, `"Airport Transfer"`
 
 ---
 
@@ -186,7 +204,7 @@ All events have: `id` (sequential: `evt-001`, `evt-002`…), `type`, `confirmati
 
 - **No financial data** — no prices, card numbers, payment info
 - **Local datetimes** — never include Z or UTC offsets in datetime strings
-- **Coordinates** — look up real lat/lng for every hotel, restaurant, activity, and car rental
+- **Coordinates** — look up real lat/lng for every hotel, restaurant, activity, and car/ground rental
 - **confirmationNumber** — use `null` if not in the confirmations (never invent one)
 - **notes** — always include the field; use `null` if nothing to add
 - **Sort events** chronologically in the `events` array
@@ -194,9 +212,9 @@ All events have: `id` (sequential: `evt-001`, `evt-002`…), `type`, `confirmati
 
 ## Cover image
 
-Pick a relevant Unsplash photo. Format: `https://images.unsplash.com/photo-{ID}?w=800`
+Format: `https://images.unsplash.com/photo-{ID}?w=800`
 
-Useful photo IDs by destination:
+Useful photo IDs:
 - Paris: `1502602898657-3e91760cbb34`
 - Tokyo: `1540959733332-eab4deabeeaf`
 - New York: `1496442226666-8d4d0e62e6e9`
@@ -207,13 +225,14 @@ Useful photo IDs by destination:
 - Hawaii: `1507876466758-e54f5abd4c93`
 - Amalfi Coast: `1534308143923-0b52d9e3c268`
 - Greece: `1533105079780-92b9be4f5e63`
+- Costa Rica: `1507525428034-b723cf961d3e`
 
 ## Commit
 
 ```bash
-git add public/trips/{id}.json public/trips/index.json
-git commit -m "Add {Trip Title} trip"
-git push
+git -C /home/vmuser/BorelloTrips add public/trips/{id}.json public/trips/index.json
+git -C /home/vmuser/BorelloTrips commit -m "Add {Trip Title} trip"
+git -C /home/vmuser/BorelloTrips push
 ```
 
 ---
