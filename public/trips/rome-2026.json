@@ -34,6 +34,20 @@
     },
     {
       "id": "evt-003",
+      "type": "ground_transportation",
+      "company": "Trenitalia",
+      "serviceType": "Frecciarossa High-Speed Train",
+      "pickupLocation": "Roma Termini, Piazza dei Cinquecento, 00185 Rome, Italy",
+      "dropoffLocation": "Venezia Santa Lucia, 30121 Venice, Italy",
+      "pickupDatetime": "2026-06-12T08:35:00",
+      "dropoffDatetime": "2026-06-12T12:34:00",
+      "pickupCoordinates": { "lat": 41.9009, "lng": 12.5010 },
+      "dropoffCoordinates": { "lat": 45.4414, "lng": 12.3202 },
+      "confirmationNumber": "R7ZTLN",
+      "notes": "Frecciarossa 9490 · 1st class, car 3 · Daniel 12B, Ashley 11B, Joshua 11A, Audrey 12A"
+    },
+    {
+      "id": "evt-004",
       "type": "hotel",
       "name": "Hotel Cipriani",
       "address": "Giudecca 10, 30133 Venice, Italy",
@@ -44,7 +58,19 @@
       "notes": "San Giorgio Suite · 2 adults, 2 children · Daily breakfast included · EUR 200 resort credit · Shuttle to St Mark's Square"
     },
     {
-      "id": "evt-004",
+      "id": "evt-005",
+      "type": "flight",
+      "airline": "ITA Airways",
+      "flightNumber": "XZ 2337",
+      "departureAirport": "FCO",
+      "arrivalAirport": "CAG",
+      "departureDatetime": "2026-06-22T09:30:00",
+      "arrivalDatetime": "2026-06-22T10:40:00",
+      "confirmationNumber": "PF5F4R",
+      "notes": null
+    },
+    {
+      "id": "evt-006",
       "type": "hotel",
       "name": "Forte Village — Le Dune",
       "address": "Via Forte Village 1, 09010 Santa Margherita di Pula, Sardinia, Italy",
@@ -55,7 +81,19 @@
       "notes": "Dune Suite · 2 adults, 2 children · Half board (breakfast and dinner) · $100 F&B credit · Spa access included"
     },
     {
-      "id": "evt-005",
+      "id": "evt-007",
+      "type": "flight",
+      "airline": "ITA Airways",
+      "flightNumber": "XZ 2340",
+      "departureAirport": "CAG",
+      "arrivalAirport": "FCO",
+      "departureDatetime": "2026-06-27T13:00:00",
+      "arrivalDatetime": "2026-06-27T14:10:00",
+      "confirmationNumber": "PF5F4R",
+      "notes": null
+    },
+    {
+      "id": "evt-008",
       "type": "flight",
       "airline": "United Airlines",
       "flightNumber": "UA 971",
