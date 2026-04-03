@@ -72,6 +72,34 @@
       "notes": "Frecciarossa 8419 · 1st class, car 2 · Daniel 12B, Ashley 11B, Joshua 12A, Audrey 11A"
     },
     {
+      "id": "evt-010",
+      "type": "ground_transportation",
+      "company": "Hotel Cipriani",
+      "serviceType": "Private Car",
+      "pickupLocation": "Venezia Santa Lucia — beginning of platform, past main security check",
+      "dropoffLocation": "Hotel Cipriani, Giudecca 10, Venice",
+      "pickupDatetime": "2026-06-12T12:34:00",
+      "dropoffDatetime": null,
+      "pickupCoordinates": { "lat": 45.4414, "lng": 12.3202 },
+      "dropoffCoordinates": { "lat": 45.4285, "lng": 12.3363 },
+      "confirmationNumber": null,
+      "notes": "Assistant will meet at platform holding Cipriani signboard · Standard service · Contact: +39 041 2408505"
+    },
+    {
+      "id": "evt-011",
+      "type": "ground_transportation",
+      "company": "Hotel Cipriani",
+      "serviceType": "Private Car",
+      "pickupLocation": "Hotel Cipriani, Giudecca 10, Venice",
+      "dropoffLocation": "Venezia Santa Lucia, 30121 Venice, Italy",
+      "pickupDatetime": "2026-06-16T11:30:00",
+      "dropoffDatetime": null,
+      "pickupCoordinates": { "lat": 45.4285, "lng": 12.3363 },
+      "dropoffCoordinates": { "lat": 45.4414, "lng": 12.3202 },
+      "confirmationNumber": null,
+      "notes": "Standard service · Departure scheduled for 11:30 to connect to Frecciarossa 8419 (12:26) · Contact: +39 041 2408505"
+    },
+    {
       "id": "evt-006",
       "type": "flight",
       "airline": "ITA Airways",
