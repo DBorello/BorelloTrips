@@ -1,4 +1,4 @@
-import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent } from '../types/trip'
+import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent } from '../types/trip'
 
 export function getEventStartDatetime(event: TripEvent): string {
   switch (event.type) {
@@ -16,6 +16,8 @@ export function getEventStartDatetime(event: TripEvent): string {
       const a = event as ActivityEvent
       return `${a.date}T${a.startTime}:00`
     }
+    case 'ground_transportation':
+      return (event as GroundTransportationEvent).pickupDatetime
   }
 }
 
@@ -35,6 +37,8 @@ export function getEventEndDatetime(event: TripEvent): string | null {
       start.setMinutes(start.getMinutes() + a.durationMinutes)
       return start.toISOString()
     }
+    case 'ground_transportation':
+      return (event as GroundTransportationEvent).dropoffDatetime
   }
 }
 

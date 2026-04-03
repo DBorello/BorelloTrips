@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import {
-  Plane, Hotel, Car, UtensilsCrossed, MapPin,
+  Plane, Hotel, Car, UtensilsCrossed, MapPin, Navigation,
   ChevronDown, Copy, Check, ArrowRight
 } from 'lucide-react'
-import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent } from '../../types/trip'
+import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent } from '../../types/trip'
 import { getEventColor, getEventBadgeClass, EVENT_LABELS } from '../../utils/eventColors'
 import { formatTime, formatDate } from '../../utils/dates'
 
@@ -15,6 +15,7 @@ function EventIcon({ type, className = '', style }: { type: TripEvent['type']; c
     case 'car_rental': return <Car {...props} />
     case 'restaurant': return <UtensilsCrossed {...props} />
     case 'activity': return <MapPin {...props} />
+    case 'ground_transportation': return <Navigation {...props} />
   }
 }
 
@@ -97,6 +98,19 @@ function EventSummaryLine({ event }: { event: TripEvent }) {
         </div>
       )
     }
+    case 'ground_transportation': {
+      const g = event as GroundTransportationEvent
+      return (
+        <div>
+          <div className="flex items-center gap-2 font-medium text-white text-sm mb-0.5">
+            <span>{g.pickupLocation}</span>
+            <ArrowRight className="w-3 h-3 text-white/30" />
+            <span>{g.dropoffLocation}</span>
+          </div>
+          <div className="text-xs text-white/35">{g.company} · {g.serviceType}</div>
+        </div>
+      )
+    }
   }
 }
 
@@ -133,6 +147,12 @@ function EventTime({ event }: { event: TripEvent }) {
       const a = event as ActivityEvent
       time = formatTime(`${a.date}T${a.startTime}:00`)
       label = 'starts'
+      break
+    }
+    case 'ground_transportation': {
+      const g = event as GroundTransportationEvent
+      time = formatTime(g.pickupDatetime)
+      label = 'pickup'
       break
     }
   }
@@ -219,6 +239,18 @@ function EventDetails({ event }: { event: TripEvent }) {
             <Field label="Date & Time" value={`${formatDate(a.date)} at ${formatTime(`${a.date}T${a.startTime}:00`)}`} />
             {a.durationMinutes && <Field label="Duration" value={`${a.durationMinutes} minutes`} />}
             {a.notes && <Field label="Notes" value={a.notes} />}
+          </>
+        )
+      }
+      case 'ground_transportation': {
+        const g = event as GroundTransportationEvent
+        return (
+          <>
+            <Field label="Company" value={g.company} />
+            <Field label="Service Type" value={g.serviceType} />
+            <Field label="Pick-Up" value={`${g.pickupLocation} · ${formatDate(g.pickupDatetime)} at ${formatTime(g.pickupDatetime)}`} />
+            <Field label="Drop-Off" value={g.dropoffLocation} />
+            {g.notes && <Field label="Notes" value={g.notes} />}
           </>
         )
       }

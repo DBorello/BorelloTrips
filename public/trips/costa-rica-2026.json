@@ -11,15 +11,16 @@
   "events": [
     {
       "id": "evt-001",
-      "type": "activity",
-      "name": "Airport Transfer to O'Hare",
-      "description": "A-1 Airport Limousine car service from Inverness to O'Hare International Airport.",
-      "address": "Inverness, IL",
-      "date": "2026-04-19",
-      "startTime": "05:30",
-      "durationMinutes": 60,
+      "type": "ground_transportation",
+      "company": "A-1 Airport Limousine Service",
+      "serviceType": "Private Car",
+      "pickupLocation": "Inverness, IL",
+      "dropoffLocation": "O'Hare International Airport (ORD)",
+      "pickupDatetime": "2026-04-19T05:30:00",
+      "dropoffDatetime": null,
+      "pickupCoordinates": null,
+      "dropoffCoordinates": { "lat": 41.9742, "lng": -87.9073 },
       "confirmationNumber": "5181894",
-      "coordinates": null,
       "notes": "For UA 1120 departing 07:48 AM."
     },
     {
@@ -84,16 +85,17 @@
     },
     {
       "id": "evt-007",
-      "type": "activity",
-      "name": "Airport Transfer from O'Hare",
-      "description": "A-1 Airport Limousine car service from O'Hare International Airport to Inverness.",
-      "address": "O'Hare International Airport, Chicago, IL",
-      "date": "2026-04-26",
-      "startTime": "19:30",
-      "durationMinutes": 60,
+      "type": "ground_transportation",
+      "company": "A-1 Airport Limousine Service",
+      "serviceType": "Private Car",
+      "pickupLocation": "O'Hare International Airport (ORD)",
+      "dropoffLocation": "Inverness, IL",
+      "pickupDatetime": "2026-04-26T19:30:00",
+      "dropoffDatetime": null,
+      "pickupCoordinates": { "lat": 41.9742, "lng": -87.9073 },
+      "dropoffCoordinates": null,
       "confirmationNumber": "5181895",
-      "coordinates": { "lat": 41.9742, "lng": -87.9073 },
-      "notes": "Text with vehicle info sent ~1 hour before flight arrival. Meet at baggage claim level."
+      "notes": "Text with vehicle info sent ~1 hour before arrival. Meet at baggage claim level."
     }
   ]
 }

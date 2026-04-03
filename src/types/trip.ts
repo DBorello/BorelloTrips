@@ -1,4 +1,4 @@
-export type EventType = 'flight' | 'hotel' | 'car_rental' | 'restaurant' | 'activity'
+export type EventType = 'flight' | 'hotel' | 'car_rental' | 'restaurant' | 'activity' | 'ground_transportation'
 
 export interface Coordinates {
   lat: number
@@ -72,7 +72,22 @@ export interface ActivityEvent {
   notes: string | null
 }
 
-export type TripEvent = FlightEvent | HotelEvent | CarRentalEvent | RestaurantEvent | ActivityEvent
+export interface GroundTransportationEvent {
+  id: string
+  type: 'ground_transportation'
+  company: string
+  serviceType: string
+  pickupLocation: string
+  dropoffLocation: string
+  pickupDatetime: string
+  dropoffDatetime: string | null
+  pickupCoordinates?: Coordinates
+  dropoffCoordinates?: Coordinates
+  confirmationNumber: string
+  notes: string | null
+}
+
+export type TripEvent = FlightEvent | HotelEvent | CarRentalEvent | RestaurantEvent | ActivityEvent | GroundTransportationEvent
 
 export interface Trip {
   schemaVersion: number
