@@ -10,7 +10,7 @@
   "timezone": "Europe/Rome",
   "events": [
     {
-      "id": "evt-001",
+      "id": "flight-ord-fco-lc5l7e",
       "type": "flight",
       "airline": "United Airlines",
       "flightNumber": "UA 970",
@@ -22,7 +22,7 @@
       "notes": "Polaris business class · Seat 09F"
     },
     {
-      "id": "evt-002",
+      "id": "hotel-frattina-hmmddm2hwr",
       "type": "hotel",
       "name": "Frattina Family Romantic Superior Suite",
       "address": "Via Frattina, 34, 00187 Rome, Lazio, Italy",
@@ -33,7 +33,7 @@
       "notes": "Airbnb hosted by Massimiliano · Self check-in with smart lock · 2 adults, 2 children · Contact: +39 351 771 9920"
     },
     {
-      "id": "evt-003",
+      "id": "train-rome-venice-r7ztln",
       "type": "ground_transportation",
       "company": "Trenitalia",
       "serviceType": "Frecciarossa High-Speed Train",
@@ -47,32 +47,7 @@
       "notes": "Frecciarossa 9490 · 1st class, car 3 · Daniel 12B, Ashley 11B, Joshua 11A, Audrey 12A"
     },
     {
-      "id": "evt-004",
-      "type": "hotel",
-      "name": "Hotel Cipriani",
-      "address": "Giudecca 10, 30133 Venice, Italy",
-      "checkInDatetime": "2026-06-12T15:00:00",
-      "checkOutDatetime": "2026-06-16T12:00:00",
-      "confirmationNumber": "1318871810-1-CIP",
-      "coordinates": { "lat": 45.4285, "lng": 12.3363 },
-      "notes": "San Giorgio Suite · 2 adults, 2 children · Daily breakfast included · EUR 200 resort credit · Shuttle to St Mark's Square"
-    },
-    {
-      "id": "evt-005",
-      "type": "ground_transportation",
-      "company": "Trenitalia",
-      "serviceType": "Frecciarossa High-Speed Train",
-      "pickupLocation": "Venezia Santa Lucia, 30121 Venice, Italy",
-      "dropoffLocation": "Roma Termini, Piazza dei Cinquecento, 00185 Rome, Italy",
-      "pickupDatetime": "2026-06-16T12:26:00",
-      "dropoffDatetime": "2026-06-16T16:24:00",
-      "pickupCoordinates": { "lat": 45.4414, "lng": 12.3202 },
-      "dropoffCoordinates": { "lat": 41.9009, "lng": 12.5010 },
-      "confirmationNumber": "R78PC5",
-      "notes": "Frecciarossa 8419 · 1st class, car 2 · Daniel 12B, Ashley 11B, Joshua 12A, Audrey 11A"
-    },
-    {
-      "id": "evt-010",
+      "id": "car-cipriani-station-to-hotel",
       "type": "ground_transportation",
       "company": "Hotel Cipriani",
       "serviceType": "Private Car",
@@ -86,7 +61,18 @@
       "notes": "Assistant will meet at platform holding Cipriani signboard · Standard service · Contact: +39 041 2408505"
     },
     {
-      "id": "evt-011",
+      "id": "hotel-cipriani-1318871810",
+      "type": "hotel",
+      "name": "Hotel Cipriani",
+      "address": "Giudecca 10, 30133 Venice, Italy",
+      "checkInDatetime": "2026-06-12T15:00:00",
+      "checkOutDatetime": "2026-06-16T12:00:00",
+      "confirmationNumber": "1318871810-1-CIP",
+      "coordinates": { "lat": 45.4285, "lng": 12.3363 },
+      "notes": "San Giorgio Suite · 2 adults, 2 children · Daily breakfast included · EUR 200 resort credit · Shuttle to St Mark's Square"
+    },
+    {
+      "id": "car-cipriani-hotel-to-station",
       "type": "ground_transportation",
       "company": "Hotel Cipriani",
       "serviceType": "Private Car",
@@ -100,7 +86,21 @@
       "notes": "Standard service · Departure scheduled for 11:30 to connect to Frecciarossa 8419 (12:26) · Contact: +39 041 2408505"
     },
     {
-      "id": "evt-006",
+      "id": "train-venice-rome-r78pc5",
+      "type": "ground_transportation",
+      "company": "Trenitalia",
+      "serviceType": "Frecciarossa High-Speed Train",
+      "pickupLocation": "Venezia Santa Lucia, 30121 Venice, Italy",
+      "dropoffLocation": "Roma Termini, Piazza dei Cinquecento, 00185 Rome, Italy",
+      "pickupDatetime": "2026-06-16T12:26:00",
+      "dropoffDatetime": "2026-06-16T16:24:00",
+      "pickupCoordinates": { "lat": 45.4414, "lng": 12.3202 },
+      "dropoffCoordinates": { "lat": 41.9009, "lng": 12.5010 },
+      "confirmationNumber": "R78PC5",
+      "notes": "Frecciarossa 8419 · 1st class, car 2 · Daniel 12B, Ashley 11B, Joshua 12A, Audrey 11A"
+    },
+    {
+      "id": "flight-fco-cag-pf5f4r",
       "type": "flight",
       "airline": "ITA Airways",
       "flightNumber": "XZ 2337",
@@ -112,7 +112,7 @@
       "notes": null
     },
     {
-      "id": "evt-007",
+      "id": "hotel-forte-village-10568480",
       "type": "hotel",
       "name": "Forte Village — Le Dune",
       "address": "Via Forte Village 1, 09010 Santa Margherita di Pula, Sardinia, Italy",
@@ -123,7 +123,7 @@
       "notes": "Dune Suite · 2 adults, 2 children · Half board (breakfast and dinner) · $100 F&B credit · Spa access included"
     },
     {
-      "id": "evt-008",
+      "id": "flight-cag-fco-pf5f4r",
       "type": "flight",
       "airline": "ITA Airways",
       "flightNumber": "XZ 2340",
@@ -135,7 +135,7 @@
       "notes": null
     },
     {
-      "id": "evt-009",
+      "id": "flight-fco-ord-lc5l7e",
       "type": "flight",
       "airline": "United Airlines",
       "flightNumber": "UA 971",

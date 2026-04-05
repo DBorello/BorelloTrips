@@ -10,7 +10,7 @@
   "timezone": "America/Costa_Rica",
   "events": [
     {
-      "id": "evt-001",
+      "id": "ground-a1-to-ord-5181894",
       "type": "ground_transportation",
       "company": "A-1 Airport Limousine Service",
       "serviceType": "Private Car",
@@ -24,7 +24,7 @@
       "notes": "For UA 1120 departing 07:48 AM."
     },
     {
-      "id": "evt-002",
+      "id": "flight-ord-lir-hcgb50",
       "type": "flight",
       "airline": "United Airlines",
       "flightNumber": "UA 1120",
@@ -36,7 +36,7 @@
       "notes": null
     },
     {
-      "id": "evt-003",
+      "id": "car-avis-lir-07818257us6",
       "type": "car_rental",
       "company": "Avis",
       "carType": "SUV",
@@ -50,7 +50,7 @@
       "notes": "Nissan Pathfinder or similar. Unlimited kilometers."
     },
     {
-      "id": "evt-004",
+      "id": "hotel-nayara-tented-10868sg138518",
       "type": "hotel",
       "name": "Nayara Tented Camp",
       "address": "702 Rd, Arenal Volcano National Park, La Fortuna de San Carlos, Alajuela 21007, Costa Rica",
@@ -61,7 +61,7 @@
       "notes": "Nayara Family Tent — king bed tent + two queen bed tent connected by outdoor living space with private pool."
     },
     {
-      "id": "evt-008",
+      "id": "restaurant-ayla-619976",
       "type": "restaurant",
       "name": "Ayla Restaurant — Nayara Tented Camp",
       "address": "Nayara Tented Camp, La Fortuna de San Carlos, Alajuela, Costa Rica",
@@ -73,7 +73,7 @@
       "notes": "Dinner · 15-minute grace period policy"
     },
     {
-      "id": "evt-009",
+      "id": "activity-private-hike-619976",
       "type": "activity",
       "name": "Nayara Private Hike & Nature",
       "description": "Private guided hike with hanging bridges, waterfall, and lunch.",
@@ -86,7 +86,7 @@
       "notes": "2 adults · Bring: comfortable clothes, hiking shoes, insect repellent, bathing suit, camera, binoculars · 24-hour cancellation policy"
     },
     {
-      "id": "evt-010",
+      "id": "restaurant-amor-loco-619976",
       "type": "restaurant",
       "name": "Amor Loco — Nayara Tented Camp",
       "address": "Nayara Tented Camp, La Fortuna de San Carlos, Alajuela, Costa Rica",
@@ -98,7 +98,7 @@
       "notes": "Seven course menu · 15-minute grace period policy"
     },
     {
-      "id": "evt-011",
+      "id": "activity-sky-tram-619976",
       "type": "activity",
       "name": "Sky Tram, Trek & Transportation",
       "description": "Sky Adventures aerial tram, guided trek, and transportation.",
@@ -111,7 +111,7 @@
       "notes": "2 adults · 48-hour cancellation policy per Sky Adventures provider · Transportation included"
     },
     {
-      "id": "evt-012",
+      "id": "activity-mixology-619976",
       "type": "activity",
       "name": "Mixology Class — Henry's Bar",
       "description": "Cocktail mixology class at Henry's Bar.",
@@ -124,7 +124,7 @@
       "notes": "2 people · 15-minute grace period — full charge applies if late or no-show"
     },
     {
-      "id": "evt-013",
+      "id": "restaurant-besame-mucho-619976",
       "type": "restaurant",
       "name": "Besame Mucho — Romantic Private Dinner",
       "address": "Nayara Tented Camp, La Fortuna de San Carlos, Alajuela, Costa Rica",
@@ -136,7 +136,7 @@
       "notes": "Romantic private dinner · 15-minute grace period policy"
     },
     {
-      "id": "evt-014",
+      "id": "activity-coffee-chocolate-619976",
       "type": "activity",
       "name": "Coffee & Chocolate Tour",
       "description": "Guided coffee and chocolate production tour.",
@@ -149,7 +149,7 @@
       "notes": "2 adults · Bring: comfortable clothes, insect repellent, camera · 24-hour cancellation policy"
     },
     {
-      "id": "evt-015",
+      "id": "activity-cooking-class-619976",
       "type": "activity",
       "name": "Cooking Class — La Terraza",
       "description": "Hands-on cooking class at La Terraza.",
@@ -162,7 +162,7 @@
       "notes": "2 people · 15-minute grace period — full charge applies if late or no-show"
     },
     {
-      "id": "evt-016",
+      "id": "activity-spa-619976",
       "type": "activity",
       "name": "Signature Nayara Spa Experience — Sukha Spa",
       "description": "120-minute signature spa treatment at Sukha Spa.",
@@ -175,7 +175,7 @@
       "notes": "Arrive 20 minutes early at Sukha Spa Reception"
     },
     {
-      "id": "evt-017",
+      "id": "restaurant-nostalgia-619976",
       "type": "restaurant",
       "name": "Nostalgia — Nayara Tented Camp",
       "address": "Nayara Tented Camp, La Fortuna de San Carlos, Alajuela, Costa Rica",
@@ -187,7 +187,7 @@
       "notes": "Wine pairing · 15-minute grace period policy"
     },
     {
-      "id": "evt-005",
+      "id": "hotel-four-seasons-papagayo-4372512174",
       "type": "hotel",
       "name": "Four Seasons Resort Peninsula Papagayo",
       "address": "Peninsula Papagayo, 5000 Carrillo, Guanacaste, Costa Rica",
@@ -198,7 +198,7 @@
       "notes": "Canopy Plunge Pool Suite, one-bedroom, king bed."
     },
     {
-      "id": "evt-006",
+      "id": "flight-lir-ord-hcgb50",
       "type": "flight",
       "airline": "United Airlines",
       "flightNumber": "UA 1121",
@@ -210,7 +210,7 @@
       "notes": null
     },
     {
-      "id": "evt-007",
+      "id": "ground-a1-from-ord-5181895",
       "type": "ground_transportation",
       "company": "A-1 Airport Limousine Service",
       "serviceType": "Private Car",

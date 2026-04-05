@@ -9,7 +9,7 @@
   "timezone": "America/New_York",
   "events": [
     {
-      "id": "evt-001",
+      "id": "flight-ord-lga-20260806",
       "type": "flight",
       "airline": "American Airlines",
       "flightNumber": "AA 386",
@@ -21,7 +21,7 @@
       "notes": "Economy · Seat 15A · Nonstop"
     },
     {
-      "id": "evt-002",
+      "id": "hotel-marriott-marquis-75707871",
       "type": "hotel",
       "name": "New York Marriott Marquis",
       "address": "1535 Broadway, New York, NY 10036",
@@ -32,7 +32,7 @@
       "notes": "Family Connector · 2 Double + 1 King + Sofa bed · 2 adults, 2 children · Grand Getaways Member Rate"
     },
     {
-      "id": "evt-003",
+      "id": "activity-harry-potter-20260807",
       "type": "activity",
       "name": "Harry Potter and the Cursed Child",
       "description": "Broadway · Lyric Theatre",
@@ -45,7 +45,7 @@
       "notes": "Orchestra seats E2, E4, E6, E8 · 4 tickets"
     },
     {
-      "id": "evt-004",
+      "id": "activity-hamilton-tgh5ns2",
       "type": "activity",
       "name": "Hamilton",
       "description": "Broadway · Richard Rodgers Theatre",
@@ -58,7 +58,7 @@
       "notes": "Orchestra Row E, seats 105–108 · 4 tickets"
     },
     {
-      "id": "evt-005",
+      "id": "flight-lga-ord-20260809",
       "type": "flight",
       "airline": "American Airlines",
       "flightNumber": "AA 1534",
