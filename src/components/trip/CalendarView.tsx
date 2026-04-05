@@ -149,7 +149,7 @@ export function CalendarView({ trip }: CalendarViewProps) {
           eventDisplay="block"
           dayMaxEvents={false}
           eventTextColor="#ffffff"
-          eventOrder="start,-duration,allDay,title"
+          eventOrder="-duration,start,title"
         />
       </div>
 

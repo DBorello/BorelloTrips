@@ -36,6 +36,15 @@ Write this back exactly, with the new trip appended to the `trips` array:
 {
   "trips": [
     {
+      "id": "rome-2026",
+      "title": "Italy 2026",
+      "description": "A month in Italy — Rome, Venice, and Sardinia.",
+      "destination": "Italy",
+      "coverImage": "https://images.unsplash.com/photo-1515542622106-78bda8ba0e5b?w=800",
+      "startDate": "2026-06-02",
+      "endDate": "2026-07-02"
+    },
+    {
       "id": "costa-rica-2026",
       "title": "Costa Rica 2026",
       "description": "Rainforest and Pacific coast — Arenal Volcano, Nayara Tented Camp, and Four Seasons Peninsula Papagayo.",

@@ -6,6 +6,21 @@ import {
   isValid
 } from 'date-fns'
 
+export type TripStatus = 'upcoming' | 'active' | 'past'
+
+export function getTripStatus(startDate: string, endDate: string): TripStatus {
+  const today = format(new Date(), 'yyyy-MM-dd')
+  if (today < startDate) return 'upcoming'
+  if (today > endDate) return 'past'
+  return 'active'
+}
+
+export function getDaysUntil(dateStr: string): number {
+  const today = new Date()
+  today.setHours(0, 0, 0, 0)
+  return differenceInDays(parseISO(dateStr), today)
+}
+
 export function formatDate(dateStr: string, fmt = 'EEE, MMMM d, yyyy'): string {
   try {
     const date = parseISO(dateStr.includes('T') ? dateStr : `${dateStr}T00:00:00`)

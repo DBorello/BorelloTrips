@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
 import {
   Plane, Hotel, Car, UtensilsCrossed, MapPin, Navigation,
-  ChevronDown, Copy, Check, ArrowRight
+  ChevronDown, Copy, Check, ArrowRight, ExternalLink
 } from 'lucide-react'
-import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent } from '../../types/trip'
+import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent, Coordinates } from '../../types/trip'
 import { getEventColor, getEventBadgeClass, EVENT_LABELS } from '../../utils/eventColors'
 import { formatTime, formatDate } from '../../utils/dates'
 
@@ -40,6 +40,31 @@ function CopyButton({ value }: { value: string }) {
         : <Copy className="w-3 h-3 text-white/20 hover:text-white/50" />
       }
     </button>
+  )
+}
+
+function mapsUrl(coords: Coordinates | null | undefined, address?: string): string | null {
+  if (coords) {
+    return `https://maps.apple.com/?q=${coords.lat},${coords.lng}&ll=${coords.lat},${coords.lng}`
+  }
+  if (address) {
+    return `https://maps.apple.com/?q=${encodeURIComponent(address)}`
+  }
+  return null
+}
+
+function MapsButton({ url, label = 'Open in Maps' }: { url: string; label?: string }) {
+  return (
+    <a
+      href={url}
+      target="_blank"
+      rel="noopener noreferrer"
+      onClick={e => e.stopPropagation()}
+      className="inline-flex items-center gap-1.5 text-[10px] font-medium tracking-wide text-white/30 hover:text-white/60 transition-colors"
+    >
+      <ExternalLink className="w-3 h-3" />
+      {label}
+    </a>
   )
 }
 
@@ -178,6 +203,46 @@ function EventDetails({ event }: { event: TripEvent }) {
     )
   }
 
+  // Derive maps links
+  let primaryMapsUrl: string | null = null
+  let secondaryMapsUrl: string | null = null
+  let primaryLabel = 'Open in Maps'
+  let secondaryLabel = 'Open in Maps'
+
+  switch (event.type) {
+    case 'hotel': {
+      const h = event as HotelEvent
+      primaryMapsUrl = mapsUrl(h.coordinates, h.address)
+      break
+    }
+    case 'restaurant': {
+      const r = event as RestaurantEvent
+      primaryMapsUrl = mapsUrl(r.coordinates, r.address)
+      break
+    }
+    case 'activity': {
+      const a = event as ActivityEvent
+      primaryMapsUrl = mapsUrl(a.coordinates, a.address)
+      break
+    }
+    case 'car_rental': {
+      const c = event as CarRentalEvent
+      primaryMapsUrl = mapsUrl(c.pickupCoordinates, c.pickupLocation)
+      secondaryMapsUrl = mapsUrl(c.dropoffCoordinates, c.dropoffLocation)
+      primaryLabel = 'Pick-up location'
+      secondaryLabel = 'Drop-off location'
+      break
+    }
+    case 'ground_transportation': {
+      const g = event as GroundTransportationEvent
+      primaryMapsUrl = mapsUrl(g.pickupCoordinates, g.pickupLocation)
+      secondaryMapsUrl = mapsUrl(g.dropoffCoordinates, g.dropoffLocation)
+      primaryLabel = 'Pick-up location'
+      secondaryLabel = 'Drop-off location'
+      break
+    }
+  }
+
   const content = () => {
     switch (event.type) {
       case 'flight': {
@@ -274,6 +339,12 @@ function EventDetails({ event }: { event: TripEvent }) {
       <div className="grid grid-cols-2 gap-x-6 gap-y-3.5">
         {content()}
       </div>
+      {(primaryMapsUrl || secondaryMapsUrl) && (
+        <div className="flex flex-wrap gap-4 pt-1" style={{ borderTop: `1px solid ${color}10` }}>
+          {primaryMapsUrl && <MapsButton url={primaryMapsUrl} label={primaryLabel} />}
+          {secondaryMapsUrl && <MapsButton url={secondaryMapsUrl} label={secondaryLabel} />}
+        </div>
+      )}
     </div>
   )
 }

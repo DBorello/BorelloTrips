@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom'
 import { Calendar } from 'lucide-react'
 import type { TripSummary } from '../../types/trip'
-import { formatDateRange, getDayCount } from '../../utils/dates'
+import { formatDateRange, getDayCount, getTripStatus, getDaysUntil } from '../../utils/dates'
 
 interface TripCardProps {
   trip: TripSummary
@@ -27,13 +27,18 @@ export function TripCard({ trip }: TripCardProps) {
   const dayCount = getDayCount(trip.startDate, trip.endDate)
   const hasCover = Boolean(trip.coverImage)
   const gradient = getFallbackGradient(trip.id)
+  const status = getTripStatus(trip.startDate, trip.endDate)
+  const daysUntil = status === 'upcoming' ? getDaysUntil(trip.startDate) : 0
 
   return (
     <Link
       to={`/trip/${trip.id}`}
       className="group block"
     >
-      <div className="relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] bg-ink-900">
+      <div
+        className="relative rounded-2xl overflow-hidden aspect-[4/5] sm:aspect-[3/4] bg-ink-900"
+        style={status === 'past' ? { opacity: 0.65 } : undefined}
+      >
         {/* Background image or gradient */}
         {hasCover ? (
           <img
@@ -50,11 +55,24 @@ export function TripCard({ trip }: TripCardProps) {
         <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/20 to-transparent" />
         <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent" />
 
-        {/* Day count pill — top right */}
+        {/* Status pill — top right */}
         <div className="absolute top-4 right-4">
-          <span className="text-[10px] font-medium tracking-[0.18em] uppercase bg-black/40 backdrop-blur-md text-white/60 px-2.5 py-1 rounded-full border border-white/10">
-            {dayCount} {dayCount === 1 ? 'day' : 'days'}
-          </span>
+          {status === 'active' && (
+            <span className="flex items-center gap-1.5 text-[10px] font-medium tracking-[0.15em] uppercase bg-emerald-500/20 backdrop-blur-md text-emerald-300 px-2.5 py-1 rounded-full border border-emerald-500/30">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+              In Progress
+            </span>
+          )}
+          {status === 'upcoming' && (
+            <span className="text-[10px] font-medium tracking-[0.18em] uppercase bg-black/40 backdrop-blur-md text-white/60 px-2.5 py-1 rounded-full border border-white/10">
+              {daysUntil === 1 ? 'Tomorrow' : `${daysUntil} days away`}
+            </span>
+          )}
+          {status === 'past' && (
+            <span className="text-[10px] font-medium tracking-[0.18em] uppercase bg-black/40 backdrop-blur-md text-white/30 px-2.5 py-1 rounded-full border border-white/8">
+              {dayCount} {dayCount === 1 ? 'day' : 'days'}
+            </span>
+          )}
         </div>
 
         {/* Bottom content */}

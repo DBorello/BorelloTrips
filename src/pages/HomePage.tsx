@@ -1,8 +1,48 @@
 import { useTripsIndex } from '../hooks/useTripsIndex'
 import { TripCard } from '../components/home/TripCard'
+import { getTripStatus } from '../utils/dates'
+import type { TripSummary } from '../types/trip'
 
 export function HomePage() {
   const { index, loading, error } = useTripsIndex()
+
+  const upcoming: TripSummary[] = []
+  const past: TripSummary[] = []
+
+  if (index) {
+    for (const trip of index.trips) {
+      const status = getTripStatus(trip.startDate, trip.endDate)
+      if (status === 'past') {
+        past.push(trip)
+      } else {
+        upcoming.push(trip)
+      }
+    }
+    // Sort upcoming: active first, then by start date ascending
+    upcoming.sort((a, b) => {
+      const sa = getTripStatus(a.startDate, a.endDate)
+      const sb = getTripStatus(b.startDate, b.endDate)
+      if (sa === 'active' && sb !== 'active') return -1
+      if (sb === 'active' && sa !== 'active') return 1
+      return a.startDate.localeCompare(b.startDate)
+    })
+    // Sort past: most recent first
+    past.sort((a, b) => b.startDate.localeCompare(a.startDate))
+  }
+
+  const TripGrid = ({ trips, delay = 0 }: { trips: TripSummary[]; delay?: number }) => (
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {trips.map((trip, i) => (
+        <div
+          key={trip.id}
+          className="animate-slide-up"
+          style={{ animationDelay: `${(i + delay) * 0.08}s`, animationFillMode: 'both' }}
+        >
+          <TripCard trip={trip} />
+        </div>
+      ))}
+    </div>
+  )
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
@@ -38,7 +78,7 @@ export function HomePage() {
         </div>
       )}
 
-      {/* Trips grid */}
+      {/* Trips */}
       {!loading && !error && index && (
         <>
           {index.trips.length === 0 ? (
@@ -49,16 +89,20 @@ export function HomePage() {
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-              {index.trips.map((trip, i) => (
-                <div
-                  key={trip.id}
-                  className="animate-slide-up"
-                  style={{ animationDelay: `${i * 0.08}s`, animationFillMode: 'both' }}
-                >
-                  <TripCard trip={trip} />
+            <div className="space-y-16">
+              {upcoming.length > 0 && <TripGrid trips={upcoming} delay={0} />}
+
+              {past.length > 0 && (
+                <div>
+                  <div className="flex items-center gap-4 mb-8">
+                    <div className="text-[10px] font-medium tracking-[0.25em] uppercase text-white/20">
+                      Past trips
+                    </div>
+                    <div className="flex-1 h-px bg-white/6" />
+                  </div>
+                  <TripGrid trips={past} delay={upcoming.length} />
                 </div>
-              ))}
+              )}
             </div>
           )}
         </>

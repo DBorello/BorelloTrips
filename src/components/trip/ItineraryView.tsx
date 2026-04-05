@@ -1,3 +1,4 @@
+import { useEffect, useRef } from 'react'
 import { format, parseISO } from 'date-fns'
 import type { Trip, HotelEvent, CarRentalEvent, TripEvent } from '../../types/trip'
 import { EventRow } from '../events/EventRow'
@@ -8,7 +9,7 @@ import {
   getEventEndDatetime,
   sortEventsByTime
 } from '../../utils/sortEvents'
-import { getAllDatesInRange } from '../../utils/dates'
+import { getAllDatesInRange, getTripStatus, isToday } from '../../utils/dates'
 import { differenceInCalendarDays, parseISO as parseISOFns } from 'date-fns'
 import { getEventColor } from '../../utils/eventColors'
 
@@ -58,9 +59,20 @@ interface ItineraryViewProps {
 }
 
 export function ItineraryView({ trip }: ItineraryViewProps) {
+  const todayRef = useRef<HTMLDivElement>(null)
   const allDates = getAllDatesInRange(trip.startDate, trip.endDate)
   const grouped = groupEventsByDay(trip.events)
   const sortedEvents = sortEventsByTime(trip.events)
+  const tripStatus = getTripStatus(trip.startDate, trip.endDate)
+
+  useEffect(() => {
+    if (tripStatus === 'active' && todayRef.current) {
+      const timer = setTimeout(() => {
+        todayRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+      }, 150)
+      return () => clearTimeout(timer)
+    }
+  }, [tripStatus])
 
   const datesWithContent = new Set<string>()
   for (const date of allDates) {
@@ -94,21 +106,40 @@ export function ItineraryView({ trip }: ItineraryViewProps) {
         const dayNum = format(parsedDate, 'd')
         const dayName = format(parsedDate, 'EEEE')
         const monthYear = format(parsedDate, 'MMMM yyyy')
+        const today = isToday(date)
 
         return (
-          <div key={date}>
+          <div key={date} ref={today ? todayRef : undefined}>
             {/* Day header */}
             <div className="sticky top-[calc(3.5rem+52px)] z-10 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3 bg-ink-950/90 backdrop-blur-md mb-5">
               <div className="max-w-7xl mx-auto flex items-center gap-5">
                 {/* Large day number */}
-                <div className="font-display text-6xl font-light leading-none text-white/8 select-none flex-shrink-0 w-16 text-right">
+                <div
+                  className="font-display text-6xl font-light leading-none select-none flex-shrink-0 w-16 text-right"
+                  style={{ color: today ? 'rgba(255,255,255,0.55)' : 'rgba(255,255,255,0.08)' }}
+                >
                   {dayNum}
                 </div>
                 {/* Divider */}
-                <div className="w-px h-8 bg-white/8 flex-shrink-0" />
+                <div
+                  className="w-px h-8 flex-shrink-0"
+                  style={{ backgroundColor: today ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)' }}
+                />
                 {/* Day name + month */}
-                <div>
-                  <div className="text-sm font-medium text-white/80">{dayName}</div>
+                <div className="flex-1">
+                  <div className="flex items-center gap-2">
+                    <div
+                      className="text-sm font-medium"
+                      style={{ color: today ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.8)' }}
+                    >
+                      {dayName}
+                    </div>
+                    {today && (
+                      <span className="text-[9px] font-medium tracking-[0.15em] uppercase bg-white/12 text-white/60 px-2 py-0.5 rounded-full border border-white/15">
+                        Today
+                      </span>
+                    )}
+                  </div>
                   <div className="text-[11px] text-white/25 tracking-wide">{monthYear}</div>
                 </div>
               </div>
