@@ -38,9 +38,13 @@ export function AppShell({ children }: AppShellProps) {
               <div className="relative flex-shrink-0">
                 {/* Subtle glow behind logo icon */}
                 <div className="absolute inset-0 rounded-lg blur-md opacity-0 group-hover:opacity-60 transition-opacity duration-300" style={{ background: 'radial-gradient(circle, rgba(255,255,255,0.25) 0%, transparent 70%)' }} />
-                <div className="relative w-7 h-7 rounded-lg bg-gradient-to-br from-white/18 to-white/6 border border-white/12 flex items-center justify-center shadow-[inset_0_1px_0_rgba(255,255,255,0.12)]">
-                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 1L8.5 5.5H13L9.5 8.5L11 13L7 10.5L3 13L4.5 8.5L1 5.5H5.5L7 1Z" fill="rgba(255,255,255,0.85)" />
+                <div className="relative w-7 h-7 rounded-lg bg-gradient-to-br from-white/12 to-white/4 border border-white/10 flex items-center justify-center shadow-[inset_0_1px_0_rgba(255,255,255,0.10)]">
+                  {/* 4-pointed sparkle mark — matches favicon/PWA icon */}
+                  <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.5 1.5 C8.35 5.65 8.35 5.65 13.5 7.5 C8.35 9.35 8.35 9.35 7.5 13.5 C6.65 9.35 6.65 9.35 1.5 7.5 C6.65 5.65 6.65 5.65 7.5 1.5 Z"
+                      fill="white" opacity="0.90"
+                    />
                   </svg>
                 </div>
               </div>
