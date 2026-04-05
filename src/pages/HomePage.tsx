@@ -49,7 +49,7 @@ export function HomePage() {
 
       {/* Editorial header */}
       <div className="mb-12 sm:mb-16">
-        <div className="text-[10px] font-medium tracking-[0.3em] uppercase text-white/22 mb-5">
+        <div className="text-[10px] font-medium tracking-[0.3em] uppercase text-white/40 mb-5">
           Your journeys
         </div>
         <h1 className="font-display font-light leading-none text-white" style={{ fontSize: 'clamp(3.5rem, 12vw, 7rem)' }}>
@@ -86,7 +86,7 @@ export function HomePage() {
           {index.trips.length === 0 ? (
             <div className="text-center py-24">
               <div className="font-display text-4xl italic text-white/10 mb-4">No trips yet</div>
-              <p className="text-white/25 text-sm tracking-wide">
+              <p className="text-white/40 text-sm tracking-wide">
                 Add a trip JSON file to get started
               </p>
             </div>
@@ -97,7 +97,7 @@ export function HomePage() {
               {past.length > 0 && (
                 <div>
                   <div className="flex items-center gap-5 mb-8">
-                    <div className="text-[10px] font-medium tracking-[0.3em] uppercase text-white/18">
+                    <div className="text-[10px] font-medium tracking-[0.3em] uppercase text-white/35">
                       Past trips
                     </div>
                     <div className="flex-1 h-px bg-gradient-to-r from-white/8 to-transparent" />

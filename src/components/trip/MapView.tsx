@@ -245,7 +245,7 @@ export function MapView({ trip }: MapViewProps) {
             className={`px-3.5 py-1.5 rounded-full text-xs font-medium transition-all duration-150 ${
               !activeFilter
                 ? 'bg-white/12 text-white'
-                : 'bg-white/5 text-white/35 hover:bg-white/8 hover:text-white/60'
+                : 'bg-white/5 text-white/50 hover:bg-white/8 hover:text-white/70'
             }`}
           >
             All
@@ -319,7 +319,7 @@ export function MapView({ trip }: MapViewProps) {
       </div>
 
       {filteredPins.length === 0 && allPins.length > 0 && (
-        <p className="text-center text-white/25 text-sm italic">No pins for this filter</p>
+        <p className="text-center text-white/45 text-sm italic">No pins for this filter</p>
       )}
 
       {/* Legend */}
@@ -328,7 +328,7 @@ export function MapView({ trip }: MapViewProps) {
           {availableTypes.map(({ type, label }) => (
             <div key={type} className="flex items-center gap-1.5">
               <div className="w-2.5 h-2.5 rounded-full" style={{ backgroundColor: getEventColor(type) }} />
-              <span className="text-xs text-white/30">{label}</span>
+              <span className="text-xs text-white/50">{label}</span>
             </div>
           ))}
         </div>

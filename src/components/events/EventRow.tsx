@@ -60,7 +60,7 @@ function MapsButton({ url, label = 'Open in Maps' }: { url: string; label?: stri
       target="_blank"
       rel="noopener noreferrer"
       onClick={e => e.stopPropagation()}
-      className="inline-flex items-center gap-1.5 text-[10px] font-medium tracking-wide text-white/30 hover:text-white/60 transition-colors"
+      className="inline-flex items-center gap-1.5 text-[10px] font-medium tracking-wide text-white/45 hover:text-white/70 transition-colors"
     >
       <ExternalLink className="w-3 h-3" />
       {label}
@@ -79,7 +79,7 @@ function EventSummaryLine({ event }: { event: TripEvent }) {
             <ArrowRight className="w-3 h-3 text-white/30" />
             <span>{f.arrivalAirport}</span>
           </div>
-          <div className="text-xs text-white/35">{f.airline} · {f.flightNumber}</div>
+          <div className="text-xs text-white/55">{f.airline} · {f.flightNumber}</div>
         </div>
       )
     }
@@ -88,7 +88,7 @@ function EventSummaryLine({ event }: { event: TripEvent }) {
       return (
         <div>
           <div className="font-medium text-white text-sm mb-0.5">{h.name}</div>
-          <div className="text-xs text-white/35 truncate">{h.address}</div>
+          <div className="text-xs text-white/55 truncate">{h.address}</div>
         </div>
       )
     }
@@ -97,7 +97,7 @@ function EventSummaryLine({ event }: { event: TripEvent }) {
       return (
         <div>
           <div className="font-medium text-white text-sm mb-0.5">{c.company} · {c.carType}</div>
-          <div className="text-xs text-white/35 truncate">{c.pickupLocation}</div>
+          <div className="text-xs text-white/55 truncate">{c.pickupLocation}</div>
         </div>
       )
     }
@@ -106,9 +106,10 @@ function EventSummaryLine({ event }: { event: TripEvent }) {
       return (
         <div>
           <div className="font-medium text-white text-sm mb-0.5">{r.name}</div>
-          <div className="text-xs text-white/35 truncate">
+          <div className="text-xs text-white/55 truncate">
             {r.partySize ? `Party of ${r.partySize} · ` : ''}{r.address}
           </div>
+
         </div>
       )
     }
@@ -117,7 +118,7 @@ function EventSummaryLine({ event }: { event: TripEvent }) {
       return (
         <div>
           <div className="font-medium text-white text-sm mb-0.5">{a.name}</div>
-          <div className="text-xs text-white/35 truncate">
+          <div className="text-xs text-white/55 truncate">
             {a.durationMinutes ? `${a.durationMinutes} min · ` : ''}{a.address}
           </div>
         </div>
@@ -132,7 +133,7 @@ function EventSummaryLine({ event }: { event: TripEvent }) {
             <ArrowRight className="w-3 h-3 text-white/30" />
             <span>{g.dropoffLocation}</span>
           </div>
-          <div className="text-xs text-white/35">{g.company} · {g.serviceType}</div>
+          <div className="text-xs text-white/55">{g.company} · {g.serviceType}</div>
         </div>
       )
     }
@@ -185,7 +186,7 @@ function EventTime({ event }: { event: TripEvent }) {
   return (
     <div className="text-right flex-shrink-0">
       <div className="font-mono text-xs font-medium text-white/60">{time}</div>
-      <div className="text-[10px] text-white/20 tracking-wide">{label}</div>
+      <div className="text-[10px] text-white/40 tracking-wide">{label}</div>
     </div>
   )
 }
@@ -197,7 +198,7 @@ function EventDetails({ event }: { event: TripEvent }) {
     if (!value && value !== 0) return null
     return (
       <div className="space-y-0.5">
-        <div className="text-[10px] text-white/25 uppercase tracking-[0.12em]">{label}</div>
+        <div className="text-[10px] text-white/45 uppercase tracking-[0.12em]">{label}</div>
         <div className="text-sm text-white/70 leading-snug">{value}</div>
       </div>
     )
@@ -336,7 +337,7 @@ function EventDetails({ event }: { event: TripEvent }) {
           }}
         >
           <div>
-            <div className="text-[9px] font-medium text-white/30 uppercase tracking-[0.18em] mb-1">Confirmation</div>
+            <div className="text-[9px] font-medium text-white/45 uppercase tracking-[0.18em] mb-1">Confirmation</div>
             <div className="font-mono text-sm font-medium tracking-[0.08em]" style={{ color }}>{event.confirmationNumber}</div>
           </div>
           <CopyButton value={event.confirmationNumber} />
@@ -370,7 +371,7 @@ export function EventRow({ event, isMultiDayIndicator, multiDayLabel }: EventRow
     return (
       <div className="flex items-center gap-3 py-2 px-3 rounded-xl bg-ink-900/40 border border-white/4">
         <div className="w-0.5 h-4 rounded-full opacity-40 flex-shrink-0" style={{ backgroundColor: color }} />
-        <span className="text-xs text-white/25 italic">{multiDayLabel}</span>
+        <span className="text-xs text-white/45 italic">{multiDayLabel}</span>
       </div>
     )
   }

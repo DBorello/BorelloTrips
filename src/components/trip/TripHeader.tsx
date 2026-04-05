@@ -36,8 +36,8 @@ export function TripHeader({ trip }: TripHeaderProps) {
 
           {/* Destination label */}
           <div className="flex items-center gap-2 mb-4">
-            <MapPin className="w-3 h-3 text-white/30" />
-            <span className="text-[10px] font-medium tracking-[0.25em] uppercase text-white/40">
+            <MapPin className="w-3 h-3 text-white/45" />
+            <span className="text-[10px] font-medium tracking-[0.25em] uppercase text-white/55">
               {trip.destination}
             </span>
           </div>
@@ -57,11 +57,11 @@ export function TripHeader({ trip }: TripHeaderProps) {
           {/* Stat pills — more refined */}
           <div className="flex flex-wrap gap-2">
             <div className="flex items-center gap-1.5 bg-black/35 backdrop-blur-md border border-white/10 rounded-full px-3.5 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
-              <Calendar className="w-3 h-3 text-white/35" />
-              <span className="text-white/65 text-xs tracking-wide">{formatDateRange(trip.startDate, trip.endDate)}</span>
+              <Calendar className="w-3 h-3 text-white/50" />
+              <span className="text-white/75 text-xs tracking-wide">{formatDateRange(trip.startDate, trip.endDate)}</span>
             </div>
             <div className="flex items-center gap-1.5 bg-black/35 backdrop-blur-md border border-white/10 rounded-full px-3.5 py-1.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.06)]">
-              <Clock className="w-3 h-3 text-white/35" />
+              <Clock className="w-3 h-3 text-white/50" />
               <span className="font-display text-sm font-light text-white/70 leading-none">{dayCount}</span>
               <span className="text-white/50 text-[11px] tracking-wide">{dayCount !== 1 ? 'days' : 'day'}</span>
             </div>

@@ -57,10 +57,10 @@ export function TripPage() {
                 className={`relative flex items-center gap-2 px-5 py-3.5 text-sm font-medium whitespace-nowrap transition-all duration-200 press-scale ${
                   activeTab === tab.id
                     ? 'text-white'
-                    : 'text-white/35 hover:text-white/65'
+                    : 'text-white/50 hover:text-white/75'
                 }`}
               >
-                <span className={`transition-colors duration-200 ${activeTab === tab.id ? 'text-white' : 'text-white/35'}`}>
+                <span className={`transition-colors duration-200 ${activeTab === tab.id ? 'text-white' : 'text-white/50'}`}>
                   {tab.icon}
                 </span>
                 {tab.label}

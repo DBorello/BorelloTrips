@@ -97,19 +97,12 @@ export function TripCard({ trip }: TripCardProps) {
           </div>
 
           {/* Title in display font */}
-          <h3 className="font-display text-[1.65rem] sm:text-[1.85rem] font-light italic text-white leading-tight mb-2 group-hover:text-white transition-colors duration-200">
+          <h3 className="font-display text-[1.65rem] sm:text-[1.85rem] font-light italic text-white leading-tight mb-3 group-hover:text-white transition-colors duration-200">
             {trip.title}
           </h3>
 
-          {/* Description — show when available */}
-          {trip.description && (
-            <p className="text-white/40 text-xs leading-relaxed mb-3 line-clamp-2 group-hover:text-white/55 transition-colors duration-200">
-              {trip.description}
-            </p>
-          )}
-
           {/* Date row */}
-          <div className="flex items-center gap-1.5 text-white/35">
+          <div className="flex items-center gap-1.5 text-white/55">
             <Calendar className="w-3 h-3 flex-shrink-0" />
             <span className="text-xs tracking-wide">{formatDateRange(trip.startDate, trip.endDate)}</span>
           </div>

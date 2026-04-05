@@ -146,7 +146,7 @@ export function ItineraryView({ trip }: ItineraryViewProps) {
                       </span>
                     )}
                   </div>
-                  <div className="text-[11px] text-white/22 tracking-wider uppercase mt-0.5">{monthYear}</div>
+                  <div className="text-[11px] text-white/40 tracking-wider uppercase mt-0.5">{monthYear}</div>
                 </div>
               </div>
             </div>
@@ -169,7 +169,7 @@ export function ItineraryView({ trip }: ItineraryViewProps) {
                       />
                       <div className="flex items-center gap-2.5 py-1.5 px-3 rounded-xl bg-ink-900/30 border border-white/4 flex-1">
                         <div className="w-0.5 h-3.5 rounded-full opacity-35" style={{ backgroundColor: color }} />
-                        <span className="text-[11px] text-white/28 italic tracking-wide">{label}</span>
+                        <span className="text-[11px] text-white/45 italic tracking-wide">{label}</span>
                       </div>
                     </div>
                   )
