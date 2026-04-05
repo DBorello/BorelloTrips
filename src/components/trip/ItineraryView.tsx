@@ -111,44 +111,51 @@ export function ItineraryView({ trip }: ItineraryViewProps) {
         return (
           <div key={date} ref={today ? todayRef : undefined}>
             {/* Day header */}
-            <div className="sticky z-10 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3 bg-ink-950/90 backdrop-blur-md mb-5" style={{ top: 'calc(3.5rem + 52px + env(safe-area-inset-top, 0px))' }}>
-              <div className="max-w-7xl mx-auto flex items-center gap-5">
-                {/* Large day number */}
+            <div className="sticky z-10 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-2.5 bg-ink-950/92 backdrop-blur-md mb-5 border-b border-white/4" style={{ top: 'calc(3.5rem + 52px + env(safe-area-inset-top, 0px))' }}>
+              <div className="max-w-7xl mx-auto flex items-center gap-4">
+                {/* Large day number — Cormorant, more impactful */}
                 <div
-                  className="font-display text-6xl font-light leading-none select-none flex-shrink-0 w-16 text-right"
-                  style={{ color: today ? 'rgba(255,255,255,0.55)' : 'rgba(255,255,255,0.08)' }}
+                  className="font-display font-light leading-none select-none flex-shrink-0 w-[4.5rem] text-right transition-colors duration-300"
+                  style={{
+                    fontSize: 'clamp(3.25rem, 7vw, 4.5rem)',
+                    color: today ? 'rgba(255,255,255,0.72)' : 'rgba(255,255,255,0.09)',
+                    letterSpacing: '-0.02em',
+                  }}
                 >
                   {dayNum}
                 </div>
                 {/* Divider */}
                 <div
-                  className="w-px h-8 flex-shrink-0"
-                  style={{ backgroundColor: today ? 'rgba(255,255,255,0.2)' : 'rgba(255,255,255,0.08)' }}
+                  className="w-px self-stretch flex-shrink-0 transition-colors duration-300"
+                  style={{ backgroundColor: today ? 'rgba(255,255,255,0.22)' : 'rgba(255,255,255,0.07)' }}
                 />
                 {/* Day name + month */}
                 <div className="flex-1">
                   <div className="flex items-center gap-2">
                     <div
-                      className="text-sm font-medium"
-                      style={{ color: today ? 'rgba(255,255,255,0.9)' : 'rgba(255,255,255,0.8)' }}
+                      className="font-medium tracking-wide transition-colors duration-300"
+                      style={{
+                        fontSize: '0.875rem',
+                        color: today ? 'rgba(255,255,255,0.95)' : 'rgba(255,255,255,0.75)',
+                      }}
                     >
                       {dayName}
                     </div>
                     {today && (
-                      <span className="text-[9px] font-medium tracking-[0.15em] uppercase bg-white/12 text-white/60 px-2 py-0.5 rounded-full border border-white/15">
+                      <span className="text-[9px] font-medium tracking-[0.18em] uppercase bg-white/10 text-white/55 px-2 py-0.5 rounded-full border border-white/14">
                         Today
                       </span>
                     )}
                   </div>
-                  <div className="text-[11px] text-white/25 tracking-wide">{monthYear}</div>
+                  <div className="text-[11px] text-white/22 tracking-wider uppercase mt-0.5">{monthYear}</div>
                 </div>
               </div>
             </div>
 
             {/* Events — timeline layout */}
             <div className="relative pl-6 sm:pl-8">
-              {/* Vertical thread line */}
-              <div className="absolute left-[11px] sm:left-[15px] top-0 bottom-0 w-px bg-gradient-to-b from-white/8 via-white/6 to-transparent" />
+              {/* Vertical thread line — more refined gradient */}
+              <div className="absolute left-[11px] sm:left-[15px] top-0 bottom-0 w-px bg-gradient-to-b from-white/10 via-white/5 to-transparent" />
 
               <div className="space-y-3">
                 {/* Multi-day continuation indicators */}
@@ -156,14 +163,14 @@ export function ItineraryView({ trip }: ItineraryViewProps) {
                   const color = getEventColor(event.type)
                   return (
                     <div key={`indicator-${event.id}-${date}`} className="relative flex items-center gap-3">
-                      {/* Timeline dot */}
+                      {/* Timeline dot — hollow for continuations */}
                       <div
-                        className="absolute -left-6 sm:-left-8 w-[9px] h-[9px] rounded-full border-2 border-ink-950 flex-shrink-0"
-                        style={{ backgroundColor: `${color}50`, borderColor: '#08080e', boxShadow: `0 0 0 1px ${color}30` }}
+                        className="absolute -left-6 sm:-left-8 w-[7px] h-[7px] rounded-full flex-shrink-0"
+                        style={{ backgroundColor: '#08080e', border: `1.5px solid ${color}45`, boxShadow: `0 0 0 2px #08080e` }}
                       />
-                      <div className="flex items-center gap-2.5 py-2 px-3 rounded-xl bg-ink-900/40 border border-white/4 flex-1">
-                        <div className="w-1 h-4 rounded-full opacity-40" style={{ backgroundColor: color }} />
-                        <span className="text-xs text-white/30 italic">{label}</span>
+                      <div className="flex items-center gap-2.5 py-1.5 px-3 rounded-xl bg-ink-900/30 border border-white/4 flex-1">
+                        <div className="w-0.5 h-3.5 rounded-full opacity-35" style={{ backgroundColor: color }} />
+                        <span className="text-[11px] text-white/28 italic tracking-wide">{label}</span>
                       </div>
                     </div>
                   )
@@ -174,12 +181,12 @@ export function ItineraryView({ trip }: ItineraryViewProps) {
                   const color = getEventColor(event.type)
                   return (
                     <div key={event.id} className="relative">
-                      {/* Timeline dot */}
+                      {/* Timeline dot — solid with glow */}
                       <div
-                        className="absolute -left-6 sm:-left-8 top-5 w-[9px] h-[9px] rounded-full flex-shrink-0 z-10"
+                        className="absolute -left-6 sm:-left-8 top-[1.2rem] w-[9px] h-[9px] rounded-full flex-shrink-0 z-10"
                         style={{
                           backgroundColor: color,
-                          boxShadow: `0 0 0 3px #08080e, 0 0 0 4px ${color}50`,
+                          boxShadow: `0 0 0 3px #08080e, 0 0 0 4.5px ${color}45, 0 0 10px ${color}30`,
                         }}
                       />
                       <div

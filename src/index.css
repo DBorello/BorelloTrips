@@ -48,6 +48,69 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
+
+  /* Ken Burns slow zoom for hero images */
+  .ken-burns {
+    animation: kenBurns 18s ease-in-out infinite alternate;
+    transform-origin: center center;
+  }
+
+  /* Expandable content transition */
+  .expand-enter {
+    animation: expandDown 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  /* iOS-style spring scale on press */
+  .press-scale {
+    transition: transform 0.15s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+  .press-scale:active {
+    transform: scale(0.97);
+  }
+
+  /* Shimmer effect for icon backgrounds on hover */
+  .icon-shimmer {
+    position: relative;
+    overflow: hidden;
+  }
+  .icon-shimmer::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, transparent 35%, rgba(255,255,255,0.15) 50%, transparent 65%);
+    transform: translateX(-100%);
+    transition: none;
+  }
+  .group:hover .icon-shimmer::after {
+    animation: shimmerSlide 0.5s ease-out forwards;
+  }
+}
+
+@keyframes kenBurns {
+  from { transform: scale(1.0) translate(0%, 0%); }
+  to   { transform: scale(1.08) translate(-1%, -1%); }
+}
+
+@keyframes expandDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes shimmerSlide {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+@keyframes pulseRing {
+  0%   { transform: scale(1);   opacity: 0.7; }
+  70%  { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(2.2); opacity: 0; }
 }
 
 /* FullCalendar dark theme overrides */

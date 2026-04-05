@@ -46,22 +46,34 @@ export function TripPage() {
     <div>
       <TripHeader trip={trip} />
 
-      {/* Tab bar — pill style */}
-      <div className="sticky z-20 bg-ink-950/90 backdrop-blur-xl border-b border-white/5" style={{ top: 'calc(3.5rem + env(safe-area-inset-top, 0px))' }}>
+      {/* Tab bar — refined underline style */}
+      <div className="sticky z-20 bg-ink-950/92 backdrop-blur-xl border-b border-white/6" style={{ top: 'calc(3.5rem + env(safe-area-inset-top, 0px))' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center gap-1 py-2.5 overflow-x-auto scrollbar-none">
+          <div className="flex items-center gap-0 overflow-x-auto scrollbar-none">
             {TABS.map(tab => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
-                className={`flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium whitespace-nowrap transition-all duration-200 ${
+                className={`relative flex items-center gap-2 px-5 py-3.5 text-sm font-medium whitespace-nowrap transition-all duration-200 press-scale ${
                   activeTab === tab.id
-                    ? 'bg-white/10 text-white'
-                    : 'text-white/35 hover:text-white/65 hover:bg-white/5'
+                    ? 'text-white'
+                    : 'text-white/35 hover:text-white/65'
                 }`}
               >
-                {tab.icon}
+                <span className={`transition-colors duration-200 ${activeTab === tab.id ? 'text-white' : 'text-white/35'}`}>
+                  {tab.icon}
+                </span>
                 {tab.label}
+                {/* Active indicator — thin colored underline with glow */}
+                {activeTab === tab.id && (
+                  <span
+                    className="absolute bottom-0 left-3 right-3 h-[2px] rounded-full"
+                    style={{
+                      background: 'linear-gradient(90deg, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0.6) 100%)',
+                      boxShadow: '0 0 8px rgba(255,255,255,0.4)',
+                    }}
+                  />
+                )}
               </button>
             ))}
           </div>

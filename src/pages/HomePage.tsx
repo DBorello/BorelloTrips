@@ -49,13 +49,15 @@ export function HomePage() {
 
       {/* Editorial header */}
       <div className="mb-12 sm:mb-16">
-        <div className="text-[10px] font-medium tracking-[0.25em] uppercase text-white/25 mb-5">
+        <div className="text-[10px] font-medium tracking-[0.3em] uppercase text-white/22 mb-5">
           Your journeys
         </div>
-        <h1 className="font-display text-6xl sm:text-8xl font-light leading-none text-white">
+        <h1 className="font-display font-light leading-none text-white" style={{ fontSize: 'clamp(3.5rem, 12vw, 7rem)' }}>
           My{' '}
-          <span className="italic">Trips</span>
+          <span className="italic" style={{ color: 'rgba(255,255,255,0.75)' }}>Trips</span>
         </h1>
+        {/* Hairline rule */}
+        <div className="mt-6 h-px w-16 bg-gradient-to-r from-white/20 to-transparent" />
       </div>
 
       {/* Loading skeleton */}
@@ -94,11 +96,11 @@ export function HomePage() {
 
               {past.length > 0 && (
                 <div>
-                  <div className="flex items-center gap-4 mb-8">
-                    <div className="text-[10px] font-medium tracking-[0.25em] uppercase text-white/20">
+                  <div className="flex items-center gap-5 mb-8">
+                    <div className="text-[10px] font-medium tracking-[0.3em] uppercase text-white/18">
                       Past trips
                     </div>
-                    <div className="flex-1 h-px bg-white/6" />
+                    <div className="flex-1 h-px bg-gradient-to-r from-white/8 to-transparent" />
                   </div>
                   <TripGrid trips={past} delay={upcoming.length} />
                 </div>

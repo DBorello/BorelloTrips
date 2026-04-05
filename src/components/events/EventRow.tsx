@@ -328,10 +328,16 @@ function EventDetails({ event }: { event: TripEvent }) {
       style={{ borderTop: `1px solid ${color}18` }}
     >
       {event.confirmationNumber && (
-        <div className="flex items-center justify-between">
+        <div
+          className="flex items-center justify-between rounded-xl px-3.5 py-2.5"
+          style={{
+            background: `linear-gradient(135deg, ${color}0d 0%, ${color}06 100%)`,
+            border: `1px solid ${color}20`,
+          }}
+        >
           <div>
-            <div className="text-[10px] text-white/25 uppercase tracking-[0.12em] mb-0.5">Confirmation</div>
-            <div className="text-sm font-mono text-white/70">{event.confirmationNumber}</div>
+            <div className="text-[9px] font-medium text-white/30 uppercase tracking-[0.18em] mb-1">Confirmation</div>
+            <div className="font-mono text-sm font-medium tracking-[0.08em]" style={{ color }}>{event.confirmationNumber}</div>
           </div>
           <CopyButton value={event.confirmationNumber} />
         </div>
@@ -371,10 +377,11 @@ export function EventRow({ event, isMultiDayIndicator, multiDayLabel }: EventRow
 
   return (
     <div
-      className="rounded-2xl overflow-hidden border transition-all duration-200 cursor-pointer group"
+      className="rounded-2xl overflow-hidden border transition-all duration-200 cursor-pointer group press-scale"
       style={{
         backgroundColor: '#101018',
-        borderColor: expanded ? `${color}25` : 'rgba(255,255,255,0.07)',
+        borderColor: expanded ? `${color}28` : 'rgba(255,255,255,0.07)',
+        boxShadow: expanded ? `0 4px 24px ${color}10` : 'none',
       }}
       onClick={() => setExpanded(e => !e)}
     >
@@ -382,15 +389,15 @@ export function EventRow({ event, isMultiDayIndicator, multiDayLabel }: EventRow
         {/* Colored left accent bar */}
         <div
           className="w-0.5 self-stretch rounded-full flex-shrink-0 transition-opacity duration-200"
-          style={{ backgroundColor: color, opacity: expanded ? 1 : 0.5 }}
+          style={{ backgroundColor: color, opacity: expanded ? 1 : 0.45 }}
         />
 
-        {/* Icon */}
+        {/* Icon — with shimmer on hover */}
         <div
-          className="w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-200"
+          className="icon-shimmer w-9 h-9 rounded-xl flex items-center justify-center flex-shrink-0 transition-all duration-200"
           style={{
-            backgroundColor: `${color}12`,
-            boxShadow: expanded ? `0 0 16px ${color}20` : 'none',
+            backgroundColor: `${color}14`,
+            boxShadow: expanded ? `0 0 18px ${color}25, inset 0 1px 0 ${color}20` : `inset 0 1px 0 ${color}10`,
           }}
         >
           <EventIcon type={event.type} style={{ color, width: 16, height: 16 }} />
@@ -418,7 +425,12 @@ export function EventRow({ event, isMultiDayIndicator, multiDayLabel }: EventRow
             </span>
           </div>
 
-          {expanded && <EventDetails event={event} />}
+          {/* Expanded details — animated */}
+          {expanded && (
+            <div className="expand-enter">
+              <EventDetails event={event} />
+            </div>
+          )}
         </div>
       </div>
     </div>
