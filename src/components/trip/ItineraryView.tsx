@@ -117,7 +117,7 @@ export function ItineraryView({ trip }: ItineraryViewProps) {
                   className="font-display font-light leading-none select-none flex-shrink-0 w-[4.5rem] text-right transition-colors duration-300"
                   style={{
                     fontSize: 'clamp(3.25rem, 7vw, 4.5rem)',
-                    color: today ? 'rgba(255,255,255,0.72)' : 'rgba(255,255,255,0.09)',
+                    color: today ? 'rgba(255,255,255,0.85)' : 'rgba(255,255,255,0.40)',
                     letterSpacing: '-0.02em',
                   }}
                 >
