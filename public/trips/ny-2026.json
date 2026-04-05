@@ -22,6 +22,19 @@
     },
     {
       "id": "evt-002",
+      "type": "activity",
+      "name": "Harry Potter and the Cursed Child",
+      "description": "Broadway · Lyric Theatre",
+      "address": "213 W 42nd St, New York, NY 10036",
+      "date": "2026-08-07",
+      "startTime": "19:00",
+      "durationMinutes": 210,
+      "coordinates": { "lat": 40.7566, "lng": -73.9880 },
+      "confirmationNumber": null,
+      "notes": "Orchestra seats E2, E4, E6, E8 · 4 tickets"
+    },
+    {
+      "id": "evt-003",
       "type": "flight",
       "airline": "American Airlines",
       "flightNumber": "AA 1534",
