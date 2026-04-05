@@ -42,13 +42,6 @@
     font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
-  .text-gradient {
-    background: linear-gradient(135deg, #fff 0%, rgba(255,255,255,0.6) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-  }
-
   /* Ken Burns slow zoom for hero images */
   .ken-burns {
     animation: kenBurns 18s ease-in-out infinite alternate;

@@ -22,42 +22,6 @@ export function getEventColor(type: EventType): string {
   return EVENT_COLORS[type]
 }
 
-export function getEventBgClass(type: EventType): string {
-  const map: Record<EventType, string> = {
-    flight: 'bg-sky-500',
-    hotel: 'bg-violet-500',
-    car_rental: 'bg-amber-500',
-    restaurant: 'bg-rose-500',
-    activity: 'bg-emerald-500',
-    ground_transportation: 'bg-orange-500'
-  }
-  return map[type]
-}
-
-export function getEventTextClass(type: EventType): string {
-  const map: Record<EventType, string> = {
-    flight: 'text-sky-400',
-    hotel: 'text-violet-400',
-    car_rental: 'text-amber-400',
-    restaurant: 'text-rose-400',
-    activity: 'text-emerald-400',
-    ground_transportation: 'text-orange-400'
-  }
-  return map[type]
-}
-
-export function getEventBorderClass(type: EventType): string {
-  const map: Record<EventType, string> = {
-    flight: 'border-sky-500',
-    hotel: 'border-violet-500',
-    car_rental: 'border-amber-500',
-    restaurant: 'border-rose-500',
-    activity: 'border-emerald-500',
-    ground_transportation: 'border-orange-500'
-  }
-  return map[type]
-}
-
 export function getEventBadgeClass(type: EventType): string {
   const map: Record<EventType, string> = {
     flight: 'bg-sky-500/20 text-sky-300',

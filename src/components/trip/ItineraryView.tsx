@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { format, parseISO } from 'date-fns'
+import { format, parseISO, differenceInCalendarDays } from 'date-fns'
 import type { Trip, HotelEvent, CarRentalEvent, TripEvent } from '../../types/trip'
 import { EventRow } from '../events/EventRow'
 import {
@@ -10,7 +10,6 @@ import {
   sortEventsByTime
 } from '../../utils/sortEvents'
 import { getAllDatesInRange, getTripStatus, isToday } from '../../utils/dates'
-import { differenceInCalendarDays, parseISO as parseISOFns } from 'date-fns'
 import { getEventColor } from '../../utils/eventColors'
 
 interface MultiDayInfo {
@@ -33,8 +32,8 @@ function getMultiDayIndicators(
 
     if (date === startDate || !allDates.includes(date)) continue
 
-    const dayNumber = differenceInCalendarDays(parseISOFns(date), parseISOFns(startDate)) + 1
-    const totalDays = differenceInCalendarDays(parseISOFns(endDate), parseISOFns(startDate)) + 1
+    const dayNumber = differenceInCalendarDays(parseISO(date), parseISO(startDate)) + 1
+    const totalDays = differenceInCalendarDays(parseISO(endDate), parseISO(startDate)) + 1
 
     if (event.type === 'hotel') {
       const h = event as HotelEvent

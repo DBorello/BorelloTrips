@@ -99,6 +99,22 @@ function buildCalendarEvents(events: TripEvent[]): EventInput[] {
   return calEvents
 }
 
+// Sunday on or before the given date
+function weekStart(dateStr: string): string {
+  const d = new Date(dateStr)
+  d.setDate(d.getDate() - d.getDay())
+  return d.toISOString().split('T')[0]
+}
+
+// Number of full Sun–Sat weeks needed to cover startDate through endDate
+function weeksNeeded(startDate: string, endDate: string): number {
+  const start = new Date(weekStart(startDate))
+  const end = new Date(endDate)
+  const daysToSat = end.getDay() === 6 ? 0 : 6 - end.getDay()
+  end.setDate(end.getDate() + daysToSat)
+  return Math.round((end.getTime() - start.getTime()) / (7 * 24 * 60 * 60 * 1000)) + 1
+}
+
 interface CalendarViewProps {
   trip: Trip
 }
@@ -109,13 +125,8 @@ export function CalendarView({ trip }: CalendarViewProps) {
   const calendarRef = useRef<FullCalendar>(null)
 
   const calendarEvents = buildCalendarEvents(trip.events)
-
-  // Exclusive end date for FullCalendar visibleRange
-  const endExclusive = (() => {
-    const d = new Date(trip.endDate)
-    d.setDate(d.getDate() + 1)
-    return d.toISOString().split('T')[0]
-  })()
+  const gridStart = weekStart(trip.startDate)
+  const numWeeks = weeksNeeded(trip.startDate, trip.endDate)
 
   const handleEventClick = useCallback((info: EventClickArg) => {
     const ev = info.event.extendedProps.event as TripEvent
@@ -125,17 +136,18 @@ export function CalendarView({ trip }: CalendarViewProps) {
 
   return (
     <div className="relative">
-      {/* Calendar — scoped to trip dates only */}
-      <div className="rounded-xl overflow-hidden border border-slate-800 bg-slate-900 calendar-wrapper">
+      {/* Calendar — weekly grid, Sun–Sat rows */}
+      <div className="rounded-xl overflow-hidden border border-white/8 bg-ink-900 calendar-wrapper">
         <FullCalendar
           ref={calendarRef}
           plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
           initialView="dayGridCustom"
-          initialDate={trip.startDate}
+          initialDate={gridStart}
+          firstDay={0}
           views={{
             dayGridCustom: {
               type: 'dayGrid',
-              visibleRange: { start: trip.startDate, end: endExclusive }
+              duration: { weeks: numWeeks }
             }
           }}
           events={calendarEvents}
