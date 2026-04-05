@@ -59,6 +59,18 @@
     },
     {
       "id": "evt-005",
+      "type": "restaurant",
+      "name": "Auro",
+      "address": "400 Silverado Trail N, Calistoga, CA 94515",
+      "date": "2026-05-21",
+      "time": "18:00",
+      "partySize": 4,
+      "coordinates": { "lat": 38.5786, "lng": -122.5629 },
+      "confirmationNumber": "12063",
+      "notes": "At the Four Seasons Resort Napa Valley · (707) 709-2100"
+    },
+    {
+      "id": "evt-006",
       "type": "activity",
       "name": "BottleRock Napa Valley — Day 1",
       "description": "VIP tickets",
@@ -71,7 +83,7 @@
       "notes": null
     },
     {
-      "id": "evt-006",
+      "id": "evt-007",
       "type": "activity",
       "name": "BottleRock Napa Valley — Day 2",
       "description": "VIP tickets",
@@ -84,7 +96,7 @@
       "notes": null
     },
     {
-      "id": "evt-007",
+      "id": "evt-008",
       "type": "activity",
       "name": "BottleRock Napa Valley — Day 3",
       "description": "VIP tickets",
@@ -97,7 +109,7 @@
       "notes": null
     },
     {
-      "id": "evt-008",
+      "id": "evt-009",
       "type": "flight",
       "airline": "SC Aviation",
       "flightNumber": "N625MF",
