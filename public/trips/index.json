@@ -19,6 +19,15 @@
       "endDate": "2026-07-02"
     },
     {
+      "id": "ny-2026",
+      "title": "New York 2026",
+      "description": "A long weekend in the city.",
+      "destination": "New York, NY",
+      "coverImage": "https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9?w=800",
+      "startDate": "2026-08-06",
+      "endDate": "2026-08-09"
+    },
+    {
       "id": "costa-rica-2026",
       "title": "Costa Rica 2026",
       "description": "Rainforest and Pacific coast — Arenal Volcano, Nayara Tented Camp, and Four Seasons Peninsula Papagayo.",
