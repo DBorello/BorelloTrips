@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import type { Trip } from '../types/trip'
 
 const BASE = import.meta.env.BASE_URL
@@ -7,12 +7,14 @@ interface UseTripResult {
   trip: Trip | null
   loading: boolean
   error: string | null
+  refresh: () => void
 }
 
 export function useTrip(id: string | undefined): UseTripResult {
   const [trip, setTrip] = useState<Trip | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [refreshKey, setRefreshKey] = useState(0)
 
   useEffect(() => {
     if (!id) {
@@ -23,9 +25,8 @@ export function useTrip(id: string | undefined): UseTripResult {
 
     setLoading(true)
     setError(null)
-    setTrip(null)
 
-    fetch(`${BASE}trips/${id}.json`)
+    fetch(`${BASE}trips/${id}.json`, { cache: 'reload' })
       .then(res => {
         if (!res.ok) throw new Error(`Trip not found: ${res.status}`)
         return res.json()
@@ -38,7 +39,9 @@ export function useTrip(id: string | undefined): UseTripResult {
         setError(err.message)
         setLoading(false)
       })
-  }, [id])
+  }, [id, refreshKey])
 
-  return { trip, loading, error }
+  const refresh = useCallback(() => setRefreshKey(k => k + 1), [])
+
+  return { trip, loading, error, refresh }
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
-import { List, Calendar, Map } from 'lucide-react'
+import { List, Calendar, Map, RotateCw } from 'lucide-react'
 import { useTrip } from '../hooks/useTrip'
 import { TripHeader } from '../components/trip/TripHeader'
 import { ItineraryView } from '../components/trip/ItineraryView'
@@ -17,8 +17,15 @@ const TABS: { id: TabId; label: string; icon: React.ReactNode }[] = [
 
 export function TripPage() {
   const { id } = useParams<{ id: string }>()
-  const { trip, loading, error } = useTrip(id)
+  const { trip, loading, error, refresh } = useTrip(id)
   const [activeTab, setActiveTab] = useState<TabId>('itinerary')
+  const [refreshing, setRefreshing] = useState(false)
+
+  const handleRefresh = () => {
+    setRefreshing(true)
+    refresh()
+    setTimeout(() => setRefreshing(false), 800)
+  }
 
   if (loading) {
     return (
@@ -50,6 +57,7 @@ export function TripPage() {
       <div className="sticky z-20 bg-ink-950/92 backdrop-blur-xl border-b border-white/6" style={{ top: 'calc(3.5rem + env(safe-area-inset-top, 0px))' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-0 overflow-x-auto scrollbar-none">
+            <div className="flex-1 flex items-center">
             {TABS.map(tab => (
               <button
                 key={tab.id}
@@ -76,6 +84,16 @@ export function TripPage() {
                 )}
               </button>
             ))}
+            </div>
+            {/* Refresh button */}
+            <button
+              onClick={handleRefresh}
+              disabled={refreshing}
+              className="flex-shrink-0 p-2 mr-1 rounded-lg text-white/35 hover:text-white/60 transition-colors duration-150 press-scale"
+              title="Refresh trip data"
+            >
+              <RotateCw className={`w-3.5 h-3.5 ${refreshing ? 'animate-spin' : ''}`} />
+            </button>
           </div>
         </div>
       </div>
