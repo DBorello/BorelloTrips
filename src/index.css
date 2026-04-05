@@ -218,6 +218,12 @@
 
 .calendar-wrapper .fc-daygrid-day-frame {
   background: transparent;
+  min-height: 6rem;
+}
+
+/* Equal height weeks — override FullCalendar's variable row sizing */
+.calendar-wrapper .fc-daygrid-body tr {
+  height: 6rem;
 }
 
 .calendar-wrapper .fc-scrollgrid {

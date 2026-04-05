@@ -115,6 +115,49 @@ function weeksNeeded(startDate: string, endDate: string): number {
   return Math.round((end.getTime() - start.getTime()) / (7 * 24 * 60 * 60 * 1000)) + 1
 }
 
+// Find earliest and latest dates across all events
+function getEventDateRange(events: TripEvent[]): { minDate: string; maxDate: string } | null {
+  const dates: string[] = []
+  for (const event of events) {
+    switch (event.type) {
+      case 'flight': {
+        const f = event as FlightEvent
+        dates.push(f.departureDatetime.split('T')[0], f.arrivalDatetime.split('T')[0])
+        break
+      }
+      case 'hotel': {
+        const h = event as HotelEvent
+        dates.push(h.checkInDatetime.split('T')[0], h.checkOutDatetime.split('T')[0])
+        break
+      }
+      case 'car_rental': {
+        const c = event as CarRentalEvent
+        dates.push(c.pickupDatetime.split('T')[0], c.dropoffDatetime.split('T')[0])
+        break
+      }
+      case 'restaurant': {
+        const r = event as RestaurantEvent
+        dates.push(r.date)
+        break
+      }
+      case 'activity': {
+        const a = event as ActivityEvent
+        dates.push(a.date)
+        break
+      }
+      case 'ground_transportation': {
+        const g = event as GroundTransportationEvent
+        dates.push(g.pickupDatetime.split('T')[0])
+        if (g.dropoffDatetime) dates.push(g.dropoffDatetime.split('T')[0])
+        break
+      }
+    }
+  }
+  if (dates.length === 0) return null
+  dates.sort()
+  return { minDate: dates[0], maxDate: dates[dates.length - 1] }
+}
+
 interface CalendarViewProps {
   trip: Trip
 }
@@ -125,8 +168,10 @@ export function CalendarView({ trip }: CalendarViewProps) {
   const calendarRef = useRef<FullCalendar>(null)
 
   const calendarEvents = buildCalendarEvents(trip.events)
-  const gridStart = weekStart(trip.startDate)
-  const numWeeks = weeksNeeded(trip.startDate, trip.endDate)
+  const eventRange = getEventDateRange(trip.events)
+  const gridStart = eventRange ? weekStart(eventRange.minDate) : weekStart(trip.startDate)
+  const gridEnd = eventRange ? eventRange.maxDate : trip.endDate
+  const numWeeks = weeksNeeded(gridStart, gridEnd)
 
   const handleEventClick = useCallback((info: EventClickArg) => {
     const ev = info.event.extendedProps.event as TripEvent
