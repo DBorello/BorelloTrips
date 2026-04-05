@@ -1,0 +1,112 @@
+{
+  "id": "napa-2026",
+  "title": "Napa 2026",
+  "description": "BottleRock Napa Valley — three days of music and wine country.",
+  "destination": "Napa Valley, CA",
+  "coverImage": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800",
+  "startDate": "2026-05-21",
+  "endDate": "2026-05-25",
+  "timezone": "America/Los_Angeles",
+  "events": [
+    {
+      "id": "evt-001",
+      "type": "flight",
+      "airline": "SC Aviation",
+      "flightNumber": "N625MF",
+      "departureAirport": "PWK",
+      "arrivalAirport": "TUS",
+      "departureDatetime": "2026-05-21T08:01:00",
+      "arrivalDatetime": "2026-05-21T09:36:00",
+      "confirmationNumber": "Q97870",
+      "notes": "Hawker 850XP · Private charter · Crew: Skindrud/Sachdeva · FBO: Signature Aviation Wheeling"
+    },
+    {
+      "id": "evt-002",
+      "type": "flight",
+      "airline": "SC Aviation",
+      "flightNumber": "N625MF",
+      "departureAirport": "TUS",
+      "arrivalAirport": "STS",
+      "departureDatetime": "2026-05-21T10:36:00",
+      "arrivalDatetime": "2026-05-21T12:41:00",
+      "confirmationNumber": "Q97870",
+      "notes": "Hawker 850XP · Private charter · FBO: Kaiserair Santa Rosa Jet Center"
+    },
+    {
+      "id": "evt-003",
+      "type": "car_rental",
+      "company": "Hertz",
+      "carType": "Large 2WD SUV",
+      "pickupLocation": "Charles M. Schulz–Sonoma County Airport",
+      "dropoffLocation": "Charles M. Schulz–Sonoma County Airport",
+      "pickupDatetime": "2026-05-21T12:00:00",
+      "dropoffDatetime": "2026-05-25T12:00:00",
+      "pickupCoordinates": { "lat": 38.5090, "lng": -122.8129 },
+      "dropoffCoordinates": { "lat": 38.5090, "lng": -122.8129 },
+      "confirmationNumber": null,
+      "notes": "GMC Yukon or similar · Basic Protection included"
+    },
+    {
+      "id": "evt-004",
+      "type": "hotel",
+      "name": "Four Seasons Resort Napa Valley",
+      "address": "400 Silverado Trail N, Calistoga, CA 94515",
+      "checkInDatetime": "2026-05-21T16:00:00",
+      "checkOutDatetime": "2026-05-25T12:00:00",
+      "coordinates": { "lat": 38.5786, "lng": -122.5629 },
+      "confirmationNumber": "L5172360848",
+      "notes": "Vineyard and Mountain 3 Bedroom Villa · 3 King beds · 4 adults · Daily breakfast · USD 100 resort credit · Virtuoso booking"
+    },
+    {
+      "id": "evt-005",
+      "type": "activity",
+      "name": "BottleRock Napa Valley — Day 1",
+      "description": "VIP tickets",
+      "address": "Napa Valley Expo, 575 Third St, Napa, CA 94559",
+      "date": "2026-05-22",
+      "startTime": "12:00",
+      "durationMinutes": 600,
+      "coordinates": { "lat": 38.2975, "lng": -122.2869 },
+      "confirmationNumber": null,
+      "notes": null
+    },
+    {
+      "id": "evt-006",
+      "type": "activity",
+      "name": "BottleRock Napa Valley — Day 2",
+      "description": "VIP tickets",
+      "address": "Napa Valley Expo, 575 Third St, Napa, CA 94559",
+      "date": "2026-05-23",
+      "startTime": "12:00",
+      "durationMinutes": 600,
+      "coordinates": { "lat": 38.2975, "lng": -122.2869 },
+      "confirmationNumber": null,
+      "notes": null
+    },
+    {
+      "id": "evt-007",
+      "type": "activity",
+      "name": "BottleRock Napa Valley — Day 3",
+      "description": "VIP tickets",
+      "address": "Napa Valley Expo, 575 Third St, Napa, CA 94559",
+      "date": "2026-05-24",
+      "startTime": "12:00",
+      "durationMinutes": 600,
+      "coordinates": { "lat": 38.2975, "lng": -122.2869 },
+      "confirmationNumber": null,
+      "notes": null
+    },
+    {
+      "id": "evt-008",
+      "type": "flight",
+      "airline": "SC Aviation",
+      "flightNumber": "N625MF",
+      "departureAirport": "STS",
+      "arrivalAirport": "PWK",
+      "departureDatetime": "2026-05-25T11:00:00",
+      "arrivalDatetime": "2026-05-25T17:06:00",
+      "confirmationNumber": "Q97870",
+      "notes": "Hawker 850XP · Private charter · FBO: Signature Aviation Wheeling"
+    }
+  ]
+}

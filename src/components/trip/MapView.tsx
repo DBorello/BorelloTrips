@@ -44,6 +44,9 @@ const AIRPORT_COORDS: Record<string, Coordinates> = {
   EZE: { lat: -34.8222, lng: -58.5358 },
   KIX: { lat: 34.4347, lng: 135.2440 },
   CTS: { lat: 42.7752, lng: 141.6924 },
+  PWK: { lat: 42.1142, lng: -87.9015 },
+  STS: { lat: 38.5090, lng: -122.8129 },
+  TUS: { lat: 32.1161, lng: -110.9410 },
 }
 
 function createColorMarker(color: string): L.DivIcon {
