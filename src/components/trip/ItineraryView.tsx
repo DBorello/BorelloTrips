@@ -111,7 +111,7 @@ export function ItineraryView({ trip }: ItineraryViewProps) {
         return (
           <div key={date} ref={today ? todayRef : undefined}>
             {/* Day header */}
-            <div className="sticky top-[calc(3.5rem+52px)] z-10 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3 bg-ink-950/90 backdrop-blur-md mb-5">
+            <div className="sticky z-10 -mx-4 sm:-mx-6 lg:-mx-8 px-4 sm:px-6 lg:px-8 py-3 bg-ink-950/90 backdrop-blur-md mb-5" style={{ top: 'calc(3.5rem + 52px + env(safe-area-inset-top, 0px))' }}>
               <div className="max-w-7xl mx-auto flex items-center gap-5">
                 {/* Large day number */}
                 <div

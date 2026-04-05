@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useLocation } from 'react-router-dom'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, WifiOff } from 'lucide-react'
+import { useOnlineStatus } from '../../hooks/useOnlineStatus'
 
 interface AppShellProps {
   children: React.ReactNode
@@ -9,10 +10,14 @@ interface AppShellProps {
 export function AppShell({ children }: AppShellProps) {
   const location = useLocation()
   const isHome = location.pathname === '/'
+  const isOnline = useOnlineStatus()
 
   return (
-    <div className="min-h-screen bg-ink-950 text-white flex flex-col">
-      <header className="sticky top-0 z-50 bg-ink-950/80 backdrop-blur-xl border-b border-white/5">
+    <div className="min-h-screen bg-ink-950 text-white flex flex-col" style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}>
+      <header
+        className="sticky top-0 z-50 bg-ink-950/80 backdrop-blur-xl border-b border-white/5"
+        style={{ paddingTop: 'env(safe-area-inset-top, 0px)' }}
+      >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center h-14 gap-4">
             {/* Back button */}
@@ -44,6 +49,14 @@ export function AppShell({ children }: AppShellProps) {
                 </span>
               </div>
             </Link>
+
+            {/* Offline indicator */}
+            {!isOnline && (
+              <div className="ml-auto flex items-center gap-1.5 text-[10px] font-medium tracking-[0.12em] uppercase text-amber-400/70 bg-amber-500/8 border border-amber-500/15 rounded-full px-2.5 py-1">
+                <WifiOff className="w-3 h-3" />
+                <span>Offline</span>
+              </div>
+            )}
           </div>
         </div>
       </header>

@@ -26,6 +26,10 @@ export function useTripsIndex(): UseTripsIndexResult {
       .then((data: TripsIndex) => {
         setIndex(data)
         setLoading(false)
+        // Pre-warm the service worker cache for all trip files so they're available offline
+        data.trips.forEach(trip => {
+          fetch(`${BASE}trips/${trip.id}.json`).catch(() => {})
+        })
       })
       .catch((err: Error) => {
         setError(err.message)

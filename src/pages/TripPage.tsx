@@ -47,7 +47,7 @@ export function TripPage() {
       <TripHeader trip={trip} />
 
       {/* Tab bar — pill style */}
-      <div className="sticky top-14 z-20 bg-ink-950/90 backdrop-blur-xl border-b border-white/5">
+      <div className="sticky z-20 bg-ink-950/90 backdrop-blur-xl border-b border-white/5" style={{ top: 'calc(3.5rem + env(safe-area-inset-top, 0px))' }}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-1 py-2.5 overflow-x-auto scrollbar-none">
             {TABS.map(tab => (
