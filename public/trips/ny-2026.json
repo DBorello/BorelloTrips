@@ -22,6 +22,17 @@
     },
     {
       "id": "evt-002",
+      "type": "hotel",
+      "name": "New York Marriott Marquis",
+      "address": "1535 Broadway, New York, NY 10036",
+      "checkInDatetime": "2026-08-06T15:00:00",
+      "checkOutDatetime": "2026-08-09T12:00:00",
+      "coordinates": { "lat": 40.7580, "lng": -73.9855 },
+      "confirmationNumber": "75707871",
+      "notes": "Family Connector · 2 Double + 1 King + Sofa bed · 2 adults, 2 children · Grand Getaways Member Rate"
+    },
+    {
+      "id": "evt-003",
       "type": "activity",
       "name": "Harry Potter and the Cursed Child",
       "description": "Broadway · Lyric Theatre",
@@ -34,7 +45,7 @@
       "notes": "Orchestra seats E2, E4, E6, E8 · 4 tickets"
     },
     {
-      "id": "evt-003",
+      "id": "evt-004",
       "type": "activity",
       "name": "Hamilton",
       "description": "Broadway · Richard Rodgers Theatre",
@@ -47,7 +58,7 @@
       "notes": "Orchestra Row E, seats 105–108 · 4 tickets"
     },
     {
-      "id": "evt-004",
+      "id": "evt-005",
       "type": "flight",
       "airline": "American Airlines",
       "flightNumber": "AA 1534",
