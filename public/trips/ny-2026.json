@@ -35,6 +35,19 @@
     },
     {
       "id": "evt-003",
+      "type": "activity",
+      "name": "Hamilton",
+      "description": "Broadway · Richard Rodgers Theatre",
+      "address": "226 W 46th St, New York, NY 10036",
+      "date": "2026-08-08",
+      "startTime": "19:00",
+      "durationMinutes": 165,
+      "coordinates": { "lat": 40.7590, "lng": -73.9874 },
+      "confirmationNumber": "TGH5NS2",
+      "notes": "Orchestra Row E, seats 105–108 · 4 tickets"
+    },
+    {
+      "id": "evt-004",
       "type": "flight",
       "airline": "American Airlines",
       "flightNumber": "AA 1534",
