@@ -19,6 +19,15 @@
       "endDate": "2026-07-02"
     },
     {
+      "id": "las-vegas-2026",
+      "title": "Las Vegas 2026",
+      "description": "A long weekend on the Strip.",
+      "destination": "Las Vegas, NV",
+      "coverImage": "https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?w=800",
+      "startDate": "2026-07-30",
+      "endDate": "2026-08-02"
+    },
+    {
       "id": "ny-2026",
       "title": "New York 2026",
       "description": "A long weekend in the city.",

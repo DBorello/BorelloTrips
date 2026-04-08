@@ -1,0 +1,36 @@
+{
+  "id": "las-vegas-2026",
+  "title": "Las Vegas 2026",
+  "description": "A long weekend on the Strip.",
+  "destination": "Las Vegas, NV",
+  "coverImage": "https://images.unsplash.com/photo-1605833556294-ea5c7a74f57d?w=800",
+  "startDate": "2026-07-30",
+  "endDate": "2026-08-02",
+  "timezone": "America/Los_Angeles",
+  "events": [
+    {
+      "id": "flight-ord-las-bz1etf",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 723",
+      "departureAirport": "ORD",
+      "arrivalAirport": "LAS",
+      "departureDatetime": "2026-07-30T09:00:00",
+      "arrivalDatetime": "2026-07-30T11:08:00",
+      "confirmationNumber": "BZ1ETF",
+      "notes": "Economy · Daniel seat 35D · Ashley seat 35E · Nonstop"
+    },
+    {
+      "id": "flight-las-ord-bz1etf",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 1583",
+      "departureAirport": "LAS",
+      "arrivalAirport": "ORD",
+      "departureDatetime": "2026-08-02T10:25:00",
+      "arrivalDatetime": "2026-08-02T16:21:00",
+      "confirmationNumber": "BZ1ETF",
+      "notes": "Economy · Daniel seat 34C · Ashley seat 34B · Nonstop"
+    }
+  ]
+}
