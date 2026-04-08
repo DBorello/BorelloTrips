@@ -20,6 +20,23 @@ npm run dev -- --port 5174   # dev server (port 3000 is taken)
 npm run build                 # tsc + vite build → dist/
 ```
 
+## Google Calendar sync
+
+After adding or updating any trip events, sync to Google Calendar:
+
+```bash
+python scripts/gcal_sync.py sync                  # sync all trips
+python scripts/gcal_sync.py sync --trip ny-2026   # sync one trip
+python scripts/gcal_sync.py delete --trip ny-2026 # remove one trip's events
+python scripts/gcal_sync.py delete                # remove all BorelloTrips events
+```
+
+- Credentials: `scripts/gcal_credentials.json` (OAuth Desktop app, download from Google Cloud Console — gitignored)
+- Token: `scripts/gcal_token.json` (auto-generated on first run — gitignored)
+- Dependencies: `pip install -r scripts/requirements.txt`
+- Events are tagged with `extendedProperties.private.source=borellotrips` so sync is idempotent — safe to run repeatedly
+- **Always run `gcal_sync.py sync` after committing trip changes.**
+
 ## Deploy
 
 Push to `main` → GitHub Actions builds and deploys to GitHub Pages automatically (~30s).

@@ -2,3 +2,5 @@ node_modules/
 dist/
 .DS_Store
 *.local
+scripts/gcal_credentials.json
+scripts/gcal_token.json
