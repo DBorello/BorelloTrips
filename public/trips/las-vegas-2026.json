@@ -21,15 +21,15 @@
       "notes": "Economy · Daniel seat 35D · Ashley seat 35E · Nonstop"
     },
     {
-      "id": "hotel-cosmopolitan-20260730",
+      "id": "hotel-cosmopolitan-1kspomrudb",
       "type": "hotel",
       "name": "The Cosmopolitan of Las Vegas",
       "address": "3708 S. Las Vegas Blvd., Las Vegas, NV 89109",
       "checkInDatetime": "2026-07-30T15:00:00",
-      "checkOutDatetime": "2026-08-02T12:00:00",
+      "checkOutDatetime": "2026-08-02T11:00:00",
       "coordinates": { "lat": 36.1098, "lng": -115.1738 },
-      "confirmationNumber": null,
-      "notes": "Wraparound Terrace Suite Fountain View · 1 King · 1200 sq ft · 2 adults · $100 F&B credit · Two $30 daily breakfast credits · MGM Rewards eligible"
+      "confirmationNumber": "1KSPOMRUDB",
+      "notes": "Wraparound Terrace Suite Fountain View · 1 King · 1200 sq ft · 2 adults · $100 F&B credit · Two $30 daily breakfast credits · MGM Rewards eligible · Record locator: LJEHBJ · Travel advisor: Sarah Lee (travel@sarahwlee.com)"
     },
     {
       "id": "flight-las-ord-bz1etf",
