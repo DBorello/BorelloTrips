@@ -198,6 +198,56 @@
       "notes": "Canopy Plunge Pool Suite, one-bedroom, king bed."
     },
     {
+      "id": "restaurant-bahia-latin-journey-20260423",
+      "type": "restaurant",
+      "name": "Bahia — Private Latin Journey Dinner",
+      "address": "Four Seasons Resort Peninsula Papagayo, Carrillo, Costa Rica",
+      "date": "2026-04-23",
+      "time": "18:00",
+      "partySize": 2,
+      "coordinates": { "lat": 10.5581, "lng": -85.7258 },
+      "confirmationNumber": null,
+      "notes": "8-course tasting menu by Chef Heberto · 3 signature non-alcoholic pairings · $215+28% per adult · 13% tax + 10% service fee · Cancel 48h+ prior for no fee"
+    },
+    {
+      "id": "activity-mountain-biking-20260424",
+      "type": "activity",
+      "name": "Electric Mountain Biking",
+      "description": "E-bike tour through Peninsula Papagayo mangroves, estuaries, and forests.",
+      "address": "Four Seasons Resort Peninsula Papagayo — meet at main lobby",
+      "date": "2026-04-24",
+      "startTime": "08:00",
+      "durationMinutes": 150,
+      "coordinates": { "lat": 10.5581, "lng": -85.7258 },
+      "confirmationNumber": null,
+      "notes": "$310 USD · Transportation, bike, water & bilingual guide included · Tennis shoes, insect repellent, sunscreen · 48-hour cancellation policy"
+    },
+    {
+      "id": "restaurant-virador-beach-club-20260424",
+      "type": "restaurant",
+      "name": "Virador Beach Club",
+      "address": "Peninsula Papagayo, Carrillo, Guanacaste, Costa Rica",
+      "date": "2026-04-24",
+      "time": "18:00",
+      "partySize": 2,
+      "coordinates": { "lat": 10.5620, "lng": -85.7310 },
+      "confirmationNumber": null,
+      "notes": "Mediterranean-inspired cuisine, family style · Smart casual dress code"
+    },
+    {
+      "id": "activity-couples-massage-20260425",
+      "type": "activity",
+      "name": "Signature Rainforest Massage — Couples",
+      "description": "Couples massage inspired by Monteverde's rainforest. Select pressure, technique, and essential oil.",
+      "address": "Four Seasons Resort Peninsula Papagayo Spa",
+      "date": "2026-04-25",
+      "startTime": "09:15",
+      "durationMinutes": 90,
+      "coordinates": { "lat": 10.5581, "lng": -85.7258 },
+      "confirmationNumber": null,
+      "notes": "Arrive 30 min early · Female therapist preference · 4-hour cancellation policy"
+    },
+    {
       "id": "flight-lir-ord-hcgb50",
       "type": "flight",
       "airline": "United Airlines",
