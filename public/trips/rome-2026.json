@@ -22,6 +22,20 @@
       "notes": "Polaris business class · Seat 09F"
     },
     {
+      "id": "car-fco-frattina-w63484591",
+      "type": "ground_transportation",
+      "company": "Welcome Pickups",
+      "serviceType": "Private Airport Transfer",
+      "pickupLocation": "Rome–Fiumicino Leonardo da Vinci International Airport (FCO)",
+      "dropoffLocation": "Frattina Family Romantic Superior Suite, Via Frattina, 34, 00187 Rome, Lazio, Italy",
+      "pickupDatetime": "2026-06-03T09:00:00",
+      "dropoffDatetime": null,
+      "pickupCoordinates": { "lat": 41.8003, "lng": 12.2389 },
+      "dropoffCoordinates": { "lat": 41.9054, "lng": 12.4797 },
+      "confirmationNumber": "w-6348459-1",
+      "notes": "Driver waiting inside the Arrival Hall in N.C.C. corner (1-4) holding sign with name · Connects from United 970 from Chicago"
+    },
+    {
       "id": "hotel-frattina-hmmddm2hwr",
       "type": "hotel",
       "name": "Frattina Family Romantic Superior Suite",
@@ -133,6 +147,20 @@
       "arrivalDatetime": "2026-06-27T14:10:00",
       "confirmationNumber": "PF5F4R",
       "notes": null
+    },
+    {
+      "id": "car-frattina-fco-w63484592",
+      "type": "ground_transportation",
+      "company": "Welcome Pickups",
+      "serviceType": "Private Airport Transfer",
+      "pickupLocation": "Frattina Family Romantic Superior Suite, Via Frattina, 34, 00187 Rome, Lazio, Italy",
+      "dropoffLocation": "Rome–Fiumicino Leonardo da Vinci International Airport (FCO)",
+      "pickupDatetime": "2026-07-02T07:00:00",
+      "dropoffDatetime": null,
+      "pickupCoordinates": { "lat": 41.9054, "lng": 12.4797 },
+      "dropoffCoordinates": { "lat": 41.8003, "lng": 12.2389 },
+      "confirmationNumber": "w-6348459-2",
+      "notes": "Driver waiting outside the hotel at scheduled pickup time · Connects to United 971 to Chicago"
     },
     {
       "id": "flight-fco-ord-lc5l7e",
