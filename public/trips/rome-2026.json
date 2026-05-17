@@ -137,6 +137,18 @@
       "notes": "Dune Suite · 2 adults, 2 children · Half board (breakfast and dinner) · $100 F&B credit · Spa access included"
     },
     {
+      "id": "flight-fco-mrs-fr945",
+      "type": "flight",
+      "airline": "Ryanair",
+      "flightNumber": "FR 945",
+      "departureAirport": "FCO",
+      "arrivalAirport": "MRS",
+      "departureDatetime": "2026-06-24T11:25:00",
+      "arrivalDatetime": "2026-06-24T12:55:00",
+      "confirmationNumber": null,
+      "notes": "Daniel 24C (checked bag 20kg) · Ashley 24D · Joshua 24B · Audrey 24E"
+    },
+    {
       "id": "hotel-villa-talabar-584592284",
       "type": "hotel",
       "name": "Villa Talabar",
@@ -158,6 +170,18 @@
       "arrivalDatetime": "2026-06-27T14:10:00",
       "confirmationNumber": "PF5F4R",
       "notes": null
+    },
+    {
+      "id": "flight-mrs-fco-fr944",
+      "type": "flight",
+      "airline": "Ryanair",
+      "flightNumber": "FR 944",
+      "departureAirport": "MRS",
+      "arrivalAirport": "FCO",
+      "departureDatetime": "2026-06-28T18:35:00",
+      "arrivalDatetime": "2026-06-28T20:00:00",
+      "confirmationNumber": null,
+      "notes": "Daniel 10C (checked bag 20kg) · Ashley 10E · Joshua 10B · Audrey 10D"
     },
     {
       "id": "car-frattina-fco-w63484592",
