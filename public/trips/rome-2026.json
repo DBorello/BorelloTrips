@@ -126,17 +126,6 @@
       "notes": null
     },
     {
-      "id": "hotel-forte-village-10568480",
-      "type": "hotel",
-      "name": "Forte Village — Le Dune",
-      "address": "Via Forte Village 1, 09010 Santa Margherita di Pula, Sardinia, Italy",
-      "checkInDatetime": "2026-06-22T14:00:00",
-      "checkOutDatetime": "2026-06-27T11:00:00",
-      "confirmationNumber": "10568480",
-      "coordinates": { "lat": 38.9183, "lng": 9.0006 },
-      "notes": "Dune Suite · 2 adults, 2 children · Half board (breakfast and dinner) · $100 F&B credit · Spa access included"
-    },
-    {
       "id": "flight-fco-mrs-fr945",
       "type": "flight",
       "airline": "Ryanair",
