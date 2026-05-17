@@ -137,6 +137,17 @@
       "notes": "Dune Suite · 2 adults, 2 children · Half board (breakfast and dinner) · $100 F&B credit · Spa access included"
     },
     {
+      "id": "hotel-villa-talabar-584592284",
+      "type": "hotel",
+      "name": "Villa Talabar",
+      "address": "4 Traverse du Soleil, 13260 Cassis, Bouches-du-Rhône, France",
+      "checkInDatetime": "2026-06-24T16:00:00",
+      "checkOutDatetime": "2026-06-28T10:00:00",
+      "confirmationNumber": "584-592-284",
+      "coordinates": { "lat": 43.21273, "lng": 5.5303 },
+      "notes": "TFL Group · Sea view villa with infinity pool and jacuzzi · 8 adults, 4 children · Arrival window 16:00–20:00 · Phone +33 6 60 17 64 46 / +33 6 60 15 78 19 · contact@thefrenchlodge.com · €2000 security deposit due on arrival"
+    },
+    {
       "id": "flight-cag-fco-pf5f4r",
       "type": "flight",
       "airline": "ITA Airways",
