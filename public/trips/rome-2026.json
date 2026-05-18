@@ -138,6 +138,20 @@
       "notes": "Daniel 24C (checked bag 20kg) · Ashley 24D · Joshua 24B · Audrey 24E"
     },
     {
+      "id": "car-sixt-mrs-9734237568",
+      "type": "car_rental",
+      "company": "SIXT",
+      "carType": "VW Multivan, Citroën SpaceTourer or similar (9-seat, automatic)",
+      "pickupLocation": "Marseille Provence Airport (MRS)",
+      "dropoffLocation": "Marseille Provence Airport (MRS)",
+      "pickupDatetime": "2026-06-24T13:30:00",
+      "dropoffDatetime": "2026-06-28T17:30:00",
+      "pickupCoordinates": { "lat": 43.4393, "lng": 5.2214 },
+      "dropoffCoordinates": { "lat": 43.4393, "lng": 5.2214 },
+      "confirmationNumber": "9734237568",
+      "notes": "9 seats · 6 luggage · Automatic · €1193.94 prepaid · €500 refundable deposit hold at pickup · Unlimited miles · Third-party insurance and 24/7 breakdown included · No CDW protection added"
+    },
+    {
       "id": "hotel-villa-talabar-584592284",
       "type": "hotel",
       "name": "Villa Talabar",
