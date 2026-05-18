@@ -114,18 +114,6 @@
       "notes": "Frecciarossa 8419 · 1st class, car 2 · Daniel 12B, Ashley 11B, Joshua 12A, Audrey 11A"
     },
     {
-      "id": "flight-fco-cag-pf5f4r",
-      "type": "flight",
-      "airline": "ITA Airways",
-      "flightNumber": "XZ 2337",
-      "departureAirport": "FCO",
-      "arrivalAirport": "CAG",
-      "departureDatetime": "2026-06-22T09:30:00",
-      "arrivalDatetime": "2026-06-22T10:40:00",
-      "confirmationNumber": "PF5F4R",
-      "notes": null
-    },
-    {
       "id": "flight-fco-mrs-fr945",
       "type": "flight",
       "airline": "Ryanair",
@@ -161,18 +149,6 @@
       "confirmationNumber": "584-592-284",
       "coordinates": { "lat": 43.21273, "lng": 5.5303 },
       "notes": "TFL Group · Sea view villa with infinity pool and jacuzzi · 8 adults, 4 children · Arrival window 16:00–20:00 · Phone +33 6 60 17 64 46 / +33 6 60 15 78 19 · contact@thefrenchlodge.com · €2000 security deposit due on arrival"
-    },
-    {
-      "id": "flight-cag-fco-pf5f4r",
-      "type": "flight",
-      "airline": "ITA Airways",
-      "flightNumber": "XZ 2340",
-      "departureAirport": "CAG",
-      "arrivalAirport": "FCO",
-      "departureDatetime": "2026-06-27T13:00:00",
-      "arrivalDatetime": "2026-06-27T14:10:00",
-      "confirmationNumber": "PF5F4R",
-      "notes": null
     },
     {
       "id": "flight-mrs-fco-fr944",
