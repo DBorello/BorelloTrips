@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import {
   Plane, Hotel, Car, UtensilsCrossed, MapPin, Navigation,
-  ChevronDown, Copy, Check, ArrowRight, ExternalLink
+  ChevronDown, Copy, Check, ArrowRight, ExternalLink, StickyNote
 } from 'lucide-react'
 import type { TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent, Coordinates } from '../../types/trip'
 import { getEventColor, getEventBadgeClass, EVENT_LABELS } from '../../utils/eventColors'
@@ -419,11 +419,18 @@ export function EventRow({ event, isMultiDayIndicator, multiDayLabel }: EventRow
             </div>
           </div>
 
-          {/* Type badge */}
-          <div className="mt-2.5">
+          {/* Type badge + note indicator */}
+          <div className="mt-2.5 flex items-center justify-between gap-2">
             <span className={`text-[10px] px-2 py-0.5 rounded-full font-medium ${badgeClass}`}>
               {EVENT_LABELS[event.type]}
             </span>
+            {event.notes && (
+              <StickyNote
+                className="w-3 h-3 flex-shrink-0"
+                style={{ color: `${color}99` }}
+                aria-label="Has note"
+              />
+            )}
           </div>
 
           {/* Expanded details — animated */}
