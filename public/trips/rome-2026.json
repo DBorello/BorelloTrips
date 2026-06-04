@@ -125,6 +125,19 @@
       "notes": "San Giorgio Suite · 2 adults, 2 children · Daily breakfast included · EUR 200 resort credit · Shuttle to St Mark's Square"
     },
     {
+      "id": "activity-murano-pendant-davide",
+      "type": "activity",
+      "name": "Create a unique pendant with Murano glass",
+      "description": "Hands-on Murrina glass pendant workshop at Vianello Nadia Murrine in Murano — brief history, demonstration, design your own pattern, and assemble glass pieces · Hosted by Davide",
+      "address": "Campiello della Pescheria 10, Murano, 30141 Venice, Veneto, Italy",
+      "date": "2026-06-15",
+      "startTime": "14:00",
+      "durationMinutes": 75,
+      "coordinates": { "lat": 45.4582, "lng": 12.3525 },
+      "confirmationNumber": null,
+      "notes": "4 guests · $348.29 total (Apple Pay, Jun 4) · Booked under Ashley (Airbnb) · Pendant ships in ~20 days ($40 shipping to US) · Get there via Murano Colonna or Murano Faro vaporetto stops · Cancellation: full refund up to 1 day before"
+    },
+    {
       "id": "car-cipriani-hotel-to-station",
       "type": "ground_transportation",
       "company": "Hotel Cipriani",
