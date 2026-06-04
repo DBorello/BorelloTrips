@@ -60,6 +60,19 @@
       "notes": "2 adults and 2 children · Meet at Piazza di San Pantaleo · Hosted by Vesparella SRL (Airbnb Experience)"
     },
     {
+      "id": "activity-colosseum-livtours-lvo665873",
+      "type": "activity",
+      "name": "Private Family Colosseum Tour for Kids",
+      "description": "Private family-friendly guided tour of the Colosseum · Hosted by LivTours",
+      "address": "Largo Gaetana Agnesi, 00184 Rome, Lazio, Italy",
+      "date": "2026-06-10",
+      "startTime": "15:15",
+      "durationMinutes": 150,
+      "coordinates": { "lat": 41.8903, "lng": 12.4900 },
+      "confirmationNumber": "LVO-665873",
+      "notes": "2 adults and 2 children · €637 total · Booking ID LVB-670801 · Meet in front of SOS sign at the UPPER-LEVEL entrance of Colosseo Metro station (Largo Gaetana Agnesi) — note there is also a lower-level SOS sign · Photo ID required for entry · 24hr free cancellation (excluding tickets) · Booked under Ashley · LivTours +1 (213) 474-8205 / +39 06 9480 4697 · booking@livtours.com"
+    },
+    {
       "id": "train-rome-venice-r7ztln",
       "type": "ground_transportation",
       "company": "Trenitalia",
