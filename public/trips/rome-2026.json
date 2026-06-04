@@ -47,6 +47,19 @@
       "notes": "Airbnb hosted by Massimiliano · Self check-in with smart lock · 2 adults, 2 children · Contact: +39 351 771 9920"
     },
     {
+      "id": "activity-vespa-sidecar-ta8pnfp5",
+      "type": "activity",
+      "name": "Vespa Sidecar Tour In Rome",
+      "description": "90-min tour of Rome's most iconic places on a Vespa Sidecar — panoramic stops, historical stories, photo-stops, and authentic tips · Hosted by Vesparella SRL",
+      "address": "Piazza di San Pantaleo, 00186 Rome, Lazio, Italy",
+      "date": "2026-06-05",
+      "startTime": "11:00",
+      "durationMinutes": 105,
+      "coordinates": { "lat": 41.8965, "lng": 12.4727 },
+      "confirmationNumber": "TA8PNFP5",
+      "notes": "2 adults and 2 children · Meet at Piazza di San Pantaleo · Hosted by Vesparella SRL (Airbnb Experience)"
+    },
+    {
       "id": "train-rome-venice-r7ztln",
       "type": "ground_transportation",
       "company": "Trenitalia",
@@ -112,6 +125,19 @@
       "dropoffCoordinates": { "lat": 41.9009, "lng": 12.5010 },
       "confirmationNumber": "R78PC5",
       "notes": "Frecciarossa 8419 · 1st class, car 2 · Daniel 12B, Ashley 11B, Joshua 12A, Audrey 11A"
+    },
+    {
+      "id": "activity-ciampini-gelato-ta8ebrqz",
+      "type": "activity",
+      "name": "Make ice cream with the Ciampini brothers",
+      "description": "Learn to make two unique gelato flavors using traditional recipes and modern techniques, guided by experts whose family has made gelato in Rome for almost 80 years · Hosted by Angelo",
+      "address": "Via del Leone, 12, 00186 Rome, Lazio, Italy",
+      "date": "2026-06-18",
+      "startTime": "15:00",
+      "durationMinutes": 90,
+      "coordinates": { "lat": 41.9087, "lng": 12.4762 },
+      "confirmationNumber": "TA8EBRQZ",
+      "notes": "2 adults and 2 children · Private group · Meet at Via del Leone, 12 · Hosted by Angelo (Airbnb Experience)"
     },
     {
       "id": "flight-fco-mrs-fr945",
