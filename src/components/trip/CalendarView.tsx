@@ -3,30 +3,10 @@ import FullCalendar from '@fullcalendar/react'
 import dayGridPlugin from '@fullcalendar/daygrid'
 import timeGridPlugin from '@fullcalendar/timegrid'
 import interactionPlugin from '@fullcalendar/interaction'
-import type { EventClickArg, EventContentArg, EventInput } from '@fullcalendar/core'
-import { StickyNote } from 'lucide-react'
+import type { EventClickArg, EventInput } from '@fullcalendar/core'
 import type { Trip, TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent } from '../../types/trip'
 import { getEventColor } from '../../utils/eventColors'
 import { EventPopover } from './EventPopover'
-
-function renderEventContent(arg: EventContentArg) {
-  const event = arg.event.extendedProps.event as TripEvent | undefined
-  const hasNote = !!event?.notes
-  return (
-    <div className="flex items-center gap-1 w-full min-w-0">
-      {arg.timeText && (
-        <span className="fc-event-time flex-shrink-0">{arg.timeText}</span>
-      )}
-      <span className="fc-event-title truncate flex-1 min-w-0">{arg.event.title}</span>
-      {hasNote && (
-        <StickyNote
-          className="w-3 h-3 flex-shrink-0 text-white drop-shadow-[0_1px_1px_rgba(0,0,0,0.4)]"
-          aria-label="Has note"
-        />
-      )}
-    </div>
-  )
-}
 
 function buildCalendarEvents(events: TripEvent[]): EventInput[] {
   const calEvents: EventInput[] = []
@@ -216,7 +196,6 @@ export function CalendarView({ trip }: CalendarViewProps) {
             }
           }}
           events={calendarEvents}
-          eventContent={renderEventContent}
           eventClick={handleEventClick}
           headerToolbar={{
             left: '',
