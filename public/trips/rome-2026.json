@@ -60,6 +60,18 @@
       "notes": "2 adults and 2 children · Meet at Piazza di San Pantaleo · Hosted by Vesparella SRL (Airbnb Experience)"
     },
     {
+      "id": "restaurant-club-derriere-2026-06-05",
+      "type": "restaurant",
+      "name": "Club Derrière",
+      "address": "Vicolo delle Coppelle, 59, 00186 Rome, Lazio, Italy",
+      "date": "2026-06-05",
+      "time": "22:00",
+      "partySize": 4,
+      "coordinates": { "lat": 41.8993, "lng": 12.4750 },
+      "confirmationNumber": null,
+      "notes": "2 adults, 2 kids · Booked under Daniel"
+    },
+    {
       "id": "activity-colosseum-livtours-lvo665873",
       "type": "activity",
       "name": "Private Family Colosseum Tour for Kids",
