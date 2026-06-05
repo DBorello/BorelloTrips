@@ -32,6 +32,18 @@
       "notes": "Wraparound Terrace Suite Fountain View · 1 King · 1200 sq ft · 2 adults · $100 F&B credit · Two $30 daily breakfast credits · MGM Rewards eligible · Record locator: LJEHBJ · Travel advisor: Sarah Lee (travel@sarahwlee.com)"
     },
     {
+      "id": "restaurant-guy-savoy-2026-08-01",
+      "type": "restaurant",
+      "name": "Restaurant Guy Savoy",
+      "address": "Caesars Palace, 3570 S Las Vegas Blvd, Las Vegas, NV 89109",
+      "date": "2026-08-01",
+      "time": "19:00",
+      "partySize": 2,
+      "coordinates": { "lat": 36.1163, "lng": -115.1745 },
+      "confirmationNumber": null,
+      "notes": "Booked via OpenTable"
+    },
+    {
       "id": "flight-las-ord-bz1etf",
       "type": "flight",
       "airline": "United Airlines",
