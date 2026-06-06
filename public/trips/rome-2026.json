@@ -72,6 +72,20 @@
       "notes": "2 adults, 2 kids · Booked under Daniel"
     },
     {
+      "id": "train-rome-florence-trejfajdpjlw3r0b-out",
+      "type": "ground_transportation",
+      "company": "Italo",
+      "serviceType": "Italo Viva High-Speed Train",
+      "pickupLocation": "Roma Termini, Piazza dei Cinquecento, 00185 Rome, Italy",
+      "dropoffLocation": "Firenze Santa Maria Novella, Piazza della Stazione, 50123 Florence, Italy",
+      "pickupDatetime": "2026-06-07T08:35:00",
+      "dropoffDatetime": "2026-06-07T10:11:00",
+      "pickupCoordinates": { "lat": 41.9009, "lng": 12.5010 },
+      "dropoffCoordinates": { "lat": 43.7765, "lng": 11.2480 },
+      "confirmationNumber": "TRE-JFAJ-DPJL-W3R0-B",
+      "notes": "Viva fare · Booked via Trainline ($366 for this leg, $822 total round-trip)"
+    },
+    {
       "id": "hotel-four-seasons-florence-64601sg043557",
       "type": "hotel",
       "name": "Four Seasons Hotel Florence",
@@ -81,6 +95,20 @@
       "confirmationNumber": "64601SG043557",
       "coordinates": { "lat": 43.7748, "lng": 11.2649 },
       "notes": "Parlour Suite King - Florentine Landscape (576 sq ft) · 2 guests + sofa bed for kids requested · Daily breakfast for 2 · €200 hotel credit (ancillary, ex. retail) · 1-category upgrade subject to availability · Rate PP - EXPE MORE SPEND CREDIT · 3 nights, €11,664 total · Record locator KTSAFO · Phone +39 055 2626 1"
+    },
+    {
+      "id": "train-florence-rome-trejfajdpjlw3r0b-ret",
+      "type": "ground_transportation",
+      "company": "Italo",
+      "serviceType": "Italo Viva High-Speed Train",
+      "pickupLocation": "Firenze Santa Maria Novella, Piazza della Stazione, 50123 Florence, Italy",
+      "dropoffLocation": "Roma Termini, Piazza dei Cinquecento, 00185 Rome, Italy",
+      "pickupDatetime": "2026-06-10T10:48:00",
+      "dropoffDatetime": "2026-06-10T12:25:00",
+      "pickupCoordinates": { "lat": 43.7765, "lng": 11.2480 },
+      "dropoffCoordinates": { "lat": 41.9009, "lng": 12.5010 },
+      "confirmationNumber": "TRE-JFAJ-DPJL-W3R0-B",
+      "notes": "Viva fare · Booked via Trainline ($456 for this leg, $822 total round-trip) · Arrives Roma Termini 12:25, ~2h45 before Colosseum tour at 15:15"
     },
     {
       "id": "activity-colosseum-livtours-lvo665873",
