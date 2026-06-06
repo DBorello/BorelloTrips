@@ -72,6 +72,17 @@
       "notes": "2 adults, 2 kids · Booked under Daniel"
     },
     {
+      "id": "hotel-four-seasons-florence-64601sg043557",
+      "type": "hotel",
+      "name": "Four Seasons Hotel Florence",
+      "address": "Borgo Pinti, 99, 50121 Florence, Italy",
+      "checkInDatetime": "2026-06-07T15:00:00",
+      "checkOutDatetime": "2026-06-10T12:00:00",
+      "confirmationNumber": "64601SG043557",
+      "coordinates": { "lat": 43.7748, "lng": 11.2649 },
+      "notes": "Parlour Suite King - Florentine Landscape (576 sq ft) · 2 guests + sofa bed for kids requested · Daily breakfast for 2 · €200 hotel credit (ancillary, ex. retail) · 1-category upgrade subject to availability · Rate PP - EXPE MORE SPEND CREDIT · 3 nights, €11,664 total · Record locator KTSAFO · Phone +39 055 2626 1"
+    },
+    {
       "id": "activity-colosseum-livtours-lvo665873",
       "type": "activity",
       "name": "Private Family Colosseum Tour for Kids",
