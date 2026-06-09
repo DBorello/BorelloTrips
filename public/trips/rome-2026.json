@@ -97,6 +97,18 @@
       "notes": "Parlour Suite King - Florentine Landscape (576 sq ft) · 2 guests + sofa bed for kids requested · Daily breakfast for 2 · €200 hotel credit (ancillary, ex. retail) · 1-category upgrade subject to availability · Rate PP - EXPE MORE SPEND CREDIT · 3 nights, €11,664 total · Record locator KTSAFO · Phone +39 055 2626 1"
     },
     {
+      "id": "restaurant-vecchia-trattoria-buralli-2026-06-08",
+      "type": "restaurant",
+      "name": "Vecchia Trattoria Buralli",
+      "address": "Piazza Sant'Agostino, 10, 55100 Lucca, LU, Italy",
+      "date": "2026-06-08",
+      "time": "14:30",
+      "partySize": 4,
+      "coordinates": { "lat": 43.8459, "lng": 10.5026 },
+      "confirmationNumber": null,
+      "notes": "Lunch · ~60 min"
+    },
+    {
       "id": "activity-leonardo-museum-401783103767",
       "type": "activity",
       "name": "Leonardo Interactive Museum",
