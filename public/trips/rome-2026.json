@@ -97,6 +97,19 @@
       "notes": "Parlour Suite King - Florentine Landscape (576 sq ft) · 2 guests + sofa bed for kids requested · Daily breakfast for 2 · €200 hotel credit (ancillary, ex. retail) · 1-category upgrade subject to availability · Rate PP - EXPE MORE SPEND CREDIT · 3 nights, €11,664 total · Record locator KTSAFO · Phone +39 055 2626 1"
     },
     {
+      "id": "activity-leonardo-museum-401783103767",
+      "type": "activity",
+      "name": "Leonardo Interactive Museum",
+      "description": "Interactive museum showcasing reproductions of Leonardo da Vinci's machines and inventions",
+      "address": "Via dei Servi, 66/R, 50122 Florence, Italy",
+      "date": "2026-06-09",
+      "startTime": "12:00",
+      "durationMinutes": 90,
+      "coordinates": { "lat": 43.7762, "lng": 11.2592 },
+      "confirmationNumber": "401783103767",
+      "notes": "4 tickets (2 adults, 1 teen 8–17, 1 child 3–7) · 50% discounted tickets · Tickets shown on phone or printed at entrance · Cancel/reschedule up to 24h before"
+    },
+    {
       "id": "train-florence-rome-trejfajdpjlw3r0b-ret",
       "type": "ground_transportation",
       "company": "Italo",
