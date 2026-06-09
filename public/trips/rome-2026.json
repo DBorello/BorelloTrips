@@ -97,6 +97,19 @@
       "notes": "Parlour Suite King - Florentine Landscape (576 sq ft) · 2 guests + sofa bed for kids requested · Daily breakfast for 2 · €200 hotel credit (ancillary, ex. retail) · 1-category upgrade subject to availability · Rate PP - EXPE MORE SPEND CREDIT · 3 nights, €11,664 total · Record locator KTSAFO · Phone +39 055 2626 1"
     },
     {
+      "id": "activity-leaning-tower-pisa-2026-06-08",
+      "type": "activity",
+      "name": "Leaning Tower of Pisa",
+      "description": "Visit to the Leaning Tower and Piazza dei Miracoli",
+      "address": "Piazza del Duomo, 56126 Pisa, PI, Italy",
+      "date": "2026-06-08",
+      "startTime": "11:00",
+      "durationMinutes": 90,
+      "coordinates": { "lat": 43.7230, "lng": 10.3966 },
+      "confirmationNumber": null,
+      "notes": null
+    },
+    {
       "id": "restaurant-vecchia-trattoria-buralli-2026-06-08",
       "type": "restaurant",
       "name": "Vecchia Trattoria Buralli",
