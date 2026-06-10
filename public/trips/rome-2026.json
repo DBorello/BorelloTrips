@@ -317,6 +317,18 @@
       "notes": "Daniel 10C (checked bag 20kg) · Ashley 10E · Joshua 10B · Audrey 10D"
     },
     {
+      "id": "restaurant-colline-emiliane-2026-07-01",
+      "type": "restaurant",
+      "name": "Colline Emiliane",
+      "address": "Via degli Avignonesi, 22, 00187 Rome, Lazio, Italy",
+      "date": "2026-07-01",
+      "time": "19:30",
+      "partySize": 4,
+      "coordinates": { "lat": 41.9028, "lng": 12.4880 },
+      "confirmationNumber": null,
+      "notes": null
+    },
+    {
       "id": "car-frattina-fco-w63484592",
       "type": "ground_transportation",
       "company": "Welcome Pickups",
