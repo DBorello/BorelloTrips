@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "pahrump-2026",
+  "title": "Cadillac V-Performance Academy 2026",
+  "description": "Two-day Cadillac Blackwing driving school at Spring Mountain Motor Resort.",
+  "destination": "Pahrump, NV",
+  "coverImage": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=800",
+  "startDate": "2026-08-23",
+  "endDate": "2026-08-25",
+  "timezone": "America/Los_Angeles",
+  "events": [
+    {
+      "id": "hotel-spring-mountain-condo",
+      "type": "hotel",
+      "name": "Spring Mountain Motor Resort Condo",
+      "address": "4767 S NV-160, Pahrump, NV 89048",
+      "checkInDatetime": "2026-08-23T15:00:00",
+      "checkOutDatetime": "2026-08-25T11:00:00",
+      "confirmationNumber": null,
+      "coordinates": { "lat": 36.1822, "lng": -115.9870 },
+      "notes": "On-property condo for the V-Performance Academy · Check-in any time after 3:00 PM · Check-out window 6:45 AM – 11:00 AM · Vehicle required to get around property (some buildings up to 1.5 mi from the classroom) · Sales associate: Ashley Saeger · (855) 556-2878"
+    },
+    {
+      "id": "activity-blackwing-academy-day1",
+      "type": "activity",
+      "name": "Cadillac V-Performance Academy — Day 1",
+      "description": "Day 1 of the 2-day Cadillac V-Performance Academy, driving a manual CT5-V Blackwing",
+      "address": "4767 S NV-160, Pahrump, NV 89048",
+      "date": "2026-08-24",
+      "startTime": "08:00",
+      "durationMinutes": 480,
+      "coordinates": { "lat": 36.1822, "lng": -115.9870 },
+      "confirmationNumber": null,
+      "notes": "8 AM – 4 PM · Manual CT5-V Blackwing · Flat-soled shoes recommended · SD card for Performance Data Recorder provided on day 1"
+    },
+    {
+      "id": "activity-blackwing-academy-day2",
+      "type": "activity",
+      "name": "Cadillac V-Performance Academy — Day 2",
+      "description": "Day 2 of the 2-day Cadillac V-Performance Academy, driving a manual CT5-V Blackwing",
+      "address": "4767 S NV-160, Pahrump, NV 89048",
+      "date": "2026-08-25",
+      "startTime": "08:00",
+      "durationMinutes": 480,
+      "coordinates": { "lat": 36.1822, "lng": -115.9870 },
+      "confirmationNumber": null,
+      "notes": "8 AM – 4 PM · Manual CT5-V Blackwing · Condo check-out same morning (6:45–11 AM)"
+    }
+  ]
+}
