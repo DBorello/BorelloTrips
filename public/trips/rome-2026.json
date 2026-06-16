@@ -255,6 +255,18 @@
       "notes": "Frecciarossa 8419 · 1st class, car 2 · Daniel 12B, Ashley 11B, Joshua 12A, Audrey 11A"
     },
     {
+      "id": "restaurant-casa-maddalena-2026-06-17",
+      "type": "restaurant",
+      "name": "Casa Maddalena",
+      "address": "Via della Maddalena, 36, 00186 Rome, Lazio, Italy",
+      "date": "2026-06-17",
+      "time": "19:00",
+      "partySize": 8,
+      "coordinates": { "lat": 41.9000, "lng": 12.4773 },
+      "confirmationNumber": null,
+      "notes": null
+    },
+    {
       "id": "activity-ciampini-gelato-ta8ebrqz",
       "type": "activity",
       "name": "Make ice cream with the Ciampini brothers",
