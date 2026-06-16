@@ -255,6 +255,19 @@
       "notes": "Frecciarossa 8419 · 1st class, car 2 · Daniel 12B, Ashley 11B, Joshua 12A, Audrey 11A"
     },
     {
+      "id": "activity-golf-cart-pizza-biga-2026-06-17",
+      "type": "activity",
+      "name": "Golf Cart Adventure and Pizza-Making",
+      "description": "Electric golf cart tour of Rome's historic center (Pantheon, Trevi, Colosseum, Circus Maximus, Piazza Navona) followed by a pizza-making class at Campo de' Fiori · Hosted by BIGA Tours",
+      "address": "Via Monterone, 19, 00186 Rome, Lazio, Italy",
+      "date": "2026-06-17",
+      "startTime": "09:45",
+      "durationMinutes": 210,
+      "coordinates": { "lat": 41.8987, "lng": 12.4760 },
+      "confirmationNumber": null,
+      "notes": "4 guests · $547.14 total (Apple Pay, Jun 16) · Booked under Ashley (Airbnb Experience) · Full refund if cancelled at least 1 day before"
+    },
+    {
       "id": "restaurant-casa-maddalena-2026-06-17",
       "type": "restaurant",
       "name": "Casa Maddalena",
