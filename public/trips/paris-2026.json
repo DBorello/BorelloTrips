@@ -22,6 +22,17 @@
       "notes": "Business Standard · Daniel ticket 0577496736063 · Ashley ticket 0577496736064 · 2x checked bags (32kg each) · 2x carry-on (18kg, 115cm) · Lounge access · Booked via BofA Travel (order 27324531), 820,117 points / $10,251.46 round-trip"
     },
     {
+      "id": "hotel-ritz-paris-6756sg027888",
+      "type": "hotel",
+      "name": "Ritz Paris",
+      "address": "15 Place Vendôme, 75001 Paris, France",
+      "checkInDatetime": "2026-10-01T15:00:00",
+      "checkOutDatetime": "2026-10-07T12:00:00",
+      "confirmationNumber": "6756SG027888",
+      "coordinates": { "lat": 48.8683, "lng": 2.3287 },
+      "notes": "Executive Room, King bed (40 sqm / 430 sq ft, Louis XV/XVI style) · 6 nights · VIRTUOSO rate · American breakfast included · VIP welcome · Roundtrip airport/train transfers · WiFi · €11.38 city tax per guest/day extra · Record locator GGQNSX · Travel advisor: Sarah Lee (travel@sarahwlee.com, 206-659-9218) · Cancel 15 days prior or full stay charged"
+    },
+    {
       "id": "activity-celine-dion-646115709",
       "type": "activity",
       "name": "Celine Dion at Paris La Defense Arena",
