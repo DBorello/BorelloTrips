@@ -22,6 +22,19 @@
       "notes": "Business Standard · Daniel ticket 0577496736063 · Ashley ticket 0577496736064 · 2x checked bags (32kg each) · 2x carry-on (18kg, 115cm) · Lounge access · Booked via BofA Travel (order 27324531), 820,117 points / $10,251.46 round-trip"
     },
     {
+      "id": "activity-celine-dion-646115709",
+      "type": "activity",
+      "name": "Celine Dion at Paris La Defense Arena",
+      "description": "Celine Dion concert · Section K, Row 4, Seats 112–113",
+      "address": "Paris La Defense Arena, 99 Jardin de l'Arche, 92000 Nanterre, France",
+      "date": "2026-10-03",
+      "startTime": "19:30",
+      "durationMinutes": 150,
+      "coordinates": { "lat": 48.8957, "lng": 2.2289 },
+      "confirmationNumber": "646115709",
+      "notes": "2 tickets · Section K, Row 4, Seats 112–113 · $7,929.06 total via StubHub · Tickets transferred by Oct 3 to dan@borellos.com / mobile · Event time subject to change"
+    },
+    {
       "id": "flight-cdg-ord-ap8jfz",
       "type": "flight",
       "airline": "Air France",
