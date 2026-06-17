@@ -32,20 +32,20 @@ function getMultiDayIndicators(
 
     if (date === startDate || !allDates.includes(date)) continue
 
-    const dayNumber = differenceInCalendarDays(parseISO(date), parseISO(startDate)) + 1
-    const totalDays = differenceInCalendarDays(parseISO(endDate), parseISO(startDate)) + 1
+    const daysFromStart = differenceInCalendarDays(parseISO(date), parseISO(startDate))
+    const spanDays = differenceInCalendarDays(parseISO(endDate), parseISO(startDate))
 
     if (event.type === 'hotel') {
       const h = event as HotelEvent
       indicators.push({
         event,
-        label: `${h.name} · night ${dayNumber} of ${totalDays}`
+        label: `${h.name} · night ${daysFromStart} of ${spanDays}`
       })
     } else if (event.type === 'car_rental') {
       const c = event as CarRentalEvent
       indicators.push({
         event,
-        label: `${c.company} rental · day ${dayNumber} of ${totalDays}`
+        label: `${c.company} rental · day ${daysFromStart + 1} of ${spanDays + 1}`
       })
     }
   }
