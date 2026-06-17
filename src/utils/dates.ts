@@ -59,6 +59,23 @@ export function formatDateRange(startDate: string, endDate: string): string {
   return `${format(start, 'MMMM d, yyyy')} – ${format(end, 'MMMM d, yyyy')}`
 }
 
+// Add minutes to a naive local-time datetime ("YYYY-MM-DDTHH:MM:SS") and
+// return the result as another naive string — never touches device timezone.
+export function addMinutesToDatetime(dt: string, minutes: number): string {
+  const [datePart, timePart = '00:00:00'] = dt.split('T')
+  const [y, m, d] = datePart.split('-').map(Number)
+  const [h, mn, s = 0] = timePart.split(':').map(Number)
+  const utc = new Date(Date.UTC(y, m - 1, d, h, mn, s))
+  utc.setUTCMinutes(utc.getUTCMinutes() + minutes)
+  const yy = utc.getUTCFullYear()
+  const mm = String(utc.getUTCMonth() + 1).padStart(2, '0')
+  const dd = String(utc.getUTCDate()).padStart(2, '0')
+  const hh = String(utc.getUTCHours()).padStart(2, '0')
+  const mins = String(utc.getUTCMinutes()).padStart(2, '0')
+  const ss = String(utc.getUTCSeconds()).padStart(2, '0')
+  return `${yy}-${mm}-${dd}T${hh}:${mins}:${ss}`
+}
+
 export function getDayCount(startDate: string, endDate: string): number {
   try {
     const start = parseISO(startDate)

@@ -6,6 +6,7 @@ import interactionPlugin from '@fullcalendar/interaction'
 import type { EventClickArg, EventInput } from '@fullcalendar/core'
 import type { Trip, TripEvent, FlightEvent, HotelEvent, CarRentalEvent, RestaurantEvent, ActivityEvent, GroundTransportationEvent } from '../../types/trip'
 import { getEventColor } from '../../utils/eventColors'
+import { addMinutesToDatetime } from '../../utils/dates'
 import { EventPopover } from './EventPopover'
 
 function buildCalendarEvents(events: TripEvent[]): EventInput[] {
@@ -67,13 +68,11 @@ function buildCalendarEvents(events: TripEvent[]): EventInput[] {
       case 'activity': {
         const a = event as ActivityEvent
         const startDt = `${a.date}T${a.startTime}:00`
-        const endDate = new Date(startDt)
-        endDate.setMinutes(endDate.getMinutes() + a.durationMinutes)
         calEvents.push({
           id: a.id,
           title: a.name,
           start: startDt,
-          end: endDate.toISOString(),
+          end: addMinutesToDatetime(startDt, a.durationMinutes),
           backgroundColor: getEventColor('activity'),
           borderColor: getEventColor('activity'),
           extendedProps: { event: a }
@@ -101,15 +100,22 @@ function buildCalendarEvents(events: TripEvent[]): EventInput[] {
 
 // Sunday on or before the given date
 function weekStart(dateStr: string): string {
-  const d = new Date(dateStr)
-  d.setDate(d.getDate() - d.getDay())
-  return d.toISOString().split('T')[0]
+  const [y, m, d] = dateStr.split('-').map(Number)
+  const date = new Date(y, m - 1, d)
+  date.setDate(date.getDate() - date.getDay())
+  const yy = date.getFullYear()
+  const mm = String(date.getMonth() + 1).padStart(2, '0')
+  const dd = String(date.getDate()).padStart(2, '0')
+  return `${yy}-${mm}-${dd}`
 }
 
 // Number of full Sun–Sat weeks needed to cover startDate through endDate
 function weeksNeeded(startDate: string, endDate: string): number {
-  const start = new Date(weekStart(startDate))
-  const end = new Date(endDate)
+  const ws = weekStart(startDate)
+  const [sy, sm, sd] = ws.split('-').map(Number)
+  const [ey, em, ed] = endDate.split('-').map(Number)
+  const start = new Date(sy, sm - 1, sd)
+  const end = new Date(ey, em - 1, ed)
   const daysToSat = end.getDay() === 6 ? 0 : 6 - end.getDay()
   end.setDate(end.getDate() + daysToSat)
   return Math.round((end.getTime() - start.getTime()) / (7 * 24 * 60 * 60 * 1000)) + 1
