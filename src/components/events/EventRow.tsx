@@ -45,10 +45,10 @@ function CopyButton({ value }: { value: string }) {
 
 function mapsUrl(coords: Coordinates | null | undefined, address?: string): string | null {
   if (coords) {
-    return `https://maps.apple.com/?q=${coords.lat},${coords.lng}&ll=${coords.lat},${coords.lng}`
+    return `https://www.google.com/maps/search/?api=1&query=${coords.lat},${coords.lng}`
   }
   if (address) {
-    return `https://maps.apple.com/?q=${encodeURIComponent(address)}`
+    return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`
   }
   return null
 }
