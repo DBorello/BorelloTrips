@@ -36,10 +36,11 @@ function getMultiDayIndicators(
     const spanDays = differenceInCalendarDays(parseISO(endDate), parseISO(startDate))
 
     if (event.type === 'hotel') {
+      if (date === endDate) continue
       const h = event as HotelEvent
       indicators.push({
         event,
-        label: `${h.name} · night ${daysFromStart} of ${spanDays}`
+        label: `${h.name} · night ${daysFromStart + 1} of ${spanDays}`
       })
     } else if (event.type === 'car_rental') {
       const c = event as CarRentalEvent
