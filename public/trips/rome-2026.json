@@ -342,6 +342,34 @@
       "notes": "Daniel 10C (checked bag 20kg) · Ashley 10E · Joshua 10B · Audrey 10D"
     },
     {
+      "id": "train-rome-naples-qhrm45",
+      "type": "ground_transportation",
+      "company": "Trenitalia",
+      "serviceType": "Frecciarossa High-Speed Train",
+      "pickupLocation": "Roma Termini, Piazza dei Cinquecento, 00185 Rome, Italy",
+      "dropoffLocation": "Napoli Centrale, Piazza Garibaldi, 80142 Naples, Italy",
+      "pickupDatetime": "2026-06-30T08:05:00",
+      "dropoffDatetime": "2026-06-30T09:18:00",
+      "pickupCoordinates": { "lat": 41.9009, "lng": 12.5010 },
+      "dropoffCoordinates": { "lat": 40.8519, "lng": 14.2729 },
+      "confirmationNumber": "QHRM45",
+      "notes": "Frecciarossa 9503 · 1h 13m · Lead passenger: Daniel"
+    },
+    {
+      "id": "train-naples-rome-qhpnen",
+      "type": "ground_transportation",
+      "company": "Trenitalia",
+      "serviceType": "Frecciarossa High-Speed Train",
+      "pickupLocation": "Napoli Centrale, Piazza Garibaldi, 80142 Naples, Italy",
+      "dropoffLocation": "Roma Termini, Piazza dei Cinquecento, 00185 Rome, Italy",
+      "pickupDatetime": "2026-06-30T18:10:00",
+      "dropoffDatetime": "2026-06-30T19:20:00",
+      "pickupCoordinates": { "lat": 40.8519, "lng": 14.2729 },
+      "dropoffCoordinates": { "lat": 41.9009, "lng": 12.5010 },
+      "confirmationNumber": "QHPNEN",
+      "notes": "Frecciarossa 9434 · 1h 10m · Lead passenger: Daniel"
+    },
+    {
       "id": "restaurant-colline-emiliane-2026-07-01",
       "type": "restaurant",
       "name": "Colline Emiliane",
