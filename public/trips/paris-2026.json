@@ -33,6 +33,18 @@
       "notes": "Executive Room, King bed (40 sqm / 430 sq ft, Louis XV/XVI style) · 6 nights · VIRTUOSO rate · American breakfast included · VIP welcome · Roundtrip airport/train transfers · WiFi · €11.38 city tax per guest/day extra · Record locator GGQNSX · Travel advisor: Sarah Lee (travel@sarahwlee.com, 206-659-9218) · Cancel 15 days prior or full stay charged"
     },
     {
+      "id": "restaurant-guy-savoy-paris-70647",
+      "type": "restaurant",
+      "name": "Restaurant Guy Savoy",
+      "address": "11 Quai de Conti, 75006 Paris, France",
+      "date": "2026-10-02",
+      "time": "19:45",
+      "partySize": 2,
+      "coordinates": { "lat": 48.8571, "lng": 2.3383 },
+      "confirmationNumber": "70647",
+      "notes": "Dinner · Bank imprint confirmed"
+    },
+    {
       "id": "activity-celine-dion-646115709",
       "type": "activity",
       "name": "Celine Dion at Paris La Defense Arena",
