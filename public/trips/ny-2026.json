@@ -32,6 +32,18 @@
       "notes": "Family Connector · 2 Double + 1 King + Sofa bed · 2 adults, 2 children · Grand Getaways Member Rate"
     },
     {
+      "id": "restaurant-il-mulino-madison-14453",
+      "type": "restaurant",
+      "name": "Il Mulino New York - Madison",
+      "address": "58 E 56th St, New York, NY 10022",
+      "date": "2026-08-06",
+      "time": "18:00",
+      "partySize": 4,
+      "coordinates": { "lat": 40.7614, "lng": -73.9721 },
+      "confirmationNumber": "14453",
+      "notes": "OpenTable · (212) 750-3270"
+    },
+    {
       "id": "activity-harry-potter-20260807",
       "type": "activity",
       "name": "Harry Potter and the Cursed Child",
