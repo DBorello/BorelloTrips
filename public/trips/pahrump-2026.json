@@ -6,9 +6,21 @@
   "destination": "Pahrump, NV",
   "coverImage": "https://images.unsplash.com/photo-1666950213034-fdff64cecf6a?w=800",
   "startDate": "2026-08-23",
-  "endDate": "2026-08-25",
+  "endDate": "2026-08-26",
   "timezone": "America/Los_Angeles",
   "events": [
+    {
+      "id": "flight-ord-las-20260823",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 2811",
+      "departureAirport": "ORD",
+      "arrivalAirport": "LAS",
+      "departureDatetime": "2026-08-23T09:17:00",
+      "arrivalDatetime": "2026-08-23T11:23:00",
+      "confirmationNumber": "NLVLVK",
+      "notes": "United First (Z) · Seats not yet assigned · eTicket 0162121429335"
+    },
     {
       "id": "hotel-spring-mountain-condo",
       "type": "hotel",
@@ -45,6 +57,18 @@
       "coordinates": { "lat": 36.1822, "lng": -115.9870 },
       "confirmationNumber": null,
       "notes": "8 AM – 4 PM · Manual CT5-V Blackwing · Condo check-out same morning (6:45–11 AM)"
+    },
+    {
+      "id": "flight-las-ord-20260826",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 1672",
+      "departureAirport": "LAS",
+      "arrivalAirport": "ORD",
+      "departureDatetime": "2026-08-26T09:08:00",
+      "arrivalDatetime": "2026-08-26T15:00:00",
+      "confirmationNumber": "NLVLVK",
+      "notes": "United First (Z) · Seats not yet assigned · eTicket 0162121429335"
     }
   ]
 }
