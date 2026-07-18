@@ -22,6 +22,20 @@
       "notes": "United First (Z) · Seats not yet assigned · eTicket 0162121429335"
     },
     {
+      "id": "car-turo-bmw-59458786",
+      "type": "car_rental",
+      "company": "Turo",
+      "carType": "2017 BMW 2 Series",
+      "pickupLocation": "Harry Reid International Airport, Las Vegas, NV",
+      "dropoffLocation": "Harry Reid International Airport, Las Vegas, NV",
+      "pickupDatetime": "2026-08-23T11:30:00",
+      "dropoffDatetime": "2026-08-26T08:00:00",
+      "pickupCoordinates": { "lat": 36.0840, "lng": -115.1537 },
+      "dropoffCoordinates": { "lat": 36.0840, "lng": -115.1537 },
+      "confirmationNumber": "59458786",
+      "notes": "Delivered to LAS airport · Host: Adil, (707) 708-9576 · 600 miles included · $348.46 paid"
+    },
+    {
       "id": "hotel-spring-mountain-condo",
       "type": "hotel",
       "name": "Spring Mountain Motor Resort Condo",
