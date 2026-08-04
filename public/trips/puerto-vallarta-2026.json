@@ -1,0 +1,36 @@
+{
+  "id": "puerto-vallarta-2026",
+  "title": "Puerto Vallarta 2026",
+  "description": "Thanksgiving week on the Pacific coast of Mexico.",
+  "destination": "Puerto Vallarta, Mexico",
+  "coverImage": "https://images.unsplash.com/photo-1512813195386-6cf811ad3542?w=800",
+  "startDate": "2026-11-21",
+  "endDate": "2026-11-25",
+  "timezone": "America/Bahia_Banderas",
+  "events": [
+    {
+      "id": "flight-ord-pvr-1037034794",
+      "type": "flight",
+      "airline": "American Airlines",
+      "flightNumber": "AA 3180",
+      "departureAirport": "ORD",
+      "arrivalAirport": "PVR",
+      "departureDatetime": "2026-11-21T08:05:00",
+      "arrivalDatetime": "2026-11-21T12:40:00",
+      "confirmationNumber": "1037034794",
+      "notes": "Economy · 2 adults, 2 children · Boeing 737-800 · Nonstop · Paid with 301,446 points ($3,768.08 value)"
+    },
+    {
+      "id": "flight-pvr-ord-1037034794",
+      "type": "flight",
+      "airline": "American Airlines",
+      "flightNumber": "AA 2278",
+      "departureAirport": "PVR",
+      "arrivalAirport": "ORD",
+      "departureDatetime": "2026-11-25T16:25:00",
+      "arrivalDatetime": "2026-11-25T21:04:00",
+      "confirmationNumber": "1037034794",
+      "notes": "Economy · 2 adults, 2 children · Boeing 737-800 · Nonstop"
+    }
+  ]
+}

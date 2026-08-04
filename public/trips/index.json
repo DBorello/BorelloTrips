@@ -55,6 +55,15 @@
       "endDate": "2026-10-07"
     },
     {
+      "id": "puerto-vallarta-2026",
+      "title": "Puerto Vallarta 2026",
+      "description": "Thanksgiving week on the Pacific coast of Mexico.",
+      "destination": "Puerto Vallarta, Mexico",
+      "coverImage": "https://images.unsplash.com/photo-1512813195386-6cf811ad3542?w=800",
+      "startDate": "2026-11-21",
+      "endDate": "2026-11-25"
+    },
+    {
       "id": "costa-rica-2026",
       "title": "Costa Rica 2026",
       "description": "Rainforest and Pacific coast — Arenal Volcano, Nayara Tented Camp, and Four Seasons Peninsula Papagayo.",
