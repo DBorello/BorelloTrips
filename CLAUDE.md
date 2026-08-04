@@ -22,7 +22,7 @@ npm run build                 # tsc + vite build → dist/
 
 ## Google Calendar sync
 
-After adding or updating any trip events, sync to Google Calendar:
+**Sync is paused for now (Aug 2026) — do NOT run `gcal_sync.py` after trip changes.** The OAuth token is expired; re-enable by re-authorizing (`python3 scripts/gcal_sync.py --auth-url`) and restoring the "always sync" instruction below.
 
 ```bash
 python scripts/gcal_sync.py sync                  # sync all trips
@@ -35,7 +35,6 @@ python scripts/gcal_sync.py delete                # remove all BorelloTrips even
 - Token: `scripts/gcal_token.json` (auto-generated on first run — gitignored)
 - Dependencies: `pip install -r scripts/requirements.txt`
 - Events are tagged with `extendedProperties.private.source=borellotrips` so sync is idempotent — safe to run repeatedly
-- **Always run `gcal_sync.py sync` after committing trip changes.**
 
 ## Deploy
 
