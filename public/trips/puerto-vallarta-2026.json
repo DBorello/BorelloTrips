@@ -21,6 +21,17 @@
       "notes": "Economy · 2 adults, 2 children · Boeing 737-800 · Nonstop · Paid with 301,446 points ($3,768.08 value)"
     },
     {
+      "id": "hotel-oneandonly-mandarina",
+      "type": "hotel",
+      "name": "One&Only Mandarina",
+      "address": "Carretera Federal 200 Km 53+900, El Monteón, Nayarit 63726, Mexico",
+      "checkInDatetime": "2026-11-21T15:00:00",
+      "checkOutDatetime": "2026-11-25T12:00:00",
+      "coordinates": { "lat": 21.033, "lng": -105.341 },
+      "confirmationNumber": null,
+      "notes": "2 Bedroom Villa Banderas, Ocean View · 1 king, 2 queen, 1 sofa bed · Virtuoso Stay 4 Pay 3 Offer rate"
+    },
+    {
       "id": "flight-pvr-ord-1037034794",
       "type": "flight",
       "airline": "American Airlines",
