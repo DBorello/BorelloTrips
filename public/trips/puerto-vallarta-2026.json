@@ -9,18 +9,6 @@
   "timezone": "America/Bahia_Banderas",
   "events": [
     {
-      "id": "flight-ord-pvr-1037034794",
-      "type": "flight",
-      "airline": "American Airlines",
-      "flightNumber": "AA 3180",
-      "departureAirport": "ORD",
-      "arrivalAirport": "PVR",
-      "departureDatetime": "2026-11-21T08:05:00",
-      "arrivalDatetime": "2026-11-21T12:40:00",
-      "confirmationNumber": "1037034794",
-      "notes": "Economy · 2 adults, 2 children · Boeing 737-800 · Nonstop · Paid with 301,446 points ($3,768.08 value)"
-    },
-    {
       "id": "hotel-oneandonly-mandarina",
       "type": "hotel",
       "name": "One&Only Mandarina",
@@ -30,18 +18,6 @@
       "coordinates": { "lat": 21.033, "lng": -105.341 },
       "confirmationNumber": "9372SG049468",
       "notes": "2 BR Villa Banderas, Ocean View · 1 king, 2 queen, 1 sofa bed · 2260 sq ft · Private pool & butler · Virtuoso Stay 4 Pay 3 rate (4th night free) · Daily breakfast for two at Alma · $100 resort credit · Upgrade on arrival subject to availability · Record locator: UAXNFK · Total $18,604.80 incl. taxes · Cancellation within 21 days of arrival charged 100% · Hotel: +52 327 689 0100"
-    },
-    {
-      "id": "flight-pvr-ord-1037034794",
-      "type": "flight",
-      "airline": "American Airlines",
-      "flightNumber": "AA 2278",
-      "departureAirport": "PVR",
-      "arrivalAirport": "ORD",
-      "departureDatetime": "2026-11-25T16:25:00",
-      "arrivalDatetime": "2026-11-25T21:04:00",
-      "confirmationNumber": "1037034794",
-      "notes": "Economy · 2 adults, 2 children · Boeing 737-800 · Nonstop"
     }
   ]
 }
