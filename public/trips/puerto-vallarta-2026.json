@@ -24,12 +24,12 @@
       "id": "hotel-oneandonly-mandarina",
       "type": "hotel",
       "name": "One&Only Mandarina",
-      "address": "Carretera Federal 200 Km 53+900, El Monteón, Nayarit 63726, Mexico",
+      "address": "Carretera Federal 200 Km 53+900, Lo de Marcos, Nayarit 63779, Mexico",
       "checkInDatetime": "2026-11-21T15:00:00",
       "checkOutDatetime": "2026-11-25T12:00:00",
       "coordinates": { "lat": 21.033, "lng": -105.341 },
-      "confirmationNumber": null,
-      "notes": "2 Bedroom Villa Banderas, Ocean View · 1 king, 2 queen, 1 sofa bed · Virtuoso Stay 4 Pay 3 Offer rate"
+      "confirmationNumber": "9372SG049468",
+      "notes": "2 BR Villa Banderas, Ocean View · 1 king, 2 queen, 1 sofa bed · 2260 sq ft · Private pool & butler · Virtuoso Stay 4 Pay 3 rate (4th night free) · Daily breakfast for two at Alma · $100 resort credit · Upgrade on arrival subject to availability · Record locator: UAXNFK · Total $18,604.80 incl. taxes · Cancellation within 21 days of arrival charged 100% · Hotel: +52 327 689 0100"
     },
     {
       "id": "flight-pvr-ord-1037034794",
