@@ -1,0 +1,36 @@
+{
+  "id": "steamboat-2027",
+  "title": "Steamboat 2027",
+  "description": "A winter trip to Steamboat Springs.",
+  "destination": "Steamboat Springs, CO",
+  "coverImage": "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800",
+  "startDate": "2027-01-20",
+  "endDate": "2027-01-24",
+  "timezone": "America/Denver",
+  "events": [
+    {
+      "id": "flight-ord-hdn-ijsegv",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 1592",
+      "departureAirport": "ORD",
+      "arrivalAirport": "HDN",
+      "departureDatetime": "2027-01-20T09:10:00",
+      "arrivalDatetime": "2027-01-20T11:14:00",
+      "confirmationNumber": "IJSEGV",
+      "notes": "First class · Daniel only · Nonstop to Yampa Valley Airport · Booking ID 1039038462 · 2 checked bags included"
+    },
+    {
+      "id": "flight-hdn-ord-ijsegv",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 636",
+      "departureAirport": "HDN",
+      "arrivalAirport": "ORD",
+      "departureDatetime": "2027-01-24T12:45:00",
+      "arrivalDatetime": "2027-01-24T16:46:00",
+      "confirmationNumber": "IJSEGV",
+      "notes": "First class · Daniel only · Nonstop · Booking ID 1039038462 · 2 checked bags included"
+    }
+  ]
+}

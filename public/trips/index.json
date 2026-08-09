@@ -64,6 +64,15 @@
       "endDate": "2026-11-25"
     },
     {
+      "id": "steamboat-2027",
+      "title": "Steamboat 2027",
+      "description": "A winter trip to Steamboat Springs.",
+      "destination": "Steamboat Springs, CO",
+      "coverImage": "https://images.unsplash.com/photo-1551524559-8af4e6624178?w=800",
+      "startDate": "2027-01-20",
+      "endDate": "2027-01-24"
+    },
+    {
       "id": "costa-rica-2026",
       "title": "Costa Rica 2026",
       "description": "Rainforest and Pacific coast — Arenal Volcano, Nayara Tented Camp, and Four Seasons Peninsula Papagayo.",
