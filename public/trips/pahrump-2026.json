@@ -73,15 +73,15 @@
       "notes": "8 AM – 4 PM · Manual CT5-V Blackwing · Condo check-out same morning (6:45–11 AM)"
     },
     {
-      "id": "hotel-fontainebleau-lakm1e5k0a",
+      "id": "hotel-fontainebleau-lakm1e5pak",
       "type": "hotel",
       "name": "Fontainebleau Las Vegas",
       "address": "2777 S Las Vegas Blvd, Las Vegas, NV 89109",
       "checkInDatetime": "2026-08-25T15:00:00",
       "checkOutDatetime": "2026-08-26T11:00:00",
       "coordinates": { "lat": 36.1379, "lng": -115.1591 },
-      "confirmationNumber": "LAKM1E5K0A",
-      "notes": "1 night after the academy · $1,068.26 · Early departure Aug 26 for 9:08 AM flight"
+      "confirmationNumber": "LAKM1E5PAK",
+      "notes": "Platinum King Strip Great View · Insider Offer · 1 night after the academy · $911.57 incl. resort fee & taxes ($849.21 deposit paid) · Rebooked from LAKM1E5K0A · Early departure Aug 26 for 9:08 AM flight"
     },
     {
       "id": "flight-las-ord-20260826",
