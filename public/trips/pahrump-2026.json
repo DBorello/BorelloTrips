@@ -91,10 +91,10 @@
       "address": "Fontainebleau Las Vegas, 2777 S Las Vegas Blvd, Las Vegas, NV 89109",
       "date": "2026-08-25",
       "startTime": "18:00",
-      "durationMinutes": 60,
+      "durationMinutes": 50,
       "coordinates": { "lat": 36.1379, "lng": -115.1591 },
       "confirmationNumber": null,
-      "notes": "$264.00 incl. service charge · Complete waiver before arrival · Duration assumed 60 min (not specified in confirmation)"
+      "notes": "50-minute massage · $264.00 incl. service charge · Complete waiver before arrival"
     },
     {
       "id": "flight-las-ord-20260826",
