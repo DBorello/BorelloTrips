@@ -13,13 +13,13 @@
       "id": "flight-ord-las-20260823",
       "type": "flight",
       "airline": "United Airlines",
-      "flightNumber": "UA 2811",
+      "flightNumber": "UA 777",
       "departureAirport": "ORD",
       "arrivalAirport": "LAS",
-      "departureDatetime": "2026-08-23T09:17:00",
-      "arrivalDatetime": "2026-08-23T11:23:00",
+      "departureDatetime": "2026-08-23T14:00:00",
+      "arrivalDatetime": "2026-08-23T16:04:00",
       "confirmationNumber": "NLVLVK",
-      "notes": "United First (Z) · Seats not yet assigned · eTicket 0162121429335"
+      "notes": "United First · Airbus A321neo · Nonstop · Rebooked from UA 2811 (9:17 AM)"
     },
     {
       "id": "car-turo-bmw-59458786",
@@ -81,19 +81,19 @@
       "checkOutDatetime": "2026-08-26T11:00:00",
       "coordinates": { "lat": 36.1379, "lng": -115.1591 },
       "confirmationNumber": "LAKM1E5PAK",
-      "notes": "Platinum King Strip Great View · Insider Offer · 1 night after the academy · $911.57 incl. resort fee & taxes ($849.21 deposit paid) · Rebooked from LAKM1E5K0A · Early departure Aug 26 for 9:08 AM flight"
+      "notes": "Platinum King Strip Great View · Insider Offer · 1 night after the academy · $911.57 incl. resort fee & taxes ($849.21 deposit paid) · Rebooked from LAKM1E5K0A · Early departure Aug 26 for 10:50 AM flight"
     },
     {
       "id": "flight-las-ord-20260826",
       "type": "flight",
       "airline": "United Airlines",
-      "flightNumber": "UA 1672",
+      "flightNumber": "UA 1583",
       "departureAirport": "LAS",
       "arrivalAirport": "ORD",
-      "departureDatetime": "2026-08-26T09:08:00",
-      "arrivalDatetime": "2026-08-26T15:00:00",
+      "departureDatetime": "2026-08-26T10:50:00",
+      "arrivalDatetime": "2026-08-26T16:42:00",
       "confirmationNumber": "NLVLVK",
-      "notes": "United First (Z) · Seats not yet assigned · eTicket 0162121429335"
+      "notes": "United First · Airbus A321neo · Nonstop · Rebooked from UA 1672 (9:08 AM)"
     }
   ]
 }
