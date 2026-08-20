@@ -84,6 +84,19 @@
       "notes": "Platinum King Strip Great View · Insider Offer · 1 night after the academy · $911.57 incl. resort fee & taxes ($849.21 deposit paid) · Rebooked from LAKM1E5K0A · Early departure Aug 26 for 10:50 AM flight"
     },
     {
+      "id": "activity-lapis-spa-odyssey-massage",
+      "type": "activity",
+      "name": "Odyssey Massage at Lapis Spa & Wellness",
+      "description": "Massage at the Fontainebleau's Lapis Spa & Wellness",
+      "address": "Fontainebleau Las Vegas, 2777 S Las Vegas Blvd, Las Vegas, NV 89109",
+      "date": "2026-08-25",
+      "startTime": "18:00",
+      "durationMinutes": 60,
+      "coordinates": { "lat": 36.1379, "lng": -115.1591 },
+      "confirmationNumber": null,
+      "notes": "$264.00 incl. service charge · Complete waiver before arrival · Duration assumed 60 min (not specified in confirmation)"
+    },
+    {
       "id": "flight-las-ord-20260826",
       "type": "flight",
       "airline": "United Airlines",
