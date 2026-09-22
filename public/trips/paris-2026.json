@@ -70,6 +70,18 @@
       "notes": "2 tickets · Section K, Row 4, Seats 112–113 · $7,929.06 total via StubHub · Tickets transferred by Oct 3 to dan@borellos.com / mobile · Event time subject to change"
     },
     {
+      "id": "restaurant-pavyllon-paris",
+      "type": "restaurant",
+      "name": "PavYllon",
+      "address": "8 Avenue Dutuit, 75008 Paris, France",
+      "date": "2026-10-05",
+      "time": "19:30",
+      "partySize": 2,
+      "coordinates": { "lat": 48.8657, "lng": 2.314 },
+      "confirmationNumber": null,
+      "notes": "Dinner · Yannick Alléno · Cancellation fee €150 per person if cancelled less than 48 hours prior"
+    },
+    {
       "id": "flight-cdg-ord-ap8jfz",
       "type": "flight",
       "airline": "Air France",
