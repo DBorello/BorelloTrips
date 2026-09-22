@@ -33,6 +33,18 @@
       "notes": "Executive Room, King bed (40 sqm / 430 sq ft, Louis XV/XVI style) · 6 nights · VIRTUOSO rate · American breakfast included · VIP welcome · Roundtrip airport/train transfers · WiFi · €11.38 city tax per guest/day extra · Record locator GGQNSX · Travel advisor: Sarah Lee (travel@sarahwlee.com, 206-659-9218) · Cancel 15 days prior or full stay charged"
     },
     {
+      "id": "restaurant-le-pre-catelan",
+      "type": "restaurant",
+      "name": "Le Pré Catelan",
+      "address": "Route de Suresnes, Bois de Boulogne, 75016 Paris, France",
+      "date": "2026-10-01",
+      "time": "19:00",
+      "partySize": 2,
+      "coordinates": { "lat": 48.8636, "lng": 2.2519 },
+      "confirmationNumber": null,
+      "notes": "Dinner · Chef Frédéric Anton · Valet available · Casual chic dress code recommended"
+    },
+    {
       "id": "restaurant-guy-savoy-paris-70647",
       "type": "restaurant",
       "name": "Restaurant Guy Savoy",
