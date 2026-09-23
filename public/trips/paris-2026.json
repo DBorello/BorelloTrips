@@ -82,6 +82,18 @@
       "notes": "Dinner · Yannick Alléno · Cancellation fee €150 per person if cancelled less than 48 hours prior"
     },
     {
+      "id": "restaurant-orson-paris",
+      "type": "restaurant",
+      "name": "Orson",
+      "address": "5 Rue du Dragon, 75006 Paris, France",
+      "date": "2026-10-06",
+      "time": "19:30",
+      "partySize": 2,
+      "coordinates": { "lat": 48.8535, "lng": 2.3316 },
+      "confirmationNumber": null,
+      "notes": "Dinner · Wood-fire restaurant, chef Esu Lee · Saint-Germain-des-Prés"
+    },
+    {
       "id": "flight-cdg-ord-ap8jfz",
       "type": "flight",
       "airline": "Air France",
