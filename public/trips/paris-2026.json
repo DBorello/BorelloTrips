@@ -70,6 +70,18 @@
       "notes": "2 tickets · Section K, Row 4, Seats 112–113 · $7,929.06 total via StubHub · Tickets transferred by Oct 3 to dan@borellos.com / mobile · Event time subject to change"
     },
     {
+      "id": "restaurant-laperouse-paris",
+      "type": "restaurant",
+      "name": "Lapérouse",
+      "address": "51 Quai des Grands Augustins, 75006 Paris, France",
+      "date": "2026-10-04",
+      "time": "20:00",
+      "partySize": 2,
+      "coordinates": { "lat": 48.8553, "lng": 2.3422 },
+      "confirmationNumber": null,
+      "notes": "Dinner"
+    },
+    {
       "id": "restaurant-pavyllon-paris",
       "type": "restaurant",
       "name": "PavYllon",
