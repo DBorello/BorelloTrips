@@ -55,6 +55,15 @@
       "endDate": "2026-10-07"
     },
     {
+      "id": "philadelphia-2026",
+      "title": "Philadelphia 2026",
+      "description": "A long weekend in Philadelphia.",
+      "destination": "Philadelphia, PA",
+      "coverImage": "https://images.unsplash.com/photo-1569761316261-9a8696fa2ca3?w=800",
+      "startDate": "2026-11-13",
+      "endDate": "2026-11-17"
+    },
+    {
       "id": "puerto-vallarta-2026",
       "title": "Puerto Vallarta 2026",
       "description": "Thanksgiving week on the Pacific coast of Mexico.",

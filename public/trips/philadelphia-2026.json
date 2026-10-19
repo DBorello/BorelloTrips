@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "philadelphia-2026",
+  "title": "Philadelphia 2026",
+  "description": "A long weekend in Philadelphia.",
+  "destination": "Philadelphia, PA",
+  "coverImage": "https://images.unsplash.com/photo-1569761316261-9a8696fa2ca3?w=800",
+  "startDate": "2026-11-13",
+  "endDate": "2026-11-17",
+  "timezone": "America/New_York",
+  "events": [
+    {
+      "id": "flight-ord-phl-lzjkf0",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 423",
+      "departureAirport": "ORD",
+      "arrivalAirport": "PHL",
+      "departureDatetime": "2026-11-13T06:42:00",
+      "arrivalDatetime": "2026-11-13T09:52:00",
+      "confirmationNumber": "LZJKF0",
+      "notes": "First · Daniel ticket 0162150066668 · Booking ID 1068052630 · 1 carry-on (15 lbs, 56x35x22 cm) · 2 checked bags"
+    },
+    {
+      "id": "flight-phl-ord-lzjkf0",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 719",
+      "departureAirport": "PHL",
+      "arrivalAirport": "ORD",
+      "departureDatetime": "2026-11-17T13:20:00",
+      "arrivalDatetime": "2026-11-17T14:55:00",
+      "confirmationNumber": "LZJKF0",
+      "notes": "First · Daniel ticket 0162150066668 · Booking ID 1068052630 · 1 carry-on (15 lbs, 56x35x22 cm) · 2 checked bags"
+    }
+  ]
+}
