@@ -55,6 +55,15 @@
       "endDate": "2026-10-07"
     },
     {
+      "id": "boston-2026",
+      "title": "Boston 2026",
+      "description": "A few days in Boston.",
+      "destination": "Boston, MA",
+      "coverImage": "https://images.unsplash.com/photo-1501979376754-2ff867a4f659?w=800",
+      "startDate": "2026-10-27",
+      "endDate": "2026-10-30"
+    },
+    {
       "id": "philadelphia-2026",
       "title": "Philadelphia 2026",
       "description": "A long weekend in Philadelphia.",

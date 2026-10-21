@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "boston-2026",
+  "title": "Boston 2026",
+  "description": "A few days in Boston.",
+  "destination": "Boston, MA",
+  "coverImage": "https://images.unsplash.com/photo-1501979376754-2ff867a4f659?w=800",
+  "startDate": "2026-10-27",
+  "endDate": "2026-10-30",
+  "timezone": "America/New_York",
+  "events": [
+    {
+      "id": "flight-ord-bos-pdljrr",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 2213",
+      "departureAirport": "ORD",
+      "arrivalAirport": "BOS",
+      "departureDatetime": "2026-10-27T07:00:00",
+      "arrivalDatetime": "2026-10-27T10:19:00",
+      "confirmationNumber": "PDLJRR",
+      "notes": "United First (P) · Seat 4E · Airbus A321 · 2h 19m"
+    },
+    {
+      "id": "flight-bos-ord-pdljrr",
+      "type": "flight",
+      "airline": "United Airlines",
+      "flightNumber": "UA 1349",
+      "departureAirport": "BOS",
+      "arrivalAirport": "ORD",
+      "departureDatetime": "2026-10-30T09:12:00",
+      "arrivalDatetime": "2026-10-30T11:15:00",
+      "confirmationNumber": "PDLJRR",
+      "notes": "United First (P) · Seat 1E · Airbus A321 · 3h 3m"
+    }
+  ]
+}
