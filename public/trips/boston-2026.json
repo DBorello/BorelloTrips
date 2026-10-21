@@ -22,6 +22,17 @@
       "notes": "United First (P) · Seat 4E · Airbus A321 · 2h 19m"
     },
     {
+      "id": "hotel-westin-boston-waterfront-84929176",
+      "type": "hotel",
+      "name": "The Westin Boston Waterfront",
+      "address": "425 Summer Street, Boston, MA 02210",
+      "checkInDatetime": "2026-10-27T16:00:00",
+      "checkOutDatetime": "2026-10-30T11:00:00",
+      "confirmationNumber": "84929176",
+      "coordinates": { "lat": 42.3464, "lng": -71.0434 },
+      "notes": "Premium View King Room, high floor (330 sq ft) · 3 nights · 2 adults · Record locator FOVREJ · Marriott Bonvoy 755093291 · Prepaid non-refundable, no changes · $3,801.34 total incl. taxes · $40/day destination fee plus tax paid at check-in (includes 2 Freedom Trail + 2 Revolutionary Space tickets, $10 MJ O'Connor's credit, $20 daily F&B credit) · Hotel 1-617-532-4600"
+    },
+    {
       "id": "flight-bos-ord-pdljrr",
       "type": "flight",
       "airline": "United Airlines",
