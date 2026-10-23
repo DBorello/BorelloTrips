@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "napa-2027",
   "title": "Napa 2027",
-  "description": "Memorial Day weekend at Four Seasons Napa Valley in Calistoga.",
+  "description": "BottleRock Napa Valley — three days of music and wine country, staying at Four Seasons Napa Valley.",
   "destination": "Napa Valley, CA",
   "coverImage": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800",
   "startDate": "2027-05-27",
@@ -19,6 +19,45 @@
       "confirmationNumber": "5798SH017522",
       "coordinates": { "lat": 38.5712, "lng": -122.5595 },
       "notes": "Vineyard Three Bedroom Estate Villa with Pool (3,395 sq ft, 2 King + 2 Double beds, outdoor dining for 10) · 4 nights · 2 guests · Rate: 3rd night free with breakfast · Daily breakfast for 2 · Preferred Partner benefits, 1-category upgrade based on availability · Record locator EPEBAT · $27,000 room + $4,552.72 taxes/fees = $31,552.72 total, prepaid Oct 19, 2026, refundable · Cancel by 3 PM May 13, 2027 or full stay charged · Travel advisor: Sarah Lee (travel@sarahwlee.com, 206-659-9218) · Hotel 1-707-709-2100"
+    },
+    {
+      "id": "activity-bottlerock-day1-20270528",
+      "type": "activity",
+      "name": "BottleRock Napa Valley — Day 1",
+      "description": "Three-day music, wine, and food festival at the Napa Valley Expo",
+      "address": "Napa Valley Expo, 575 Third St, Napa, CA 94559",
+      "date": "2027-05-28",
+      "startTime": "12:00",
+      "durationMinutes": 600,
+      "coordinates": { "lat": 38.2975, "lng": -122.2869 },
+      "confirmationNumber": null,
+      "notes": "Tickets not yet confirmed · Festival dates are Memorial Day weekend (Fri–Sun); verify once lineup/schedule is announced"
+    },
+    {
+      "id": "activity-bottlerock-day2-20270529",
+      "type": "activity",
+      "name": "BottleRock Napa Valley — Day 2",
+      "description": "Three-day music, wine, and food festival at the Napa Valley Expo",
+      "address": "Napa Valley Expo, 575 Third St, Napa, CA 94559",
+      "date": "2027-05-29",
+      "startTime": "12:00",
+      "durationMinutes": 600,
+      "coordinates": { "lat": 38.2975, "lng": -122.2869 },
+      "confirmationNumber": null,
+      "notes": "Tickets not yet confirmed · Festival dates are Memorial Day weekend (Fri–Sun); verify once lineup/schedule is announced"
+    },
+    {
+      "id": "activity-bottlerock-day3-20270530",
+      "type": "activity",
+      "name": "BottleRock Napa Valley — Day 3",
+      "description": "Three-day music, wine, and food festival at the Napa Valley Expo",
+      "address": "Napa Valley Expo, 575 Third St, Napa, CA 94559",
+      "date": "2027-05-30",
+      "startTime": "12:00",
+      "durationMinutes": 600,
+      "coordinates": { "lat": 38.2975, "lng": -122.2869 },
+      "confirmationNumber": null,
+      "notes": "Tickets not yet confirmed · Festival dates are Memorial Day weekend (Fri–Sun); verify once lineup/schedule is announced"
     }
   ]
 }
