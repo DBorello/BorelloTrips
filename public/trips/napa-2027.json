@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "napa-2027",
+  "title": "Napa 2027",
+  "description": "Memorial Day weekend at Four Seasons Napa Valley in Calistoga.",
+  "destination": "Napa Valley, CA",
+  "coverImage": "https://images.unsplash.com/photo-1506377247377-2a5b3b417ebb?w=800",
+  "startDate": "2027-05-27",
+  "endDate": "2027-05-31",
+  "timezone": "America/Los_Angeles",
+  "events": [
+    {
+      "id": "hotel-four-seasons-napa-valley-5798sh017522",
+      "type": "hotel",
+      "name": "Four Seasons Napa Valley",
+      "address": "400 Silverado Trail N, Calistoga, CA 94515",
+      "checkInDatetime": "2027-05-27T16:00:00",
+      "checkOutDatetime": "2027-05-31T12:00:00",
+      "confirmationNumber": "5798SH017522",
+      "coordinates": { "lat": 38.5712, "lng": -122.5595 },
+      "notes": "Vineyard Three Bedroom Estate Villa with Pool (3,395 sq ft, 2 King + 2 Double beds, outdoor dining for 10) · 4 nights · 2 guests · Rate: 3rd night free with breakfast · Daily breakfast for 2 · Preferred Partner benefits, 1-category upgrade based on availability · Record locator EPEBAT · $27,000 room + $4,552.72 taxes/fees = $31,552.72 total, prepaid Oct 19, 2026, refundable · Cancel by 3 PM May 13, 2027 or full stay charged · Travel advisor: Sarah Lee (travel@sarahwlee.com, 206-659-9218) · Hotel 1-707-709-2100"
+    }
+  ]
+}
