@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "vail-2027",
+  "title": "Vail 2027",
+  "description": "New Year's ski week at The Arrabelle at Vail Square.",
+  "destination": "Vail, CO",
+  "coverImage": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800",
+  "startDate": "2026-12-31",
+  "endDate": "2027-01-05",
+  "timezone": "America/Denver",
+  "events": [
+    {
+      "id": "hotel-arrabelle-vail-square-55792720",
+      "type": "hotel",
+      "name": "The Arrabelle at Vail Square, a RockResort",
+      "address": "675 Lionshead Place, Vail, CO 81657",
+      "checkInDatetime": "2026-12-31T16:00:00",
+      "checkOutDatetime": "2027-01-05T11:00:00",
+      "confirmationNumber": "55792720",
+      "coordinates": { "lat": 39.6424, "lng": -106.3906 },
+      "notes": "2 Bedroom Residence · 5 nights · 2 adults + 2 children (Joshua, Audrey) · Guests: Daniel, Ashley, Joshua, Audrey · Winter Advanced Purchase, non-refundable · Epic Mountain Rewards 20% pass holder discount · $14,820.60 + $3,324.86 taxes/fees = $18,145.46 total, paid in full Oct 25, 2026 (VI 9410) · Package savings $8,539.05 · Lift tickets limited at resort, buy in advance · Spa: 970-754-7754 · Reservations: (877) 725-7213"
+    }
+  ]
+}

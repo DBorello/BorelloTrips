@@ -82,6 +82,15 @@
       "endDate": "2026-11-25"
     },
     {
+      "id": "vail-2027",
+      "title": "Vail 2027",
+      "description": "New Year's ski week at The Arrabelle at Vail Square.",
+      "destination": "Vail, CO",
+      "coverImage": "https://images.unsplash.com/photo-1605540436563-5bca919ae766?w=800",
+      "startDate": "2026-12-31",
+      "endDate": "2027-01-05"
+    },
+    {
       "id": "steamboat-2027",
       "title": "Steamboat 2027",
       "description": "A winter trip to Steamboat Springs.",
