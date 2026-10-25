@@ -22,6 +22,20 @@
       "notes": "United Economy (S) · 4 passengers · Seats not yet assigned · Tickets: Daniel 0162151917823 · Ashley 0162151917825 · Joshua 0162151917828 · Audrey 0162151917829 · $679.22 per passenger, $2,716.88 total, purchased Oct 25, 2026"
     },
     {
+      "id": "car-ege-29496305us6",
+      "type": "car_rental",
+      "company": "Avis/Budget",
+      "carType": "Chrysler Pacifica or similar (minivan, automatic)",
+      "pickupLocation": "Eagle County Regional Airport (EGE), 217 Eldon Wilson Rd, Gypsum, CO 81637",
+      "dropoffLocation": "Eagle County Regional Airport (EGE), 217 Eldon Wilson Rd, Gypsum, CO 81637",
+      "pickupDatetime": "2026-12-31T11:30:00",
+      "dropoffDatetime": "2027-01-05T23:30:00",
+      "pickupCoordinates": { "lat": 39.6426, "lng": -106.9159 },
+      "dropoffCoordinates": { "lat": 39.6426, "lng": -106.9159 },
+      "confirmationNumber": "29496305US6",
+      "notes": "Unlimited mileage · Prepaid $1,082.64 (base $811.66 + fees $180.83 + taxes $90.15) · Counter 970-524-7571 · Rental company not named on confirmation (Avis/Budget number format) · Drop-off booked for 11:30 PM but return flight departs 1:05 PM — likely should be 11:30 AM, verify"
+    },
+    {
       "id": "hotel-arrabelle-vail-square-55792720",
       "type": "hotel",
       "name": "The Arrabelle at Vail Square, a RockResort",
